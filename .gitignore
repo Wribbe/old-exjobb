@@ -2,3 +2,5 @@
 *.log
 *.pdf
 brev
+*.bbl
+*.blg
