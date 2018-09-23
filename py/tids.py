@@ -43,7 +43,11 @@ def print_gantt(g):
         if variant is 'G':
             command = "ganttgroup"
         else:
-            opts = []
+            filter_opts = []
+            for optlist in opts:
+                if not any(["group" in opt.split() for opt in optlist]):
+                    filter_opts.append(optlist)
+            opts = filter_opts
         lines.append(cmd([command, t_name, t_start+1, t_stop+1], opts=opts))
     lines.append(cmd(["end" ,"ganttchart"], endl=False, opts=opts))
     print('\n'.join(lines))
