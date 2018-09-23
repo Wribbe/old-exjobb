@@ -3,12 +3,52 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,swedish]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
 
 \setlength{\parindent}{0cm}
 
 \begin{document}
 
 \begin{center}
+
+%Projektplanering Alla större arbeten tjänar på att planeras, inte minst ett
+%examensarbete som pågår ungefär ett halvår. Det kan vara en god idé att använda
+%det tidigare skrivna måldokumentet som en stomme till en projektplan. I
+%projektplanen beskrivs arbetets innehåll, avgränsningar och metodik relativt
+%detaljerat. Detta innebär bland annat att försöka planera vilka mätningar,
+%beräkningar, intervjuer eller andra undersökningar som ska utföras, och hur man
+%avser att tolka och analyser de resultat som detta ger. En sådan plan kommer
+%givetvis att variera högst väsentligt mellan olika examensarbeten.
+%
+%En annan viktig del i planeringen är upprättande av en tidsplan. För att
+%underlätta styrning och uppföljning av projektet bör arbetet delas upp i mindre
+%delmoment och avstämningspunkter. Det är lätt hänt att tiden rinner iväg,
+%vilket i viss mån kan regleras med en tidsplan. En tidsplan ska, så bra som
+%möjligt, uppskatta den tid som de olika momenten i examensarbetet kan ta. Det
+%är viktigt att på ett tidigt stadium av arbetet få en uppfattning av hur mycket
+%tid som finns tillgänglig för de olika delmoment som ingår. Ett examensarbete
+%ska motsvara 20 veckors heltidsstudier. Begränsningen är givetvis inte strikt,
+%men kan vara ett riktmärke att jobba efter. Det är viktigt att även ta hänsyn
+%till konkurrerande aktiviteter såsom studentens/studentgruppens eventuella
+%parallella studier och handledarens eventuella längre tjänsteresor.
+%
+%Det kan också vara bra att fundera över formerna för handledning på ett tidigt
+%stadium, och klargöra respektive parters förväntningar på varandra. En del
+%tycker att en form med regelbundna möten fungerar bra, andra trivs med att
+%träffas efter behov. En projektplan ska definiera avstämningspunkter med alla
+%handledare.
+%
+%Tänk på att inte bara planera för själva utredningsarbetet utan också ta med
+%aktiviteter i slutfasen t.ex. opponering och presentation där diverse praktiska
+%saker som tid för tryckning av rapporten, presentationsförberedelser och
+%liknande kan påverka tidsplanen för arbetet.
+%
+%Planering inte är något statiskt. Många examensarbeten har karaktär av
+%forskning eller utveckling, vilket innebär att man inte vet riktigt vad man har
+%att vänta sig. En god planering måste vara tillräckligt flexibel för att ta
+%hänsyn till detta. Projektplanen bör uppdateras löpande och förändringar bör
+%diskuteras med huvudhandledaren.
 
   % Arbetstitel.
   Examensarbete -- Måldokument. \\
@@ -132,7 +172,15 @@
   \texttt{<annika.wallin@lucs.lu.se>} som ställt upp för frågor och förslag
   kring relevant litteratur inom kognitionsvetenskap om behovet uppstår.
 
-\bibliography{mdoc}
-\bibliographystyle{plain}
+\newpage
+
+\begin{landscape}
+
+  \center
+  \section*{Tidsschema}
+
+  \input{tex/tidsschema.tex}
+
+\end{landscape}
 
 \end{document}
