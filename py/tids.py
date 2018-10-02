@@ -116,7 +116,7 @@ pilot_start = 3
 pilot_end, pilot_tasks = spread(pilot, start=pilot_start)
 
 litstudy = [
-    ("Leta relevant litteratur", 12),
+    ("Hitta relevant litteratur", 12),
     ("mod", -4),
     ("Utvärdera litteratur", 7),
 ]
@@ -126,24 +126,25 @@ litstudy_end, litstudy_tasks = spread(litstudy, start=litstudy_start)
 
 pilot2_num = 8
 pilot2 = [
-    ("Implementering studie-UI", pilot2_num),
+    ("Implementering utvärdering-UI", pilot2_num),
     ("mod", -pilot2_num),
-    ("Färdigställ studie-formulär", pilot2_num),
+    ("Färdigställ utvärdering-formulär", pilot2_num),
     ("mod", -4),
-    ("Välj kandidater för studie", 4),
+    ("Hitta kandidater för utvärdering", 4),
 ]
 
 pilot2_start = litstudy_end + 1
 pilot2_end, pilot2_tasks = spread(pilot2, start=pilot2_start)
 
 
-studie1 = [
+utvärdering1 = [
     ("Genomförande", 5),
-    ("Utvärdering", 2),
+    ("Sammanställning", 2),
+    ("Litteratursök vid behov", 2),
 ]
 
-studie1_start = pilot2_end + 1
-studie1_end, studie1_tasks = spread(studie1, start=studie1_start)
+utvärdering1_start = pilot2_end + 1
+utvärdering1_end, utvärdering1_tasks = spread(utvärdering1, start=utvärdering1_start)
 
 iter1 = [
     ("Modifiering UI", 4),
@@ -151,23 +152,24 @@ iter1 = [
     ("Modifiering formulär", 4),
 ]
 
-iter1_start = studie1_end+1+2
+iter1_start = utvärdering1_end+1
 iter1_end, iter1_tasks = spread(iter1, start=iter1_start)
 
 
-studie2 = [
+utvärdering2 = [
     ("Genomförande", 5),
-    ("Utvärdering", 2),
+    ("Sammanställning", 2),
+    ("Litteratursök vid behov", 2),
 ]
 
-studie2_start = iter1_end + 1
-studie2_end, studie2_tasks = spread(studie2, start=studie2_start)
+utvärdering2_start = iter1_end + 1
+utvärdering2_end, utvärdering2_tasks = spread(utvärdering2, start=utvärdering2_start)
 
-iter2_start = studie2_end+2+1
+iter2_start = utvärdering2_end+1
 iter2_end, iter2_tasks = spread(iter1, start=iter2_start)
 
-studie3_start = iter2_end + 1
-studie3_end, studie3_tasks = spread(studie2, start=studie3_start)
+utvärdering3_start = iter2_end + 1
+utvärdering3_end, utvärdering3_tasks = spread(utvärdering2, start=utvärdering3_start)
 
 sammanställning = [
     ("Bearbeta data", 15),
@@ -175,7 +177,7 @@ sammanställning = [
     ("Slutintervjuer", 5),
 ]
 
-sammanställning_start = studie3_end+1
+sammanställning_start = utvärdering3_end+1
 sammanställning_end, sammanställning_tasks = spread(sammanställning,
                                                       start=sammanställning_start)
 
@@ -184,30 +186,30 @@ tasks = [
     ('T', 1, 2, "Uppstart"),
     ('G', pilot_start, pilot_end, "Pilot"),
     *pilot_tasks,
-    ('G', litstudy_start, litstudy_end, "Literaturstudie"),
+    ('G', litstudy_start, litstudy_end, "Literaturutvärdering"),
     *litstudy_tasks,
-    ('G', pilot2_start, pilot2_end, "Förbered studie"),
+    ('G', pilot2_start, pilot2_end, "Förbered utvärdering"),
     *pilot2_tasks,
     ('M', pilot2_end, 0, "Frys UI och formulär"),
-    ('G', studie1_start, studie1_end, "Studie \#1"),
-    *studie1_tasks,
-    ('T', studie1_end+1, studie1_end+2, "ev. ytterligare litteratur"),
+    ('G', utvärdering1_start, utvärdering1_end, "Utvärdering gränssnitt \#1"),
+    *utvärdering1_tasks,
     ('G', iter1_start, iter1_end, "Återkoppling \#1"),
     *iter1_tasks,
     ('M', iter1_end, 0, "Frys UI och formulär\#2"),
-    ('G', studie2_start, studie2_end, "Studie \#2"),
-    *studie2_tasks,
-    ('T', studie2_end+1, studie2_end+2, "ev. ytterligare litteratur"),
+    ('G', utvärdering2_start, utvärdering2_end, "Utvärdering gränssnitt \#2"),
+    *utvärdering2_tasks,
     ('G', iter2_start, iter2_end, "Återkoppling \#2"),
     *iter2_tasks,
     ('M', iter2_end, 0, "Frys UI och formulär\#3"),
-    ('G', studie3_start, studie3_end, "Studie \#3"),
-    *studie3_tasks,
+    ('G', utvärdering3_start, utvärdering3_end, "Utvärdering gränssnitt \#3"),
+    *utvärdering3_tasks,
     ('G', sammanställning_start, sammanställning_end, "Sammanställning"),
     *sammanställning_tasks,
-    ('T', 77, 92, "Opponering"),
-    ('T', 38, 90, "Skriva rapport"),
+    ('T', 76, 87, "Opponering"),
+    ('T', 38, 90, "Skriva uppsats"),
+    ('T', 85, 96, "Presentationsslides"),
     ('T', days_total-6, days_total, "Presentationsförberedelser"),
+    ('M', days_total, 0, "Presentation"),
 ]
 
 group_no_left = ["group left peak height = 0", "group left shift = 0"]
@@ -237,3 +239,4 @@ for task in tasks:
 
 for chart in charts:
     print_gantt(chart)
+    print("\\newpage")

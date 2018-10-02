@@ -3,10 +3,56 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,swedish]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{wasysym}
 \usepackage{pgfgantt}
 \usepackage{pdflscape}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{xifthen}
+\usepackage{setspace}
+\usepackage{pgffor}
 
 \setlength{\parindent}{0cm}
+
+\newcounter{countQuestions}
+\newenvironment{question}
+  {%
+%    \begin{doublespacing}
+  }%
+  {%
+%    \end{doublespacing}
+  }%
+
+\newcommand{\qmline}[2][]{%
+  #2? \\ \ \\
+  \ifthenelse{\isempty{#1}}%
+    {\rule{\textwidth}{0.4pt} \\ \\ \rule{\textwidth}{0.4pt} \\ }%first is empty.
+    {%
+      \foreach \index in {1, ..., #1} {%
+        \rule{\textwidth}{0.4pt} \\ \\
+      }
+    }%first is not empty.
+    \\
+}
+
+\newcommand{\qline}[2][]{%
+  \ifthenelse{\isempty{#1}}%
+    {#2: }%first is empty.
+    {#2 [\textit{Ex: #1}]: }%first is not empty.
+    \hrulefill \\ \\
+}
+\newcommand{\hh}{\hspace{1cm}}
+\newcommand{\qscale}[1]{%
+  \textit{#1}: \\
+    Strongly Disagree\ 1---2---3---4---5---6---7\ Strongly Agree
+  %  \fullmoon \ Never  \hh
+  %  \fullmoon \ Sometimes  \hh
+  %  \fullmoon \ Most of the time  \hh
+  %  \fullmoon \ Always
+  \ \\ \\
+}
+
 
 \begin{document}
 
@@ -51,136 +97,89 @@
 %diskuteras med huvudhandledaren.
 
   % Arbetstitel.
-  Examensarbete -- Måldokument. \\
+  Examensarbete. \\
   \ \\
   {\large
-    \textbf{För mycket av det goda} -
-    Att använda interaktionsdesign och kognitionsvetenskap för
-    att minska friktionen i informationsflödet hos Massive
-    Entertainment, Malmö. \\
-  }
+    \textbf{Projektplan för examensarbete}
+  } \\
   %} \\
   %--- \\
   \ \\
-  Prel. period: 2018-09-17 - 2019-02-18\\
   Stefan Eng \texttt{<atn08sen@student.lu.se>}
+  \ \\
+  \today \\
   \ \\
   ---
   \vspace{-0.3cm}
 
 \end{center}
 
-\section*{Bakgrund}
+\section*{Innehåll}
+  Målet med arbetet är att undersöka i vilken utsträckning forsknings-resultat
+  från, samt teorier inom området människa-datorinteraktion, MDI\cite{c_mdi},
+  eller engelska motsvarigheten, HDI\cite{c_hci} kan underlätta användningen av
+  digital kommunikation på Massive Entertainment\cite{c_massive}, Malmö.
 
-  Vid diskussion med personal på Massive kom det upp att det digitala
-  arbetes- och kommunikations-flödet mellan olika discipliner i ett
-  projekt övergetts för fysisk kommunikation via boards och post-it's  vid ett
-  tillfälle av extra press.
+\section*{Avgränsningar}
 
-\section*{Motiv}
+  Arbetet kommer främst fokusera på att analysera interaktioner med
+  Shotgun\cite{c_shotgun}, en mjukvaran som används för att skapa och hålla
+  uppsikt på utvecklingen av multimedia projekt. Vid diskussion har det framkommit
+  att det finns ytterligare system som hade varit intressanta att analysera,
+  men som ej kommer utföras på grund av begränsad tid. \\
 
-  Även fast det tänkta målet blev nått så framgår det tydligt från de
-  tillfrågade att det hade varit önskvärt, och mindre ansträngande om
-  kommunikationen via de tilltänkta systemen hade fortsatt, trots press.
-
-\section*{Mål \& Problemställning}
-
-  Målet är att använda litteratur från kognitionsvetenskap och interaktionsdesign
-  för att identifiera och söka lösningar till eventuell friktion inom
-  planerings- och kommunikations-systemen som används internt. \\
-
-  Problemställningen handlar om huruvida det går att producera en
-  digital prototyp, grundad på lösningar från litteraturen, som mätbart
-  reducerar den upplevda friktionen. Tanken är att införa modifikationer som
-  höjer ribban för mängden press som kan uppstå innan användare väljer att
-  överge det digitala systemet.
+  Målet är att identifiera mellan tre till tio ofta förekommande arbetsflöden
+  som består av minst tre distinkta handlingar som exempelvis fil-operationer
+  och mus-klick där användare upplevt irritation eller att det kan ske
+  förbättringar.
 
 \section*{Metodik}
 
-  Den preliminära metodiken enligt följande:
-  \begin{enumerate}
-    \item{Intervjua personal och identifiera upplevda problem.}
-    \item{Använda litteraturen för att verifiera de mest kritiska problemen och
-        formulera lösningar till dessa eller hitta eventuella existerande
-        lösningar.}
-    \item{Välja en specifik lösning till ett upplevt problem och konstruera en
-        prototyp i syfte att minimera, alternativt eliminera det upplevda
-        problemet.}
-    \item{Testa prototypen mot personal och mäta huruvida lösningen påverkar
-        det upplevda problemet eller inte.}
-  \end{enumerate}
+  För att etablera ett startvärde att jämföra mot samt få en överblick, kommer
+  inledande intervjuer och enkäter om hur den nuvarande processen upplevs
+  utföras bland utvecklare och chefer. \\
 
-  Metoden kommer följa ett cykliskt arbetsflöde där ett flertal problem samlas
-  in i punkt 1 och sedan reduceras i mängd med avseende på upplevd negativ
-  effekt alternativt, teoretisk relevans i punkt 2. I punkt 3 väljs sedan en
-  lösning till en av de utsorterade problemen och implementeras, för att sedan
-  testa effekten av implementeringen i punkt 4. \\
+  [ ... ]
 
-  Cykeln 3 $\rightarrow$ 4 repeteras så länge det finns tid och kvarvarande
-  lösningsförslag. Om lösningsförslagen tar slut; återvänd till punkt 2 och
-  försök identifiera lösningar till de problem som sorterats ut och
-  implementera dessa. Tar även dessa slut, återgå till punkt 1 för att
-  identifiera nya problem bland användarna.
 
-\section*{Vetenskaplig grund}
 
-  \textbf{The design of everyday things}\cite{c_design_norman} -
-  Hur kognitionsvetenskap kan användas i design och underlätta användning. \\
+  %Inledningsvis behövs ett värde som den slutliga analysen kan utvärderas mot
 
-  \textbf{Interaction design : beyond human-computer
-    interaction}\cite{c_interaction_design} -
-  Hur fungerar interaktionsdesign, förstå sig på användaren, hur gränssnitt
-  påverkar, behovsidentifiering m.m.
+  %Utvärdering av
 
-\section*{Bidragande kunskapsutveckling}
+  %Inledningsvis kommer intervjuer ske med de anställda för att identifiera
+  %upplevda problem-områden samt skaffa sig ett initialvärde för att
 
-  Detta arbetet ger möjlighet att praktiskt testa teorier från
-  kognitionsvetenskap och interaktionsdesign och dess tillämpningar i
-  spelbranchen, en krävande interaktions-miljö där problemfri kommunikation av
-  information och hur system används på bästa sätt är av yttersta vikt.
+\newpage
+\section*{Mätningar}
 
-\section*{Resurser}
+\begin{question}
+  \qline{Alias}
+  Age: \hspace{0.5cm}
+    \fullmoon \ $<30$ \hh
+    \fullmoon \ $31-40$ \hh
+    \fullmoon \ $41-50$ \hh
+    \fullmoon \ $51+$
+    \ \\ \\
+  \qline[Gameplay Animator]{Position}
+  \qscale{I am often annoyed by the software}
+  \qscale{I am often annoyed by quizzes}
+  \qscale{I always know where in the process my colleges are}
+  \qmline{What problems do you experience with the software}
+  \qmline[4]{What positive aspects do you experience with the software}
+\end{question}
 
-  För att utföra arbetet behövs preliminärt;
-  \begin{enumerate}
-    \item{Tillgång till personal på Massive Entertainment för intervjuer.}
-    \item{Dator med möjlighet att sammanställning data och utveckla
-        interaktions-prototyp(er).}
-    \item{Tillgång till relevanta interna kommunikations- och planerings-system
-        på Massive för analys och insamling av information.}
-    \item{Stöd med information och vägledning kring interna processer och
-        metoder inom Massive.}
-    \item{Information och stöd med insamling och bearbetning av teori rörande
-        interaktionsdesign.}
-    \item{Delvist stöd med vägledning för information kring
-        kognitionsvetenskap.}
-  \end{enumerate}
-
-  Punkt 1-4 löses genom fysisk arbetsplats på Massive Entertainment i Malmö,
-  samt företags-kontakt på plats; Patrick O'Casey (Cinematics Producer) \\
-  \texttt{<patrick.ocasey@massive.se>}. \\
-
-  Punkt 5 löses via kontakt med främst handledare; \\
-  Johanna Person (Biträdande universitetslektor vid Ergonomi och
-  aerosolteknologi, LTH) \texttt{<johanna.persson@design.lth.se>} och vidare
-  examinator;
-  \\Joakim Eriksson (Forskningsingenjör vid Ergonomi och aerosolteknologi, LTH)
-  \texttt{<joakim.eriksson@design.lth.se>}. \\
-
-  Punkt 6 löses via kontakt med Annika Wallin (Docent Kognitionsvetenskap,
-  Filosofiska intuitionen, Lunds Universitet)
-  \texttt{<annika.wallin@lucs.lu.se>} som ställt upp för frågor och förslag
-  kring relevant litteratur inom kognitionsvetenskap om behovet uppstår.
+\newgeometry{left=3cm, bottom=3cm}
+\begin{landscape}
+  \section*{Tidsschema}
+  \centering
+  \input{tex/tidsschema.tex}
+\end{landscape}
+\restoregeometry
 
 \newpage
 
-\begin{landscape}
-
-  \center
-  \section*{Tidsschema}
-
-  \input{tex/tidsschema.tex}
-
-\end{landscape}
+\bibliography{pplan}
+\bibliographystyle{unsrt}
 
 \end{document}

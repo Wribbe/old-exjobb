@@ -6,14 +6,16 @@ DIR_TEX := tex
 
 all: $(INPUTS) $(PDFS)
 
+%.pdf : %.tex %.bbl $(INPUTS)
+	pdflatex $(filter %.tex,$^)
+
 %.pdf : %.tex $(INPUTS)
 	pdflatex $(filter %.tex,$^)
 
-%.pdf : %.tex %.bib $(INPUTS)
-	pdflatex $(filter %.tex,$^)
-	bibtex $(patsubst %.bib,%,$(filter %.bib,$^))
-	pdflatex $(filter %.tex,$^)
-	pdflatex $(filter %.tex,$^)
+%.bbl : %.bib
+	pdflatex $(patsubst %.bbl,%.tex,$@)
+	bibtex $(patsubst %.bbl,%,$@)
+	pdflatex $(patsubst %.bbl,%.tex,$@)
 
 tex/tidsschema.tex : py/tids.py | $(DIR_TEX)
 	@python $^ > $@
