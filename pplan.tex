@@ -1,7 +1,7 @@
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[english,swedish]{babel}
+\usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{wasysym}
 \usepackage{pgfgantt}
@@ -97,10 +97,10 @@
 %diskuteras med huvudhandledaren.
 
   % Arbetstitel.
-  Examensarbete. \\
+  Degree project \\
   \ \\
   {\large
-    \textbf{Projektplan för examensarbete}
+    \textbf{Project plan for degree project}
   } \\
   %} \\
   %--- \\
@@ -114,7 +114,13 @@
 
 \end{center}
 
-\section*{Innehåll}
+\tableofcontents
+
+\begin{center}
+---
+\end{center}
+
+\section{Project Purpose}
   Arbetet kommer att undersöka i vilken utsträckning forsknings-resultat
   från, samt teorier inom området människa-datorinteraktion, MDI\cite{c_mdi},
   eller engelska motsvarigheten, HDI\cite{c_hci} kan underlätta användningen av
@@ -123,7 +129,7 @@
   positiv inverkan på användareupplevelsen, och sekundärt, om den är stor nog
   att motivera det initial arbetet.
 
-\section*{Avgränsningar}
+\section{Project Restrictions}
 
   Arbetet kommer främst fokusera på att analysera interaktioner med
   Shotgun\cite{c_shotgun}, en mjukvaran som används för att skapa och hålla
@@ -131,14 +137,14 @@
   att det finns ytterligare system som hade varit intressanta att analysera,
   men som ej kommer utföras på grund av begränsad tid.
 
-  \subsection*{Arbetsflöden}
+  \subsection{Arbetsflöden}
 
     Målet är att identifiera mellan tre till tio ofta förekommande arbetsflöden
     som består av minst tre distinkta handlingar som exempelvis fil-operationer
     och mus-klick där användare upplevt irritation eller att det kan ske
     förbättringar.
 
-  \subsection*{Personal och Tid}
+  \subsection{Personal och Tid}
 
     Vid tre utförda tester rekommenderas minst fyra till fem personer i varje
     grupp för att upptäcka majoriteten av de problem som
@@ -147,7 +153,7 @@
     Då tid är en bristvara är målet att tillbringa runt 60 minuter med varje
     person och testtillfälle, med en övre gräns på 90 minuter.
 
-\section*{Metodik}
+\section{Considered Methods}
 
   Övergripande kommer studien
 
@@ -173,8 +179,16 @@ Simple Single-Room Setup \cite[p.101]{c_handbook_usability}
   %Inledningsvis kommer intervjuer ske med de anställda för att identifiera
   %upplevda problem-områden samt skaffa sig ett initialvärde för att
 
+\newgeometry{left=3cm, bottom=3cm}
+\begin{landscape}
+  \section{Time schedule}
+  \centering
+  \input{tex/tidsschema.tex}
+\end{landscape}
+\restoregeometry
+
 \newpage
-\section*{Mätningar}
+\section{Surveys}
 
 \begin{question}
   \qline{Alias}
@@ -192,16 +206,9 @@ Simple Single-Room Setup \cite[p.101]{c_handbook_usability}
   \qmline[4]{What positive aspects do you experience with the software}
 \end{question}
 
-\newgeometry{left=3cm, bottom=3cm}
-\begin{landscape}
-  \section*{Tidsschema}
-  \centering
-  \input{tex/tidsschema.tex}
-\end{landscape}
-\restoregeometry
 
 \newpage
-
+\section{Citations}
 \bibliography{pplan}
 \bibliographystyle{unsrt}
 

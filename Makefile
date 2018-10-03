@@ -8,6 +8,7 @@ all: $(INPUTS) $(PDFS)
 
 %.pdf : %.tex %.bbl $(INPUTS)
 	pdflatex $(filter %.tex,$^)
+	pdflatex $(filter %.tex,$^)
 
 %.pdf : %.tex $(INPUTS)
 	pdflatex $(filter %.tex,$^)
