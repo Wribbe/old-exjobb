@@ -1,14 +1,15 @@
 
 PDFS := $(patsubst %.tex,%.pdf,$(wildcard *.tex))
-BBLS := $(patsubst %._raw.bbl,%.bbl,$(wildcard *raw.bib))
+BBLS := $(patsubst %_raw.bib,%.bib,$(wildcard *raw.bib))
+BIBS := $(patsubst %.bib,%.bbl,$(BBLS))
 
 INPUTS := tex/tidsschema.tex
 
 DIR_TEX := tex
 
-all: $(INPUTS) $(PDFS) $(BBLS)
+all: $(INPUTS) $(BBLS) $(BIBS) $(PDFS)
 
-%.pdf : %.tex %.bbl $(INPUTS)
+%.pdf : %.tex %.bbl %_raw.bib $(INPUTS)
 	pdflatex $(filter %.tex,$^)
 	pdflatex $(filter %.tex,$^)
 
