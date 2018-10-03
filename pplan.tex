@@ -12,7 +12,15 @@
 \usepackage{xifthen}
 \usepackage{setspace}
 \usepackage{pgffor}
-\usepackage{biblatex}
+
+\usepackage[autostyle]{csquotes}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  url=true,
+  sorting=none
+]{biblatex}
+\bibliography{pplan}
 
 \setlength{\parindent}{0cm}
 
@@ -168,7 +176,7 @@
 
   \subsection{Number of Participants}
 
-    In \citeTitle{c_handbook_usability}
+    In \citetitle{c_handbook_usability}
 
     %Vid tre utförda tester rekommenderas minst fyra till fem personer i varje
     %grupp för att upptäcka majoriteten av de problem som
@@ -237,7 +245,7 @@ Simple Single-Room Setup \cite[p.101]{c_handbook_usability}
 
 \newpage
 \section{Citations}
-\bibliography{pplan}
-\bibliographystyle{unsrt}
+\cite{c_mdi}
+\printbibliography
 
 \end{document}
