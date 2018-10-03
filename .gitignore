@@ -8,3 +8,6 @@ crypt
 tex
 pplan.out
 *.toc
+*.xml
+pplan.bib
+*.bcf
