@@ -1,6 +1,5 @@
 *.aux
 *.log
-*.pdf
 brev
 *.bbl
 *.blg
@@ -11,3 +10,4 @@ pplan.out
 *.xml
 pplan.bib
 *.bcf
+out

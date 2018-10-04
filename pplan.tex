@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[10pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -12,6 +12,7 @@
 \usepackage{xifthen}
 \usepackage{setspace}
 \usepackage{pgffor}
+\usepackage{graphics}
 
 \usepackage[autostyle]{csquotes}
 \usepackage[
@@ -21,6 +22,8 @@
   sorting=none
 ]{biblatex}
 \bibliography{pplan}
+%\usepackage{fontspec}
+%\setmainfont[Ligatures=TeX]{Georgia}
 
 \setlength{\parindent}{0cm}
 
@@ -189,7 +192,7 @@
     In \citetitle{c_handbook_usability}\cite[p.126]{c_handbook_usability}, the
     authors recommend that in order to \myenquote{expose the vast majority of
       usability problems} a project that has three tests planned should aim at
-    a group size of four to five people in each group, which results in twelve
+    a group size of four to five people in each group, resulting in twelve
     to fifteen participants in total. The number of total participants is not a
     restriction in of itself, but ensuring a good mix of roles in each group
     and compensating for biases from, as an example, longer usage of Shotgun
@@ -215,27 +218,157 @@
     Since all information regarding the software products created at Massive
     and the internal structure of their employees is covered by an
     NDA\cite{c_nda}, participants will only be known as aliases in the recorded
-    data. In the case where disclosure of project information or internal work
-    flows would serve to help prove a point, validate a result or ease the
-    understating of the reader, the data or information will be replaced with
-    generated data of the same type and context.
+    data. If disclosure of project information or internal work
+    flows would serve to help prove a point, validate a result or improve the
+    understating of the reader the data in question will be replaced with
+    obfuscated data conveying the same type of relevant information.
 
+\newpage
 \section{Considered Methods}
 
-  Övergripande kommer studien
+  In order to successfully complete this project, four distinct phases must be
+  executed at least once,
+  \textit{Information Gathering},
+  \textit{Data Analysis},
+  \textit{Generating Results} and
+  \textit{Presentation of Results}.
 
-Thinking Aloud \cite[p.204]{c_handbook_usability}
-Simple Single-Room Setup \cite[p.101]{c_handbook_usability}
+  \begin{figure}[!h]
+    \center
+    \includegraphics{images/project_cykle.pdf}
+    \caption{Schematic of single iteration cycle without
+      presentation.\label{fig_schematic_cycle}}
+  \end{figure}
 
-  Inledningsvis kommer tre till fyra personer att väljas ut till en
-  pilotstudie för att säkerställa en korrekt riktning på testuppställningen och
-  frågor.
+  This section will describe the considered methods of each of these phases in
+  more detail.
 
-  För att etablera ett startvärde att jämföra mot samt få en överblick, kommer
-  inledande intervjuer och enkäter om hur den nuvarande processen upplevs
-  utföras bland utvecklare och chefer. \\
+  \subsection{Information Gathering}
 
-  [ ... ]
+    \subsubsection{Quantitative versus Qualitative}
+      First There is a distinction to be made regarding qualitative and
+      quantitative data. Examples of quantitative measurements are,
+      \myenquote{Count of calls to the help desk} and \myenquote{Count of user
+        manual accesses}\cite[p.89]{c_handbook_usability}, in other words,
+      information that is easy to enumerate and describe as values. Qualitative
+      data and answers are more free form and can usually not be enumerated or
+      reduced to a number. Among the examples of what classifies as qualitative
+      data are,
+      \myenquote{Wow, I'm very, very impressed} and
+      \myenquote{Can I please leave now -- keep my mony and the
+        product}\cite[p.90]{c_handbook_usability}.
+%    Information relevant
+%    Gathering information for this project will initially
+
+    \subsubsection{Surveys and Interviews}
+      These methods can gather both qualitative and qualitative information
+      and are very flexible in how they can be constructed to plumb a specific
+      part of the process if it becomes extra interesting.
+      This type of data gathering will be the main gathering method in the
+      pilot and early prototyping stage of the project.
+
+    \subsubsection{Prototypes and Observations}
+      Past the initial prototyping and pilot stage, interaction with the current
+      prototype can be analysed, and the results folded into the next iteration
+      cycle. This type of observations makes it possible to measure
+      quantitative data such as, time to completion of task, number of clicks
+      to reach intended targets, etc. It can also become a good source for
+      qualitative data, especially when encouraging participant to
+      \textit{Think Aloud}\cite[p.54]{c_handbook_usability}, see below.
+
+    \subsubsection{Thinking aloud}
+      Asking test participants to produce a \textit{running commentary}
+      by narrating what they are doing in real time is encouraged in order to
+      get insight in why a problem exists and how a user would try to get
+      around it. The method can also reveal important clues of how the user
+      views and thinks about the system, which can then be compared to the
+      intended design goal. It is however important to recognize that if
+      precise timings are tracked, narrating should be avoided, since it
+      slows down the actions of the tester\cite[p.54]{c_handbook_usability}.
+
+  \subsection{Work Flow and Data Analysis}
+
+    Extracting results from the acquired data and folding it back into the
+    prototype and surveys will be an continuous process. The following section
+    will highlight work flows and methods of analyzing the data that seem
+    especially interesting.
+
+    \subsubsection{Iteration, The Pilot and Prototyping}
+
+      As described above, the goal is to work in a continuous state of iteration,
+      shown schematically in figure \ref{fig_schematic_cycle}. In order to not
+      waste valuable time by heading in the wrong direction, a pilot will be
+      conducted. A pool of three to four employees will be used to provide
+      feedback for the pilot phase, preferably someone from a management
+      position together with a representative from each distinct discipline
+      present in the team. In order to avoid biasing, these people will only be
+      consulted for feedback during the pilot. Iteration on the pilot will
+      continue either until the result is deemed acceptabel, nothing more of
+      worth is gleaned, or the alloted time runs out.
+
+    \subsubsection{Abandoning the Pilot}
+
+      It is worth pointing out that the purpose of the pilot is not to generate
+      ready-to-use software, surveys or other material. Rather, the pilot is
+      done in order to uncover if the initial issues are the correct ones, the
+      chosen methodology works, the interface framework is understandable
+      enough and runs, etc. Since it is typical that the final stage of the
+      prototype is built on faulty and corrected assumptions, it should not be
+      used as is, rather the final assumptions should be taken into account and
+      used in order to create a new basis.
+
+    \subsubsection{Archetype Users, Personas and Scenarios}
+
+      Archetype users or personas is a way to compress and present relevant
+      information about the users of a product. A persona is an evidence-based
+      user sketch that is a stand-in for a larger user group and represents
+      their typical behaviour patterns and
+      goals\cite[p.331]{c_handbook_usability}. \\
+
+      Scenarios is a way to group related test-tasks and give them context. The
+      scenario should be realistic with the correct motivation, match
+      participants experience, retain any natural task order and not contain
+      unnecessary jargon or cues to action \cite[p.182]{c_handbook_usability}.
+
+  \subsection{Presentation of Results}
+
+    The point of this project is to produce a result, both in the sense of
+    software that tries to provide a solution to a perceived problem, and data
+    points supporting or rejecting applications of usability-theory.
+
+    \subsubsection{Intermittent}
+
+      Presentation of intermittent results will manly include the current state
+      of the interface and surveys together with any new assumptions about the
+      process. This information will be delivered verbally, or at most, written
+      up in a document or email and distributed to the team or project
+      supervisor.
+
+    \subsubsection{Final}
+
+      The final presentation includes a full report and verbal presentation
+      with an accompanying slide-deck. Here, the final conclusions and results
+      of the project will be presented together with a summary of their
+      theoretical backing.
+
+%  In order to gather eno
+%
+%  There are several different
+%
+%  Övergripande kommer studien
+%
+%Thinking Aloud \cite[p.204]{c_handbook_usability}
+%Simple Single-Room Setup \cite[p.101]{c_handbook_usability}
+%
+%  Inledningsvis kommer tre till fyra personer att väljas ut till en
+%  pilotstudie för att säkerställa en korrekt riktning på testuppställningen och
+%  frågor.
+%
+%  För att etablera ett startvärde att jämföra mot samt få en överblick, kommer
+%  inledande intervjuer och enkäter om hur den nuvarande processen upplevs
+%  utföras bland utvecklare och chefer. \\
+%
+%  [ ... ]
 
 
 
@@ -248,7 +381,8 @@ Simple Single-Room Setup \cite[p.101]{c_handbook_usability}
 
 \newgeometry{left=3cm, bottom=3cm}
 \begin{landscape}
-  \section{Time schedule}
+  \section{Time schedule} \flushleft{(Number of days from start)}
+  \ \\
   \centering
   \input{tex/tidsschema.tex}
 \end{landscape}
@@ -274,6 +408,7 @@ Simple Single-Room Setup \cite[p.101]{c_handbook_usability}
 \end{question}
 
 \newpage
-\printbibliography[heading=bibintoc]
+%\printbibliography[heading=bibintoc]
+\printbibliography
 
 \end{document}
