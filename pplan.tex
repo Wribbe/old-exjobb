@@ -4,6 +4,7 @@
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{wasysym}
+\usepackage{amssymb}
 \usepackage{pgfgantt}
 \usepackage{pdflscape}
 \usepackage{geometry}
@@ -30,22 +31,20 @@
 \newcounter{countQuestions}
 \newenvironment{question}
   {%
-%    \begin{doublespacing}
   }%
   {%
-%    \end{doublespacing}
   }%
 
 \newcommand{\qmline}[2][]{%
-  #2? \\ \ \\
+  #2 \\ \ \\
   \ifthenelse{\isempty{#1}}%
-    {\rule{\textwidth}{0.4pt} \\ \\ \rule{\textwidth}{0.4pt} \\ }%first is empty.
+    {\rule{\textwidth}{0.4pt} }%first is empty.
     {%
-      \foreach \index in {1, ..., #1} {%
+      \foreach \index in {1, ..., \numexpr(#1-1)} {%
         \rule{\textwidth}{0.4pt} \\ \\
       }
+      \rule{\textwidth}{0.4pt}
     }%first is not empty.
-    \\
 }
 
 \newcommand{\qline}[2][]{%
@@ -63,6 +62,11 @@
   %  \fullmoon \ Most of the time  \hh
   %  \fullmoon \ Always
   \ \\ \\
+}
+\newcommand{\qyesno}[1]{%
+  \textbf{#1}: \\
+  \ \hspace{1cm} $\square$ Yes \\
+  \ \hspace{1cm} $\square$ No
 }
 
 \newcommand{\myenquote}[1]{\enquote{\itshape#1}}
@@ -400,14 +404,16 @@
     \fullmoon \ $51+$
     \ \\ \\
   \qline[Gameplay Animator]{Position}
-  \qscale{I am often annoyed by the software}
-  \qscale{I am often annoyed by quizzes}
-  \qscale{I always know where in the process my colleges are}
-  \qmline{What problems do you experience with the software}
-  \qmline[4]{What positive aspects do you experience with the software}
+  \qscale{I am often annoyed by Shotgun}
+  \qscale{I always know where in the project process my colleges are}
+  \qscale{I think Shtogun provides all functionality I need}
+  \qmline[3]{State three positive things about Shotgun:} \\
+  \qmline[3]{State three negative things about Shotgun:} \\
+%  \qyesno{test}
+  \qmline{Approximately, how many hours have you spent in Shotgun?} \\
+  \qmline[4]{Comments and Suggestions}
 \end{question}
 
-\newpage
 %\printbibliography[heading=bibintoc]
 \printbibliography
 
