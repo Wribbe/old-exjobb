@@ -90,15 +90,15 @@ while day_current < days_total:
     day_current += split + 1
 
 pilot = [
-         ("Förintervjuer", 4),
+         ("Pre-interviews", 4),
          ("mod", -2),
-         ("Utkast formulär", 3),
+         ("Draft pilot-survey", 3),
          ("mod", -2),
-         ("Utvärdering formulär", 3),
+         ("Evaluation pilot-survey", 3),
          ("mod", -1),
-         ("Implementering pilot-UI", 7),
+         ("Implementation pilot-UI", 7),
          ("mod", -3),
-         ("Utvärdering pilot-UI", 3),
+         ("Evaluation pilot-UI", 3),
         ]
 
 def spread(l, start=1):
@@ -112,13 +112,13 @@ def spread(l, start=1):
         current += length
     return current-1, tuples
 
-pilot_start = 3
+pilot_start = 6
 pilot_end, pilot_tasks = spread(pilot, start=pilot_start)
 
 litstudy = [
-    ("Hitta relevant litteratur", 12),
+    ("Find relevant literature", 12),
     ("mod", -4),
-    ("Utvärdera litteratur", 7),
+    ("Evaluate literature", 7),
 ]
 
 litstudy_start = pilot_end + 1
@@ -126,11 +126,11 @@ litstudy_end, litstudy_tasks = spread(litstudy, start=litstudy_start)
 
 pilot2_num = 8
 pilot2 = [
-    ("Implementering utvärdering-UI", pilot2_num),
+    ("Implement main test UI", pilot2_num),
     ("mod", -pilot2_num),
-    ("Färdigställ utvärdering-formulär", pilot2_num),
+    ("Write main test surveys", pilot2_num),
     ("mod", -4),
-    ("Hitta kandidater för utvärdering", 4),
+    ("Find main test candidates", 4),
 ]
 
 pilot2_start = litstudy_end + 1
@@ -138,18 +138,18 @@ pilot2_end, pilot2_tasks = spread(pilot2, start=pilot2_start)
 
 
 utvärdering1 = [
-    ("Genomförande", 5),
-    ("Sammanställning", 2),
-    ("Litteratursök vid behov", 2),
+    ("Perform Testing", 5),
+    ("Evaluation of results", 3),
+#    ("Litteratursök vid behov", 2),
 ]
 
 utvärdering1_start = pilot2_end + 1
 utvärdering1_end, utvärdering1_tasks = spread(utvärdering1, start=utvärdering1_start)
 
 iter1 = [
-    ("Modifiering UI", 4),
+    ("Modify UI", 4),
     ("mod", -4),
-    ("Modifiering formulär", 4),
+    ("Modify surveys", 4),
 ]
 
 iter1_start = utvärdering1_end+1
@@ -157,9 +157,9 @@ iter1_end, iter1_tasks = spread(iter1, start=iter1_start)
 
 
 utvärdering2 = [
-    ("Genomförande", 5),
-    ("Sammanställning", 2),
-    ("Litteratursök vid behov", 2),
+    ("Perform Testing", 5),
+    ("Evaluation of results", 3),
+   # ("Litteratursök vid behov", 2),
 ]
 
 utvärdering2_start = iter1_end + 1
@@ -172,9 +172,9 @@ utvärdering3_start = iter2_end + 1
 utvärdering3_end, utvärdering3_tasks = spread(utvärdering2, start=utvärdering3_start)
 
 sammanställning = [
-    ("Bearbeta data", 15),
+    ("Evaluate test data", 15),
     ("mod", -5),
-    ("Slutintervjuer", 5),
+    ("Closing interviews", 5),
 ]
 
 sammanställning_start = utvärdering3_end+1
@@ -183,32 +183,32 @@ sammanställning_end, sammanställning_tasks = spread(sammanställning,
 
 
 tasks = [
-    ('T', 1, 2, "Uppstart"),
-    ('G', pilot_start, pilot_end, "Pilot"),
+    ('T', 1, 5, "Wind-up"),
+    ('G', pilot_start, pilot_end, "Pilot test-study"),
     *pilot_tasks,
-    ('G', litstudy_start, litstudy_end, "Literaturutvärdering"),
+    ('G', litstudy_start, litstudy_end, "Literature study"),
     *litstudy_tasks,
-    ('G', pilot2_start, pilot2_end, "Förbered utvärdering"),
+    ('G', pilot2_start, pilot2_end, "Prepare for main tests"),
     *pilot2_tasks,
-    ('M', pilot2_end, 0, "Frys UI och formulär"),
-    ('G', utvärdering1_start, utvärdering1_end, "Utvärdering gränssnitt \#1"),
+    ('M', pilot2_end, 0, "Freeze UI and surveys"),
+    ('G', utvärdering1_start, utvärdering1_end, "Evaluate interface\#1"),
     *utvärdering1_tasks,
-    ('G', iter1_start, iter1_end, "Återkoppling \#1"),
+    ('G', iter1_start, iter1_end, "Re-integration \#1"),
     *iter1_tasks,
-    ('M', iter1_end, 0, "Frys UI och formulär\#2"),
-    ('G', utvärdering2_start, utvärdering2_end, "Utvärdering gränssnitt \#2"),
+    ('M', iter1_end, 0, "Freeze UI and surveys\#2"),
+    ('G', utvärdering2_start, utvärdering2_end, "Evaluate interface \#2"),
     *utvärdering2_tasks,
-    ('G', iter2_start, iter2_end, "Återkoppling \#2"),
+    ('G', iter2_start, iter2_end, "Re-integration \#2"),
     *iter2_tasks,
-    ('M', iter2_end, 0, "Frys UI och formulär\#3"),
-    ('G', utvärdering3_start, utvärdering3_end, "Utvärdering gränssnitt \#3"),
+    ('M', iter2_end, 0, "Freeze UI and surveys\#3"),
+    ('G', utvärdering3_start, utvärdering3_end, "Evaluate interface \#3"),
     *utvärdering3_tasks,
-    ('G', sammanställning_start, sammanställning_end, "Sammanställning"),
+    ('G', sammanställning_start, sammanställning_end, "Summarising test data"),
     *sammanställning_tasks,
-    ('T', 76, 87, "Opponering"),
-    ('T', 38, 90, "Skriva uppsats"),
-    ('T', 85, 96, "Presentationsslides"),
-    ('T', days_total-6, days_total, "Presentationsförberedelser"),
+    ('T', 76, 87, "Opposition of Thesis"),
+    ('T', 38, 90, "Write report"),
+    ('T', 85, 96, "Create slides"),
+    ('T', days_total-6, days_total, "Preparation presentation"),
     ('M', days_total, 0, "Presentation"),
 ]
 
