@@ -1,0 +1,86 @@
+\documentclass[a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\usepackage{mathptmx}
+\usepackage{helvet}
+
+\usepackage{calc}
+
+\setlength{\parindent}{0cm}
+
+
+\begin{document}
+
+\newcommand\YUGE{\fontsize{30}{42}\selectfont}
+
+% Begin title page.
+{\color[rgb]{0.612,0.376,0.075}
+  \thispagestyle{empty}
+
+  \def\colorBorder{0.8cm}
+  \def\titleBoxWidth{15.0cm}
+  \definecolor{bgcolor}{rgb}{0.835,0.824,0.769}
+
+  \begin{tikzpicture}[remember picture, overlay]
+    \coordinate (topLeft) at ($%
+      (current page.north west) + (\colorBorder, -\colorBorder)%
+    $);
+
+    \coordinate (bottomRight) at ($%
+      (current page.south east) + (-\colorBorder, \colorBorder)%
+    $);
+
+    \fill[fill=bgcolor] (topLeft) rectangle (bottomRight);
+  \end{tikzpicture}
+
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[fill=white] (0.5cm, 0cm) rectangle +(\titleBoxWidth+1cm, -8cm);
+  \end{tikzpicture}
+
+  \fontfamily{phv}\selectfont
+  \vspace{1cm}
+  \vspace{1cm}
+  \begin{minipage}{\paperwidth}
+    \begin{minipage}{1.0cm}
+      \
+    \end{minipage}
+    \begin{minipage}{\titleBoxWidth}
+      \textrm{\YUGE \bfseries
+    %    Title on 2 rows \vspace{0.5cm} \\
+        Title on 1 row
+      } \\ \vspace{3mm}
+      \hspace{-2mm}\noindent\rule{{\titleBoxWidth-2mm}}{0.3mm} \\
+      \vspace{-5mm} \\
+      \textrm{\LARGE
+        First Name Last Name and
+        First Name Last Name
+      }\vspace{5mm} \\
+      {\small\bfseries
+        DIVISION OF PRODUCT DEVELOPMENT | DEPARTMENT OF DESIGN SCIENCES \\
+        FACULTY OF ENGINEERING LTH | LUND UNIVERSITY \\
+        2018
+        \vspace{0.6cm} \\
+        MASTER THESIS
+      }
+    \end{minipage}
+  \end{minipage}
+
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=center] at ($ (current page.south east) + (-4.2cm, 4.2cm) $) {
+        \includegraphics[width=10cm]{LU-logotyp-tryck-digitalt/EPS_for_tryck/Engelska/LundUniversity_C2line_CMYK_cut.pdf}
+    };
+  \end{tikzpicture}
+}
+
+\newpage
+
+
+\end{document}
