@@ -8,7 +8,7 @@
 
 == TODO || +todo ==
 [[todo-done|done]]
-* [S] - Use taskarena with master thesis work.  #5c285589
+* [X] - Use taskarena with master thesis work.  #5c285589
 * [ ] - Email draft of thesis design to supervisor.  #70293a9c
   * [ ] - Read the design document throughly.  #edf0ef09
   * [ ] - Adjust the LaTeX template to match.  #24409892

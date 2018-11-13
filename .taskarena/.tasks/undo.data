@@ -80,3 +80,7 @@ time 1542108896
 old [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a,24409892-f84a-4dae-adb9-59e2ff8a01ea,93217e73-15d9-4a38-ac4b-13ca8938217a" description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
 new [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a,24409892-f84a-4dae-adb9-59e2ff8a01ea,93217e73-15d9-4a38-ac4b-13ca8938217a" description:"- Email draft of thesis design to supervisor." entry:"1542108839" modified:"1542108896" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
 ---
+time 1542108932
+old [description:"- Use taskarena with master thesis work." entry:"1542108795" modified:"1542108797" project:"master_thesis" start:"1542108797" status:"pending" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+new [description:"- Use taskarena with master thesis work." end:"1542108932" entry:"1542108795" modified:"1542108932" project:"master_thesis" status:"completed" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+---
