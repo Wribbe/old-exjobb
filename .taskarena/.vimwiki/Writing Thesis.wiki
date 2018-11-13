@@ -1,0 +1,15 @@
+= Master Thesis || project:master_thesis =
+
+== Suggestions || +sugesstions ==
+[[suggestions-done|done]]
+
+== Improvements || +improvements ==
+[[improvements-done|done]]
+
+== TODO || +todo ==
+[[todo-done|done]]
+* [S] - Use taskarena with master thesis work.  #5c285589
+* [ ] - Email draft of thesis design to supervisor.  #70293a9c
+  * [ ] - Read the design document throughly.  #edf0ef09
+  * [ ] - Adjust the LaTeX template to match.  #24409892
+  * [ ] - (Re-)write the current text to fit the new format.  #93217e73

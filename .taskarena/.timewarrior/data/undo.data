@@ -1,0 +1,4 @@
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181113T113317Z","tags":["- Use taskarena with master thesis work.","master_thesis","todo"]}

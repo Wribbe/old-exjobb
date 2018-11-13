@@ -1,0 +1,82 @@
+time 1542108547
+new [description:"This is a thing." entry:"1542108547" modified:"1542108547" status:"pending" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+---
+time 1542108569
+old [description:"This is a thing." entry:"1542108547" modified:"1542108547" status:"pending" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+new [description:"This is a thing." end:"1542108569" entry:"1542108547" modified:"1542108569" status:"deleted" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+---
+time 1542108572
+old [description:"This is a thing." end:"1542108569" entry:"1542108547" modified:"1542108569" status:"deleted" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+new [description:"This is a thing." entry:"1542108547" modified:"1542108572" status:"pending" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+---
+time 1542108594
+old [description:"This is a thing." entry:"1542108547" modified:"1542108572" status:"pending" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+new [description:"This is a thing." end:"1542108594" entry:"1542108547" modified:"1542108594" status:"deleted" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+---
+time 1542108606
+new [description:"This is another thing." entry:"1542108606" modified:"1542108606" status:"pending" tags:"todo,thesis" uuid:"2ebc0ced-c058-48f6-a0f3-e3302c2c9ea1"]
+---
+time 1542108626
+new [description:"This is a third thing." entry:"1542108626" modified:"1542108626" project:"master_thesis" status:"pending" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+---
+time 1542108641
+new [description:"This is an indented thing." entry:"1542108641" modified:"1542108641" project:"master_thesis" status:"pending" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+---
+time 1542108648
+old [description:"This is a third thing." entry:"1542108626" modified:"1542108626" project:"master_thesis" status:"pending" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+new [depends:"c0b25b8a-40d0-402c-aee4-117b4d96fd74" description:"This is a third thing." entry:"1542108626" modified:"1542108648" project:"master_thesis" status:"pending" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+---
+time 1542108665
+new [description:"This is a furter indentend thing." entry:"1542108665" modified:"1542108665" project:"master_thesis" status:"pending" uuid:"f87b78b7-09ba-4488-ad82-7122d9cea866"]
+---
+time 1542108665
+old [description:"This is an indented thing." entry:"1542108641" modified:"1542108641" project:"master_thesis" status:"pending" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+new [depends:"f87b78b7-09ba-4488-ad82-7122d9cea866" description:"This is an indented thing." entry:"1542108641" modified:"1542108665" project:"master_thesis" status:"pending" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+---
+time 1542108680
+old [description:"This is another thing." entry:"1542108606" modified:"1542108606" status:"pending" tags:"todo,thesis" uuid:"2ebc0ced-c058-48f6-a0f3-e3302c2c9ea1"]
+new [description:"This is another thing." end:"1542108680" entry:"1542108606" modified:"1542108680" status:"deleted" tags:"todo,thesis" uuid:"2ebc0ced-c058-48f6-a0f3-e3302c2c9ea1"]
+---
+time 1542108680
+old [depends:"c0b25b8a-40d0-402c-aee4-117b4d96fd74" description:"This is a third thing." entry:"1542108626" modified:"1542108648" project:"master_thesis" status:"pending" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+new [depends:"c0b25b8a-40d0-402c-aee4-117b4d96fd74" description:"This is a third thing." end:"1542108680" entry:"1542108626" modified:"1542108680" project:"master_thesis" status:"deleted" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+---
+time 1542108680
+old [description:"This is a furter indentend thing." entry:"1542108665" modified:"1542108665" project:"master_thesis" status:"pending" uuid:"f87b78b7-09ba-4488-ad82-7122d9cea866"]
+new [description:"This is a furter indentend thing." end:"1542108680" entry:"1542108665" modified:"1542108680" project:"master_thesis" status:"deleted" uuid:"f87b78b7-09ba-4488-ad82-7122d9cea866"]
+---
+time 1542108680
+old [depends:"f87b78b7-09ba-4488-ad82-7122d9cea866" description:"This is an indented thing." entry:"1542108641" modified:"1542108665" project:"master_thesis" status:"pending" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+new [depends:"f87b78b7-09ba-4488-ad82-7122d9cea866" description:"This is an indented thing." end:"1542108680" entry:"1542108641" modified:"1542108680" project:"master_thesis" status:"deleted" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+---
+time 1542108795
+new [description:"- Use taskarena with master thesis work." entry:"1542108795" modified:"1542108795" project:"master_thesis" status:"pending" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+---
+time 1542108797
+old [description:"- Use taskarena with master thesis work." entry:"1542108795" modified:"1542108795" project:"master_thesis" status:"pending" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+new [description:"- Use taskarena with master thesis work." entry:"1542108795" modified:"1542108797" project:"master_thesis" start:"1542108797" status:"pending" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+---
+time 1542108839
+new [description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108839" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+---
+time 1542108864
+new [description:"- Read the design document throughly." entry:"1542108864" modified:"1542108864" project:"master_thesis" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+---
+time 1542108864
+old [description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108839" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+new [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a" description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108864" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+---
+time 1542108890
+new [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+---
+time 1542108890
+new [description:"- (Re-)write the current text to fit the new format." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"93217e73-15d9-4a38-ac4b-13ca8938217a"]
+---
+time 1542108890
+old [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a" description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108864" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+new [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a,24409892-f84a-4dae-adb9-59e2ff8a01ea,93217e73-15d9-4a38-ac4b-13ca8938217a" description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+---
+time 1542108896
+old [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a,24409892-f84a-4dae-adb9-59e2ff8a01ea,93217e73-15d9-4a38-ac4b-13ca8938217a" description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+new [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a,24409892-f84a-4dae-adb9-59e2ff8a01ea,93217e73-15d9-4a38-ac4b-13ca8938217a" description:"- Email draft of thesis design to supervisor." entry:"1542108839" modified:"1542108896" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+---

@@ -1,0 +1,5 @@
+[depends:"f87b78b7-09ba-4488-ad82-7122d9cea866" description:"This is an indented thing." end:"1542108680" entry:"1542108641" modified:"1542108680" project:"master_thesis" status:"deleted" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+[description:"This is a furter indentend thing." end:"1542108680" entry:"1542108665" modified:"1542108680" project:"master_thesis" status:"deleted" uuid:"f87b78b7-09ba-4488-ad82-7122d9cea866"]
+[depends:"c0b25b8a-40d0-402c-aee4-117b4d96fd74" description:"This is a third thing." end:"1542108680" entry:"1542108626" modified:"1542108680" project:"master_thesis" status:"deleted" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+[description:"This is another thing." end:"1542108680" entry:"1542108606" modified:"1542108680" status:"deleted" tags:"todo,thesis" uuid:"2ebc0ced-c058-48f6-a0f3-e3302c2c9ea1"]
+[description:"This is a thing." end:"1542108594" entry:"1542108547" modified:"1542108594" status:"deleted" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
