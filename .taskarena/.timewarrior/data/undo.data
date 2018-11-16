@@ -10,3 +10,15 @@ txn:
   type: interval
   before: 
   after: {"start":"20181113T113317Z","end":"20181113T113532Z","tags":["- Use taskarena with master thesis work.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181113T113617Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181113T113617Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181113T113617Z","end":"20181113T114659Z","tags":["- Read the design document throughly.","master_thesis","todo"]}

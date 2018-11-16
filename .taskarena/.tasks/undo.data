@@ -84,3 +84,11 @@ time 1542108932
 old [description:"- Use taskarena with master thesis work." entry:"1542108795" modified:"1542108797" project:"master_thesis" start:"1542108797" status:"pending" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
 new [description:"- Use taskarena with master thesis work." end:"1542108932" entry:"1542108795" modified:"1542108932" project:"master_thesis" status:"completed" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
 ---
+time 1542108977
+old [description:"- Read the design document throughly." entry:"1542108864" modified:"1542108864" project:"master_thesis" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+new [description:"- Read the design document throughly." entry:"1542108864" modified:"1542108977" project:"master_thesis" start:"1542108977" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+---
+time 1542109619
+old [description:"- Read the design document throughly." entry:"1542108864" modified:"1542108977" project:"master_thesis" start:"1542108977" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+new [description:"- Read the design document throughly." entry:"1542108864" modified:"1542109619" project:"master_thesis" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+---
