@@ -10,6 +10,6 @@
 [[todo-done|done]]
 * [X] - Use taskarena with master thesis work.  #5c285589
 * [ ] - Email draft of thesis design to supervisor.  #70293a9c
-  * [S] - Read the design document throughly.  #edf0ef09
-  * [ ] - Adjust the LaTeX template to match.  #24409892
+  * [X] - Read the design document throughly.  #edf0ef09
+  * [S] - Adjust the LaTeX template to match.  #24409892
   * [ ] - (Re-)write the current text to fit the new format.  #93217e73

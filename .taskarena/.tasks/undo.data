@@ -96,3 +96,11 @@ time 1542717346
 old [description:"- Read the design document throughly." entry:"1542108864" modified:"1542109619" project:"master_thesis" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
 new [description:"- Read the design document throughly." entry:"1542108864" modified:"1542717346" project:"master_thesis" start:"1542717346" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
 ---
+time 1542721375
+old [description:"- Read the design document throughly." entry:"1542108864" modified:"1542717346" project:"master_thesis" start:"1542717346" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+new [description:"- Read the design document throughly." end:"1542721375" entry:"1542108864" modified:"1542721375" project:"master_thesis" status:"completed" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+---
+time 1542721377
+old [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+new [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542721377" project:"master_thesis" start:"1542721377" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+---

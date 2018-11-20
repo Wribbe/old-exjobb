@@ -1,3 +1,4 @@
+[description:"- Read the design document throughly." end:"1542721375" entry:"1542108864" modified:"1542721375" project:"master_thesis" status:"completed" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
 [description:"- Use taskarena with master thesis work." end:"1542108932" entry:"1542108795" modified:"1542108932" project:"master_thesis" status:"completed" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
 [depends:"f87b78b7-09ba-4488-ad82-7122d9cea866" description:"This is an indented thing." end:"1542108680" entry:"1542108641" modified:"1542108680" project:"master_thesis" status:"deleted" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
 [description:"This is a furter indentend thing." end:"1542108680" entry:"1542108665" modified:"1542108680" project:"master_thesis" status:"deleted" uuid:"f87b78b7-09ba-4488-ad82-7122d9cea866"]

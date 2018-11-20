@@ -26,3 +26,15 @@ txn:
   type: interval
   before: 
   after: {"start":"20181120T123546Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181120T123546Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181120T123546Z","end":"20181120T134255Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181120T134257Z","tags":["- Adjust the LaTeX template to match.","master_thesis","todo"]}
