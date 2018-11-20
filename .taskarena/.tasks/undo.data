@@ -104,3 +104,7 @@ time 1542721377
 old [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
 new [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542721377" project:"master_thesis" start:"1542721377" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
 ---
+time 1542724836
+old [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542721377" project:"master_thesis" start:"1542721377" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+new [description:"- Adjust the LaTeX template to match." end:"1542724836" entry:"1542108890" modified:"1542724836" project:"master_thesis" status:"completed" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+---

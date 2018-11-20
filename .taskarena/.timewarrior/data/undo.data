@@ -38,3 +38,11 @@ txn:
   type: interval
   before: 
   after: {"start":"20181120T134257Z","tags":["- Adjust the LaTeX template to match.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181120T134257Z","tags":["- Adjust the LaTeX template to match.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181120T134257Z","end":"20181120T144036Z","tags":["- Adjust the LaTeX template to match.","master_thesis","todo"]}
