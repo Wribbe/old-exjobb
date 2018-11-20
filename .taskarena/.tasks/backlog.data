@@ -24,3 +24,4 @@
 {"description":"- Use taskarena with master thesis work.","end":"20181113T113532Z","entry":"20181113T113315Z","modified":"20181113T113532Z","project":"master_thesis","status":"completed","tags":["todo"],"uuid":"5c285589-458b-4d96-8c0b-19a33ba2c2a7"}
 {"description":"- Read the design document throughly.","entry":"20181113T113424Z","modified":"20181113T113617Z","project":"master_thesis","start":"20181113T113617Z","status":"pending","tags":["todo"],"uuid":"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"}
 {"description":"- Read the design document throughly.","entry":"20181113T113424Z","modified":"20181113T114659Z","project":"master_thesis","status":"pending","tags":["todo"],"uuid":"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"}
+{"description":"- Read the design document throughly.","entry":"20181113T113424Z","modified":"20181120T123546Z","project":"master_thesis","start":"20181120T123546Z","status":"pending","tags":["todo"],"uuid":"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"}

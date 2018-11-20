@@ -1,4 +1,4 @@
 [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a,24409892-f84a-4dae-adb9-59e2ff8a01ea,93217e73-15d9-4a38-ac4b-13ca8938217a" description:"- Email draft of thesis design to supervisor." entry:"1542108839" modified:"1542108896" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
-[description:"- Read the design document throughly." entry:"1542108864" modified:"1542109619" project:"master_thesis" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+[description:"- Read the design document throughly." entry:"1542108864" modified:"1542717346" project:"master_thesis" start:"1542717346" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
 [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
 [description:"- (Re-)write the current text to fit the new format." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"93217e73-15d9-4a38-ac4b-13ca8938217a"]
