@@ -11,9 +11,9 @@ for line in lines:
     if line.startswith("#"):
         continue
     for char in line:
-        if char in ['%','&']:
-            if chars[-1] != "\\":
-                chars.append("\\")
+#        if char in ['%','&']:
+#            if chars[-1] != "\\":
+#                chars.append("\\")
         chars.append(char)
     output.append(''.join(chars))
 

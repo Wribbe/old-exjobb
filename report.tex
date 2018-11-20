@@ -2,6 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[english]{babel}
 \usepackage{graphicx}
 
 \usepackage{xcolor}
@@ -10,6 +11,7 @@
 
 \usepackage{mathptmx}
 \usepackage{helvet}
+\usepackage[hidelinks=true]{hyperref}
 
 \usepackage{calc}
 
@@ -21,7 +23,7 @@
 \usepackage[titles]{tocloft}
 \setlength{\cftsubsecindent}{0.3cm}
 \setlength{\cftsubsubsecindent}{0.3cm}
-\renewcommand{\contentsname}{Table of contents}
+\addto\captionsenglish{\renewcommand{\contentsname}{Table of contents}}
 \renewcommand{\cftdot}{}
 \renewcommand{\cftsecfont}{\normalfont\large}
 \renewcommand{\cftsecpagefont}{\normalfont\large}
@@ -37,6 +39,16 @@
 \newcommand\HTwo{\fontsize{16}{8}\selectfont}
 \titleformat{\section}{\normalfont\HOne}{\thesection:}{0.3cm}{}
 \titleformat{\subsection}{\normalfont\HTwo}{\thesubsection:}{0.3cm}{}
+
+% Reference settings.
+\usepackage[autostyle]{csquotes}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  url=true,
+  sorting=none
+]{biblatex}
+\bibliography{report}
 
 
 \begin{document}
@@ -119,6 +131,12 @@
 \section{Discussion and conclusion}
 \section{References}
 \section{Appendices}
+  \cite{c_book_dont_make_me_think}
+  \cite{c_book_dont_make_me_think}
+  \cite{c_book_dont_make_me_think}
+  \cite{c_book_dont_make_me_think}
 \section{Popular science summary}
+
+\printbibliography
 
 \end{document}
