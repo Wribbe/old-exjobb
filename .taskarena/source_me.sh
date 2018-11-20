@@ -25,6 +25,7 @@ HOOK_TIMEW=$DIR_HOOKS/on-modify.timewarrior
 
 FILE_TMP=$ROOT/.temp
 
+PREFIX_TASK="ARENA-TASKS"
 
 export DIR_LOCAL_VIMWIKI=$DIR_LOCAL_VIMWIKI
 export DIR_LOCAL_TASKWIKI=$DIR_LOCAL_TASKWIKI
@@ -68,3 +69,10 @@ export TIMEWARRIORDB=$DIR_LOCAL_TIMEWARRIOR_DB
 
 # Check and setup vimwiki if it does not exist.
 [ -d $DIR_LOCAL_VIMWIKI ] || mkdir $DIR_LOCAL_VIMWIKI
+
+# Git commit tasks function.
+gct() {
+  git add .taskarena
+  git commit -m "$PREFIX_TASK: commit tasks."
+}
+
