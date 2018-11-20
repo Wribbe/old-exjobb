@@ -1,7 +1,6 @@
 \documentclass[a4paper,10pt]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 
@@ -16,6 +15,16 @@
 
 \usepackage[a4paper,top=4.9cm, bottom=4.9cm, left=4.05cm,%
   right=4.05cm]{geometry}
+
+% Change table of contents to match.
+\usepackage{titletoc}
+\usepackage[titles]{tocloft}
+\setlength{\cftsubsecindent}{0.3cm}
+\setlength{\cftsubsubsecindent}{0.3cm}
+\renewcommand{\contentsname}{Table of contents}
+\renewcommand{\cftdot}{}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
 
 \setlength{\parindent}{0cm}
 \newcommand\YUGE{\fontsize{30}{42}\selectfont}
