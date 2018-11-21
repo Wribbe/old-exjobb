@@ -64,8 +64,8 @@ task() {
 export TIMEWARRIORDB=$DIR_LOCAL_TIMEWARRIOR_DB
 # Set up database if it does not existing.
 [ -f $DIR_LOCAL_TIMEWARRIOR_DB ] || echo $(echo yes | timew 2>&1) > /dev/null
-# Symlink on-modify script if not linked.
-[ -h $DIR_LOCAL_TASKWARRIOR_HOOKS/${HOOK_TIMEW##*/} ] || ln -s $HOOK_TIMEW $DIR_LOCAL_TASKWARRIOR_HOOKS
+# Symlink hooks dir if not linked.
+[ -h $DIR_LOCAL_TASKWARRIOR_HOOKS ] || ln -frs $DIR_HOOKS $DIR_LOCAL_TASKWARRIOR_HOOKS
 
 # Check and setup vimwiki if it does not exist.
 [ -d $DIR_LOCAL_VIMWIKI ] || mkdir $DIR_LOCAL_VIMWIKI

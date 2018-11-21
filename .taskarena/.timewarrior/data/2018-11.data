@@ -2,3 +2,26 @@ inc 20181113T113317Z - 20181113T113532Z # "- Use taskarena with master thesis wo
 inc 20181113T113617Z - 20181113T114659Z # "- Read the design document throughly." "master_thesis" todo
 inc 20181120T123546Z - 20181120T134255Z # "- Read the design document throughly." "master_thesis" todo
 inc 20181120T134257Z - 20181120T144036Z # "- Adjust the LaTeX template to match." "master_thesis" todo
+inc 20181121T173818Z - 20181121T191330Z # "- Read papers." "master_thesis" todo
+inc 20181122T102300Z - 20181122T110300Z # "- Flesh out front page." improvements "master_thesis"
+inc 20181122T135142Z - 20181122T140354Z # "- Flesh out front page." improvements "master_thesis"
+inc 20181122T141430Z - 20181122T144958Z # "- (Re-)write the current text to fit the new format." "master_thesis" todo
+inc 20181122T145030Z - 20181122T151022Z # "- Find citable material about usability testing." "master_thesis" todo
+inc 20181126T095950Z - 20181126T113656Z # "- Adjust fonts." improvements "master_thesis"
+inc 20181126T113746Z - 20181126T123000Z # "- Adjust fonts." improvements "master_thesis"
+inc 20181126T142000Z - 20181126T142450Z # "- Adjust format." improvements "master_thesis"
+inc 20181126T142455Z - 20181126T165000Z # "- Integrate matplot-lib figure." "master_thesis" todo
+inc 20181126T165010Z - 20181126T173210Z # "- Possible to generate custom svg graphics with python?" "master_thesis" todo
+inc 20181127T111203Z - 20181127T120807Z # "- Write mock-abstract." "master_thesis" todo
+inc 20181127T120822Z - 20181127T141958Z # "- Figure out why draft watermark not on all pages." bug "master_thesis"
+inc 20181127T162512Z - 20181127T164400Z # "- Write mock-abstract." "master_thesis" todo
+inc 20181127T164426Z - 20181127T173443Z # "- Write introduction." "master_thesis" todo
+inc 20181128T111843Z - 20181128T113503Z # "- Write colored todo macros." "master_thesis" todo
+inc 20181128T113559Z - 20181128T124123Z # "- Write introduction." "master_thesis" todo
+inc 20181128T130751Z - 20181128T131307Z # "- Add TODOCite command." "master_thesis" todo
+inc 20181128T131333Z - 20181128T132049Z # "- Write introduction." "master_thesis" todo
+inc 20181128T132218Z - 20181128T132250Z # "- Write Methodology." "master_thesis" todo
+inc 20181128T132255Z - 20181128T132330Z # "- Write Methodology." "master_thesis" todo
+inc 20181128T132412Z - 20181128T132419Z # "- Write Methodology." "master_thesis" writing
+inc 20181128T151356Z - 20181128T161826Z # "- Poking LaTeX related things." "master_thesis" todo
+inc 20181128T163353Z - 20181128T171233Z # "- Poking LaTeX related things." "master_thesis" todo
