@@ -1,0 +1,96 @@
+2018_Technique for representing requirements using personas: a controlled experiment.pdf
+========================================================================================
+
+  keywords: PATHY,
+
+  Introduction
+  ------------
+    Sw industry competing to satisfy customer needs. Design thinking.
+    DT -> empathy. Hard to incorporate into development team.
+    6 fields w. leading questions.
+
+  Background
+  ----------
+
+    Design Thinking
+    ---------------
+      users needs + technology feasibility + feasible business strat ->
+      customers & market opportunity.
+      5 stages:
+        - empathy - needs through interviews/personas etc.
+        - definition - analyze -> initial definition of problem.
+        - ideation - generate solutions to problem definition.
+        - prototyping - build prototypes that users can interact with.
+        - testing - users evaluate prototypes.
+
+    Personas
+    --------
+      - Hypothetical user archetype w. goals, skills and interest.
+      - Existing solutions + problems.
+      - Current persona variants expose information that is not relevant to
+        requirements.
+
+    Persona technique proposed by Acuña et al.
+    ------------------------------------------
+      - Standard, no leading questions, most detailed description of others.
+
+  PATHY technique.
+  ----------------
+    - Knowing the user.
+    - Identifying an initial connection between user and tech.
+    - Ide generation.
+
+  Controlled experiment.
+  ----------------------
+
+    Problem statement.
+    ------------------
+      - More info about technologically related habits.
+
+    Research objectives.
+    --------------------
+
+    Context.
+    --------
+
+    Variables selection and experimental design.
+    --------------------------------------------
+
+    Hypotheses.
+    -----------
+
+    Instrumentation.
+    ----------------
+
+    Experiment execution.
+    ---------------------
+
+  Results
+  -------
+
+    Analysis of the created personas.
+    ---------------------------------
+
+    Efficiency of the techniques.
+    -----------------------------
+
+    Perception regarding the use op the techniques.
+    -----------------------------------------------
+
+  Threats to validity.
+  --------------------
+
+  Conclusion.
+  -----------
+
+TODO:
+[ ] - Kolla upp design thinking (DT) --
+  Ostrowski, S., Rolczyński, R., Pniewska, J., et al.: ‘User-friendly
+  E-learning platform: a case study of a design thinking approach use’. Proc.
+  Multimedia, Interaction, Design and Innovation, Warsaw, Poland, June 2015,
+  pp. 19–26
+
+[ ] - Check design thinking. --
+  Jensen, M.B., Lozano, F., Steinert, M.: ‘The origins of design thinking and
+  the relevance in software innovations’. Proc. Product-Focused Software
+  Process Improvement, Trondheim, Norway, November 2016, pp. 675–678
