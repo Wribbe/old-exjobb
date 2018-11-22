@@ -31,7 +31,7 @@
 \renewcommand{\cftsubsecfont}{\normalfont\large}
 
 \setlength{\parindent}{0cm}
-\newcommand\YUGE{\fontsize{30}{42}\selectfont}
+\newcommand\YUGE{\fontsize{24}{12}\selectfont}
 
 %Set title formats.
 \usepackage{titlesec}
@@ -74,31 +74,31 @@
   \end{tikzpicture}
 
   \begin{tikzpicture}[remember picture, overlay]
-    \fill[fill=white] (0.5cm, 0cm) rectangle +(\titleBoxWidth+1cm, -8cm);
+    \fill[fill=white] (0.5cm, 0cm) rectangle +(\titleBoxWidth+1cm, -7.5cm);
   \end{tikzpicture}
 
   \fontfamily{phv}\selectfont
   \vspace{1cm}
-  \vspace{1cm}
+  %\vspace{1cm}
   \begin{minipage}{\paperwidth}
     \begin{minipage}{1.0cm}
       \
     \end{minipage}
     \begin{minipage}{\titleBoxWidth}
       \textrm{\YUGE \bfseries
-    %    Title on 2 rows \vspace{0.5cm} \\
-        Title on 1 row
+        Improving in-team communication at
+        \vspace{0.3cm} \\
+        MASSIVE with tailored web-interfaces
       } \\ \vspace{3mm}
       \hspace{-2mm}\noindent\rule{{\titleBoxWidth-2mm}}{0.3mm} \\
       \vspace{-5mm} \\
       \textrm{\LARGE
-        First Name Last Name and
-        First Name Last Name
+        Stefan Eng
       }\vspace{5mm} \\
       {\small\bfseries
-        DIVISION OF PRODUCT DEVELOPMENT | DEPARTMENT OF DESIGN SCIENCES \\
+        DIVISION OF ERGONOMICS AND AEROSOL TECHNOLOGY | DEPARTMENT OF DESIGN SCIENCES \\
         FACULTY OF ENGINEERING LTH | LUND UNIVERSITY \\
-        2018
+        \the\year
         \vspace{0.6cm} \\
         MASTER THESIS
       }
@@ -107,7 +107,13 @@
 
   \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=center] at ($ (current page.south east) + (-4.2cm, 4.2cm) $) {
-        \includegraphics[width=10cm]{LU-logotyp-tryck-digitalt/EPS_for_tryck/Engelska/LundUniversity_C2line_CMYK_cut.pdf}
+        \includegraphics[width=9cm]{LU-logotyp-tryck-digitalt/EPS_for_tryck/Engelska/LundUniversity_C2line_CMYK_cut.pdf}
+    };
+  \end{tikzpicture}
+
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=center] at ($ (current page.south west) + ( 6.3cm, 4.2cm) $) {
+        \includegraphics[width=9cm]{logos/Massive_Logotype_Print/Black/MASSIVE_LOGO_CMYK_BLACK.eps}
     };
   \end{tikzpicture}
 }
