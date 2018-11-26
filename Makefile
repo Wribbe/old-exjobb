@@ -13,12 +13,12 @@ INPUTS := tex/tidsschema.tex
 
 all: $(DIR_OUT) $(INPUTS) $(BBLS) $(BIBS) $(PDFS)
 
-$(DIR_OUT)/%.pdf : %.tex %.bbl %_raw.bib $(INPUTS) $(IMGS)
+$(DIR_OUT)/%.pdf : %.tex %_raw.bib $(INPUTS) $(IMGS)
 	$(PP) $(filter %.tex,$^)
 	$(PP) $(filter %.tex,$^)
 
-$(DIR_OUT)/%.pdf : %.tex $(INPUTS) | $(DIR_OUT)
-	$(PP) $(filter %.tex,$^)
+#$(DIR_OUT)/%.pdf : %.tex $(INPUTS) | $(DIR_OUT)
+#	$(PP) $(filter %.tex,$^)
 
 $(DIR_OUT)/%.bbl : $(DIR_OUT)/%.bib
 	$(PP) $(notdir $(patsubst %.bbl,%.tex,$@))

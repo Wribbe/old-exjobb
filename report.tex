@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -37,7 +37,7 @@
 \usepackage{titlesec}
 \newcommand\HOne{\fontsize{20}{12}\selectfont}
 \newcommand\HTwo{\fontsize{14}{8}\selectfont}
-\titleformat{\section}{\normalfont\HOne}{\thesection:}{0.3cm}{}
+\titleformat{\section}{\normalfont\HOne}{\thesection:}{0.3cm}{\vspace{2cm}}
 \titleformat{\subsection}{\normalfont\HTwo}{\thesubsection:}{0.3cm}{}
 
 % Reference settings.
@@ -50,8 +50,32 @@
 ]{biblatex}
 \bibliography{report}
 
+% Get copyright-symbol.
+\usepackage{textcomp}
+
+% Get shortmonthname.
+\usepackage[nodayofweek]{datetime}
 
 \begin{document}
+
+\newcommand\titleFirst{Using tailored web-interfaces to improve}
+\newcommand\titleSecond{in-team communication at MASSIVE}
+\newcommand\titleFull{\titleFirst \ \titleSecond}
+
+\newcommand\name{Stefan Eng}
+\newcommand\email{kontakt@stefaneng.se}
+\newcommand\nameEmail{\name \ \texttt{<\email>}}
+
+\newcommand\DIVISION{ERGONOMICS AND AEROSOL TECHNOLOGY}
+\newcommand\division{Ergonomics and Aerosol Technology}
+\newcommand\supervisor{Johanna Persson}
+\newcommand\contact{Patrick O'Casey}
+\newcommand\examiner{Joakim Eriksson }
+
+\author{
+  Stefan Eng \\
+  \texttt{<kontakt@stefaneng.se}
+}
 
 % Begin title page.
 {\color[rgb]{0.612,0.376,0.075}
@@ -74,7 +98,7 @@
   \end{tikzpicture}
 
   \begin{tikzpicture}[remember picture, overlay]
-    \fill[fill=white] (0.5cm, 0cm) rectangle +(\titleBoxWidth+1cm, -7.5cm);
+    \fill[fill=white] (0.5cm, 0cm) rectangle +(\titleBoxWidth+1cm, -8.0cm);
   \end{tikzpicture}
 
   \fontfamily{phv}\selectfont
@@ -86,17 +110,17 @@
     \end{minipage}
     \begin{minipage}{\titleBoxWidth}
       \textrm{\YUGE \bfseries
-        Using tailored web-interfaces to improve
+        \titleFirst
         \vspace{0.3cm} \\
-        in-team communication at MASSIVE
+        \titleSecond
       } \\ \vspace{3mm}
       \hspace{-2mm}\noindent\rule{{\titleBoxWidth-2mm}}{0.3mm} \\
       \vspace{-5mm} \\
       \textrm{\LARGE
-        Stefan Eng
+        \name
       }\vspace{5mm} \\
       {\small\bfseries
-        DIVISION OF ERGONOMICS AND AEROSOL TECHNOLOGY | DEPARTMENT OF DESIGN SCIENCES \\
+        DIVISION OF \DIVISION | DEPARTMENT OF DESIGN SCIENCES \\
         FACULTY OF ENGINEERING LTH | LUND UNIVERSITY \\
         \the\year
         \vspace{0.6cm} \\
@@ -117,13 +141,128 @@
     };
   \end{tikzpicture}
 }
+\pagenumbering{roman}
+
+%% Beginning Title page.
+\newpage
+
+\begin{center}
+  {\HOne \titleFull} \\
+  \vspace{2.5cm}
+  {\large \name} \\
+  \vspace{2.0cm}
+%  \hspace{0.17cm}
+  \includegraphics[width=3.5cm]{LU-logotyp-tryck-digitalt/EPS_for_tryck/Engelska/LundUniversity_C2line_BLACK.eps}
+
+\end{center}
+
+%% End Title page.
+
+
+%% Beginning Copyright page.
+\newpage
+
+%{\Large \titleFirst \\ \titleSecond}
+{\Large \titleFull}
+\vspace{1.5cm} \\
+\begin{large}
+  Copyright \textcopyright \ \the\year \ \name \\
+
+  \textit{Published by} \vspace{0.2cm} \\
+      Department of Design Sciences \\
+      Faculty of Engineering LTH, Lund University \\
+      P.O. Box 118, SE-221 00 Lund, Sweden
+
+  \vspace{0.8cm}
+  Subject: (MAMM10), Interaction Design \\
+  Division: \division \\
+  Supervisor: \supervisor \\
+  Co-supervisor: \contact \\
+  Examiner: \examiner \\
+
+
+\end{large}
+%% EndCopyright page.
 
 \newpage
 
-\section{Abstract}
-\section{Preface}
+
+\section*{Abstract}
+
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+  parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+  pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+  rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+  mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+  nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+  consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra
+  quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+  Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+  ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus,
+  tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+  sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+  id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
+  libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
+  faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec
+  sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+  cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
+  Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam
+  accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; In ac dui quis mi. \\
+
+  \textbf{Keywords:} word1, word2, word3, word4, word5.
+
+
+\newpage
+
+\section*{Sammanfattning}
+
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+  parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+  pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+  rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+  mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+  nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+  consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra
+  quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+  Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+  ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus,
+  tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+  sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+  id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
+  libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
+  faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec
+  sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+  cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
+  Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam
+  accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.
+  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  cubilia Curae; In ac dui quis mi. \\
+
+  \textbf{Nyckelord:} ord1, ord2, ord3, ord4, ord5.
+
+
+\newpage
+
+\section*{Preface}
+
+{\large
+Lund, \monthname \ \the\year
+\vspace{0.7cm} \\
+\name
+}
+
+\newpage
 
 \tableofcontents
+
+\newpage
+\pagenumbering{arabic}
 
 \section{Introduction}
   \subsection{Short background}
