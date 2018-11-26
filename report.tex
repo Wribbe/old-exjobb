@@ -56,6 +56,9 @@
 % Get shortmonthname.
 \usepackage[nodayofweek]{datetime}
 
+% Get the [H] parameter for figures.
+\usepackage{float}
+
 \begin{document}
 
 \newcommand\titleFirst{Using tailored web-interfaces to improve}
@@ -119,8 +122,8 @@
       \textrm{\LARGE
         \name
       }\vspace{5mm} \\
-      {\small\bfseries
-        DIVISION OF \DIVISION | DEPARTMENT OF DESIGN SCIENCES \\
+      {\footnotesize\bfseries
+        DIVISION OF {\DIVISION} | DEPARTMENT OF DESIGN SCIENCES \\
         FACULTY OF ENGINEERING LTH | LUND UNIVERSITY \\
         \the\year
         \vspace{0.6cm} \\
@@ -149,7 +152,7 @@
 \begin{center}
   {\HOne \titleFull} \\
   \vspace{2.5cm}
-  {\large \name} \\
+  {\Large \name} \\
   \vspace{2.0cm}
 %  \hspace{0.17cm}
   \includegraphics[width=3.5cm]{LU-logotyp-tryck-digitalt/EPS_for_tryck/Engelska/LundUniversity_C2line_BLACK.eps}
@@ -177,7 +180,8 @@
   Subject: (MAMM10), Interaction Design \\
   Division: \division \\
   Supervisor: \supervisor \\
-  Co-supervisor: \contact \\
+  % TODO: Which one?
+  Co-supervisor / Company contact: \contact \\
   Examiner: \examiner \\
 
 
@@ -270,9 +274,29 @@ Lund, \monthname \ \the\year
   \subsection{Report structure}
 \section{Methodology}
   \subsection{Theories}
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics{figures/plots/fig_test.pdf}
+        \caption{Hello line figure!}
+      \end{center}
+    \end{figure}
   \subsection{Tools}
+    \begin{figure}[H]
+      \begin{center}
+        \vspace{-0.3cm}
+        \includegraphics{figures/plots/fig_pie_test.pdf}
+        \vspace{-0.5cm}
+        \caption{Hello pie figure!}
+      \end{center}
+    \end{figure}
   \subsection{etc.}
 \section{Results}
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics{figures/plots/fig_bar_test.pdf}
+        \caption{Hello bar figure!}
+      \end{center}
+    \end{figure}
 \section{Discussion and conclusion}
 \section{References}
 \section{Appendices}
