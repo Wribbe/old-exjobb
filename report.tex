@@ -60,7 +60,6 @@
 % Get the [H] parameter for figures.
 \usepackage{float}
 
-
 % Get and set watermark.
 \usepackage{eso-pic}
 \AddToShipoutPictureFG{
@@ -68,6 +67,9 @@
     \node[scale=15,rotate=45,opacity=0.2,color=red] at (current page.center) {Draft};
   \end{tikzpicture}
 }
+
+% Get heart.
+\usepackage{txfonts}
 
 \begin{document}
 
@@ -88,11 +90,6 @@
 \newcommand\supervisor{Johanna Persson}
 \newcommand\contact{Patrick O'Casey}
 \newcommand\examiner{Joakim Eriksson }
-
-\author{
-  Stefan Eng \\
-  \texttt{<kontakt@stefaneng.se}
-}
 
 % Definition of names.
 \def\shotgun{\texttt{Shotgun}}
@@ -217,9 +214,10 @@
 
 \section*{Abstract}
 
+%TODO: Finish abstract.
 \def\abs{
   Working as a team in the gaming industry can be challenging as is, and it
-  doesn't get better with the degradation of effectiveness and communication
+  does not get better with the degradation of effectiveness and communication
   that potential stress of looming deadlines brings with it. \\
 
   This thesis examines if it is possible to counter the reduction
@@ -266,6 +264,15 @@
 \section*{Preface}
 
 {\large
+
+First off I want to thank my fiancé, Amanda, for helping out with proof-reading and
+edit-suggestions while simultaneously putting up with the weird question and
+theories lobbed in her general direction.
+\textcolor{red}{\ensuremath\varheartsuit} \\
+
+%TODO: Finish preface.
+\texttt{<Preface continued ... >} \\
+\vspace{0.7cm} \\
 Lund, \monthname \ \the\year
 \vspace{0.7cm} \\
 \name
