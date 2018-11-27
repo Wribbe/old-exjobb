@@ -37,7 +37,8 @@
 \usepackage{titlesec}
 \newcommand\HOne{\fontsize{20}{12}\selectfont}
 \newcommand\HTwo{\fontsize{14}{8}\selectfont}
-\titleformat{\section}{\normalfont\HOne}{\thesection:}{0.3cm}{\vspace{2cm}}
+\titleformat{\section}{\normalfont\HOne}{\thesection:}{0.3cm}{\vspace{1.5cm}}
+\titleformat{name = \section, numberless}{\normalfont\HOne}{}{0em}{\vspace{1.5cm}}
 \titleformat{\subsection}{\normalfont\HTwo}{\thesubsection:}{0.3cm}{}
 
 % Reference settings.
@@ -64,7 +65,7 @@
 \usepackage{eso-pic}
 \AddToShipoutPictureFG{
   \begin{tikzpicture}[remember picture,overlay]
-    \node[scale=15,rotate=45,opacity=0.3,color=red] at (current page.center) {Draft};
+    \node[scale=15,rotate=45,opacity=0.2,color=red] at (current page.center) {Draft};
   \end{tikzpicture}
 }
 
@@ -92,6 +93,14 @@
   Stefan Eng \\
   \texttt{<kontakt@stefaneng.se}
 }
+
+% Definition of names.
+\def\shotgun{\texttt{Shotgun}}
+\def\recordingSystem{\texttt{<Recording-System>}}
+\def\flask{\texttt{Flask}}
+\def\python{\texttt{Python}}
+\def\reviewProtocol{\texttt{<Review-Protocol>}}
+\def\numIterations{\texttt{<Num-Iterations>}}
 
 % Begin title page.
 {\color[rgb]{0.612,0.376,0.075}
@@ -208,81 +217,49 @@
 
 \section*{Abstract}
 
-
+\def\abs{
   Working as a team in the gaming industry can be challenging as is, and it
   doesn't get better with the degradation of effectiveness and communication
-  that potential stress around deadlines brings with it. \\
+  that potential stress of looming deadlines brings with it. \\
 
-  The goal of the thesis is to examine if it is possible to counter the reduction
+  This thesis examines if it is possible to counter the reduction
   in communication and effectiveness by making it easier to work with the
-  available tooling. More specific, the thesis will examine if it is possible
-  to reduce the negative effects of stress through tailor-made web-interfaces to
-  \texttt{Shotgun} by using its provided API.\\
+  available tooling. More specifically; is is possible
+  to reduce the negative effects of stress through tailor-made web-interfaces
+  employing findings from Cognitive Science and Interface Design? \\
 
-  Initial data is gathered through questionnaires and interviews \\
+  The main method used in the study is design thinking, which is composed the
+  following steps: empathize, define, ideate, prototype and test. During the
+  empathize step interviews and surveys are conducted in order to get a measure
+  of the how the users currently view working with {\shotgun}.
+  Using the initial data, personas representing the requirements and needs of
+  identified user-groups and stakeholders are created.
+  After the define and ideate stages manipulable prototypes are cerated using
+  {\python} and {\flask}. The prototypes are then tested and monitored using
+  {\recordingSystem} toghether with {\reviewProtocol} with the test-data
+  feeding back into the prototype iteration cycle for a total of {\numIterations}
+  iterations. \\
 
+  By analyzing the observation data gathered using {\recordingSystem} the
+  conclusion that {\texttt{<insert conclusion here>}} is (not) possible through
+  usage of them method described above. \\
 
-  It is then showed that creating a customized interfaces tailored to a section
-  of users, as defined by the group persona, increases the individual users
-  effectiveness and engagement as well as lowering the perceived resistance.
-
-  %Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  %ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-  %parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-  %pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-  %pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
-  %rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-  %mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
-  %nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-  %consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra
-  %quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-  %Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-  %ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus,
-  %tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
-  %sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
-  %id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
-  %libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
-  %faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec
-  %sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
-  %cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
-  %Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam
-  %accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.
-  %Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  %cubilia Curae; In ac dui quis mi. \\
-
-  \textbf{Keywords:} word1, word2, word3, word4, word5.
+  \textbf{Keywords:}
+    Interaction Design,
+    Tooling,
+    Stress,
+    Development,
+    Design-Thinking.
+}
+{\abs}
 
 
 \clearpage
 
 \section*{Sammanfattning}
 
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-  parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-  pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
-  rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-  mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
-  nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-  consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra
-  quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-  Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-  ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus,
-  tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
-  sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
-  id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
-  libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
-  faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec
-  sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
-  cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
-  Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam
-  accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; In ac dui quis mi. \\
-
-  \textbf{Nyckelord:} ord1, ord2, ord3, ord4, ord5.
-
+%TODO: Translate to Swedish.
+{\abs}
 
 \clearpage
 
@@ -322,6 +299,7 @@ Lund, \monthname \ \the\year
         \caption{Hello pie figure!}
       \end{center}
     \end{figure}
+  \subsection{Threats to validity}
   \subsection{etc.}
 \section{Results}
     \begin{figure}[H]
