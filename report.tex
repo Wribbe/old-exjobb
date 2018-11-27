@@ -37,9 +37,23 @@
 \usepackage{titlesec}
 \newcommand\HOne{\fontsize{20}{12}\selectfont}
 \newcommand\HTwo{\fontsize{14}{8}\selectfont}
-\titleformat{\section}{\normalfont\HOne}{\thesection:}{0.3cm}{\vspace{1.5cm}}
-\titleformat{name = \section, numberless}{\normalfont\HOne}{}{0em}{\vspace{1.5cm}}
+\titleformat{\section}
+  {\normalfont\HOne}
+  {\thesection:}
+  {0.3cm}
+  {}
+  {}%
+\titleformat{name=\section,numberless}
+  {\normalfont\HOne}
+  {}
+  {0cm}
+  {}
+  {}%
 \titleformat{\subsection}{\normalfont\HTwo}{\thesubsection:}{0.3cm}{}
+\def\sectionSpacing{1.5cm}
+\titlespacing{\section}{0cm}{0cm}{\sectionSpacing}
+\titlespacing{name=\section, numberless}{0cm}{0cm}{\sectionSpacing}
+\titlespacing{\subsection}{0cm}{0cm}{\sectionSpacing-0.7cm}
 
 % Reference settings.
 \usepackage[autostyle]{csquotes}
@@ -168,7 +182,7 @@
 
 
 %% Beginning Title page.
-\clearpage
+\newpage
 
 \begin{center}
   {\HOne \titleFull} \\
@@ -184,7 +198,7 @@
 
 
 %% Beginning Copyright page.
-\clearpage
+\newpage
 
 %{\Large \titleFirst \\ \titleSecond}
 {\Large \titleFull}
@@ -209,7 +223,7 @@
 \end{large}
 %% EndCopyright page.
 
-\clearpage
+\newpage
 
 
 \section*{Abstract}
@@ -252,14 +266,14 @@
 {\abs}
 
 
-\clearpage
+\newpage
 
 \section*{Sammanfattning}
 
 %TODO: Translate to Swedish.
 {\abs}
 
-\clearpage
+\newpage
 
 \section*{Preface}
 
@@ -278,11 +292,11 @@ Lund, \monthname \ \the\year
 \name
 }
 
-\clearpage
+\newpage
 
 \tableofcontents
 
-\clearpage
+
 \pagenumbering{arabic}
 
 \section{Introduction}
@@ -292,14 +306,19 @@ Lund, \monthname \ \the\year
   \subsection{Report structure}
 
 \section{Methodology}
+
   \subsection{Theories}
   \subsection{Tools}
   \subsection{Threats to validity}
-  \subsection{etc.}
+
 \section{Results}
+
 \section{Discussion and conclusion}
+
 \section{References}
+
 \section{Appendices}
+
 \section{Popular science summary}
 
   \begin{figure}[H]
