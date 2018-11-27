@@ -19,6 +19,7 @@ all: $(DIR_OUT) $(INPUTS) $(BBLS) $(BIBS) $(PLOTS) $(PDFS)
 
 $(DIR_OUT)/%.pdf : %.tex %_raw.bib $(INPUTS) $(IMGS) $(PLOTS)
 	$(PP) $(filter %.tex,$^)
+	cd $(DIR_OUT) && biber $(notdir $(patsubst %.pdf,%,$@))
 	$(PP) $(filter %.tex,$^)
 
 $(DIR_OUT)/mdoc.pdf : mdoc.tex $(INPUTS) | $(DIR_OUT)
@@ -27,7 +28,6 @@ $(DIR_OUT)/mdoc.pdf : mdoc.tex $(INPUTS) | $(DIR_OUT)
 $(DIR_OUT)/%.bbl : $(DIR_OUT)/%.bib
 	$(PP) $(notdir $(patsubst %.bbl,%.tex,$@))
 #	bibtex $(patsubst %.bbl,%,$@)
-	cd $(DIR_OUT) && biber $(notdir $(patsubst %.bbl,%,$@))
 	$(PP) $(notdir $(patsubst %.bbl,%.tex,$@))
 
 $(DIR_OUT)/%.bib : %_raw.bib

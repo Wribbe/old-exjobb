@@ -59,10 +59,23 @@
 % Get the [H] parameter for figures.
 \usepackage{float}
 
+
+% Get and set watermark.
+\usepackage{eso-pic}
+\AddToShipoutPictureFG{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[scale=15,rotate=45,opacity=0.3,color=red] at (current page.center) {Draft};
+  \end{tikzpicture}
+}
+
 \begin{document}
 
+\pagenumbering{roman}
+
 \newcommand\titleFirst{Using tailored web-interfaces to improve}
-\newcommand\titleSecond{in-team communication at MASSIVE}
+\newcommand\titleSecond{in-team communication and effectiveness}
+\newcommand\titleThird{at MASSIVE, Malmö}
+%\newcommand\titleFull{\titleFirst \ \titleSecond \ \titleThird}
 \newcommand\titleFull{\titleFirst \ \titleSecond}
 
 \newcommand\name{Stefan Eng}
@@ -116,6 +129,8 @@
         \titleFirst
         \vspace{0.3cm} \\
         \titleSecond
+        %\vspace{0.45cm} \\
+        %\titleThird
       } \\ \vspace{3mm}
       \hspace{-2mm}\noindent\rule{{\titleBoxWidth-2mm}}{0.3mm} \\
       \vspace{-5mm} \\
@@ -144,10 +159,10 @@
     };
   \end{tikzpicture}
 }
-\pagenumbering{roman}
+
 
 %% Beginning Title page.
-\newpage
+\clearpage
 
 \begin{center}
   {\HOne \titleFull} \\
@@ -163,7 +178,7 @@
 
 
 %% Beginning Copyright page.
-\newpage
+\clearpage
 
 %{\Large \titleFirst \\ \titleSecond}
 {\Large \titleFull}
@@ -188,39 +203,57 @@
 \end{large}
 %% EndCopyright page.
 
-\newpage
+\clearpage
 
 
 \section*{Abstract}
 
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-  parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-  pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
-  rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-  mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
-  nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-  consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra
-  quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-  Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
-  ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus,
-  tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
-  sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
-  id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
-  libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
-  faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec
-  sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
-  cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
-  Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam
-  accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.
-  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-  cubilia Curae; In ac dui quis mi. \\
+
+  Working as a team in the gaming industry can be challenging as is, and it
+  doesn't get better with the degradation of effectiveness and communication
+  that potential stress around deadlines brings with it. \\
+
+  The goal of the thesis is to examine if it is possible to counter the reduction
+  in communication and effectiveness by making it easier to work with the
+  available tooling. More specific, the thesis will examine if it is possible
+  to reduce the negative effects of stress through tailor-made web-interfaces to
+  \texttt{Shotgun} by using its provided API.\\
+
+  Initial data is gathered through questionnaires and interviews \\
+
+
+  It is then showed that creating a customized interfaces tailored to a section
+  of users, as defined by the group persona, increases the individual users
+  effectiveness and engagement as well as lowering the perceived resistance.
+
+  %Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+  %ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+  %parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+  %pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+  %pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+  %rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+  %mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+  %nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+  %consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra
+  %quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+  %Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+  %ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus,
+  %tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+  %sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+  %id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
+  %libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
+  %faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec
+  %sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit
+  %cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien.
+  %Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam
+  %accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.
+  %Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+  %cubilia Curae; In ac dui quis mi. \\
 
   \textbf{Keywords:} word1, word2, word3, word4, word5.
 
 
-\newpage
+\clearpage
 
 \section*{Sammanfattning}
 
@@ -251,7 +284,7 @@
   \textbf{Nyckelord:} ord1, ord2, ord3, ord4, ord5.
 
 
-\newpage
+\clearpage
 
 \section*{Preface}
 
@@ -261,11 +294,11 @@ Lund, \monthname \ \the\year
 \name
 }
 
-\newpage
+\clearpage
 
 \tableofcontents
 
-\newpage
+\clearpage
 \pagenumbering{arabic}
 
 \section{Introduction}
