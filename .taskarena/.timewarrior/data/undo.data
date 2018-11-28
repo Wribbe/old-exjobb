@@ -514,3 +514,15 @@ txn:
   type: interval
   before: 
   after: {"start":"20181128T184453Z","end":"20181128T190029Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T190401Z","tags":["- Introduction subsections are pushed to the next page.","bug","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181128T190401Z","tags":["- Introduction subsections are pushed to the next page.","bug","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T190401Z","end":"20181128T191159Z","tags":["- Introduction subsections are pushed to the next page.","bug","master_thesis"]}

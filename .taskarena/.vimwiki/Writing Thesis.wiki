@@ -2,6 +2,7 @@
 
 == Bugs || +bug ==
 * [X] - Figure out why draft watermark not on all pages.  #e1cb5bfd
+* [X] - Introduction subsections are pushed to the next page.  #19201b70
 == Suggestions || +sugesstions ==
 [[suggestions-done|done]]
 

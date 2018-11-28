@@ -601,3 +601,14 @@ time 1543431631
 old [description:"- Poking LaTeX related things." end:"1543431629" entry:"1543417959" modified:"1543431629" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
 new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543431631" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
 ---
+time 1543431840
+new [description:"- Introduction subsections are pushed to the next page." entry:"1543431840" modified:"1543431840" project:"master_thesis" status:"pending" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+---
+time 1543431841
+old [description:"- Introduction subsections are pushed to the next page." entry:"1543431840" modified:"1543431840" project:"master_thesis" status:"pending" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+new [description:"- Introduction subsections are pushed to the next page." entry:"1543431840" modified:"1543431841" project:"master_thesis" start:"1543431841" status:"pending" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+---
+time 1543432319
+old [description:"- Introduction subsections are pushed to the next page." entry:"1543431840" modified:"1543431841" project:"master_thesis" start:"1543431841" status:"pending" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+new [description:"- Introduction subsections are pushed to the next page." end:"1543432319" entry:"1543431840" modified:"1543432319" project:"master_thesis" status:"completed" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+---
