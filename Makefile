@@ -50,7 +50,7 @@ $(DIR_OUT)/%-non-commented.pdf : %.tex %_raw.bib $(INPUTS) $(IMGS) $(PLOTS)
 #	bibtex $(patsubst %.bbl,%,$@)
 #	$(PP) $(notdir $(patsubst %.bbl,%.tex,$@))
 
-$(DIR_OUT)/%.bib : %_raw.bib
+$(DIR_OUT)/%.bib : %_raw.bib | $(DIR_OUT)
 	./clean_bib_urls.py $^ > $@
 
 $(DIR_PLOTS)/%.pdf : $(DIR_PLOTS_SRC)/%.py plots.py | $(DIRS)

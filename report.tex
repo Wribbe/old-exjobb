@@ -69,7 +69,7 @@
 \usepackage{textcomp}
 
 % Get shortmonthname.
-\usepackage[nodayofweek]{datetime}
+\usepackage{datetime2}
 
 % Get the [H] parameter for figures.
 \usepackage{float}
@@ -78,7 +78,9 @@
 \usepackage{eso-pic}
 \AddToShipoutPictureFG{
   \begin{tikzpicture}[remember picture,overlay]
-    \node[scale=15,rotate=45,opacity=0.2,color=red] at (current page.center) {Draft};
+    \node[scale=15,rotate=45,opacity=0.1,color=red] at (current page.center) {Draft};
+    \node[scale=3,rotate=45,opacity=0.1,color=red, yshift=-0.90cm] at (current
+    page.center) {\DTMnow};
   \end{tikzpicture}
 }
 
@@ -89,8 +91,9 @@
 
 
 \newcommand\TODO[1]{\ifshowTodo{\textcolor{purple}{\texttt{<}\textbf{TODO}\texttt{: #1>}}\\}\fi}
-\newcommand\TODOMaybe[1]{\ifshowTodo{\textcolor{orange}{\texttt{<}\textbf{TODOMaybe}\texttt{: #1?>}}}\fi}
-\newcommand\TODOCite{\ifshowTodo{\textcolor{blue}{\texttt{\textit{[Finalize citations]}}}}\fi}
+\newcommand\TODOMaybe[1]{\ifshowTodo{\textcolor{orange}{\texttt{<}\textbf{TODOMaybe}\texttt{: #1?>}}\\}\fi}
+\newcommand\TODOCite{\ifshowTodo{\textcolor{blue}{\texttt{\textit{[Finalize
+          citations]}}}}\else[?]\fi}
 % Get adjustwidth command.
 \usepackage{changepage}
 
@@ -102,12 +105,13 @@
 \NewEnviron{notes}[1]
 {
   \ifshowComments
+    \vspace{-1.2cm}
     \color{teal}
     Notes (\textit{#1}):
     \begin{adjustwidth}{0.5cm}{0pt}
       \BODY
     \end{adjustwidth}
-    \ \\
+    \vspace{0.3cm}
   \fi
 }
 
@@ -326,7 +330,10 @@ theories lobbed in her general direction.
 \textcolor{red}{\ensuremath\varheartsuit} \\
 
 \vspace{0.7cm}
-Lund, \monthname \ \the\year
+\DTMsavenow{thisone}
+Lund,
+\DTMenglishmonthname{\DTMfetchmonth{thisone}},
+\DTMfetchyear{thisone}
 \vspace{0.7cm} \\
 \name
 }
@@ -342,6 +349,8 @@ Lund, \monthname \ \the\year
 \section{Introduction}
 
   \begin{notes}{Introduction structure | CARS}
+    Create A Research Space \\
+    Type: General $\rightarrow$ Specific
     \begin{itemize}
       \item{Establish your territory}
       \begin{itemize}
@@ -384,6 +393,28 @@ Lund, \monthname \ \the\year
 
 \section{Methodology}
 
+  \begin{notes}{Methodology structure | STAR}
+    Type: Specific \\
+    Sufficiency, Typicality, Accuracy, Relevance.
+    \begin{itemize}
+      \item{Convince readers that materials are valid}
+        \begin{itemize}
+          \item{follows agreed protocol}
+          \item{What?}
+          \item{How?}
+          \item{What Materials?}
+          \item{Problems? / How solved?}
+        \end{itemize}
+      \item{Materials should}
+      \begin{itemize}
+        \item{support the claim}
+        \item{be typical \& representative}
+        \item{be accurate \& up-to-date}
+        \item{be relevant to the claims made}
+      \end{itemize}
+    \end{itemize}
+  \end{notes}
+
   \TODO{Finish Methodology}
 
   \subsection{Theories}
@@ -394,15 +425,40 @@ Lund, \monthname \ \the\year
     \TODO{Finish Threats to validity}
 
 \section{Results}
+  \begin{notes}{Results}
+    Type: Specific
+    \begin{itemize}
+      \item{How should the result be presented?}
+      \item{Present part or all of it?}
+      \item{Include visualisations}
+      \item{Don't retell findings that are directly represented by the visuals}
+      \item{Decide which results should be brought to the foreground}
+    \end{itemize}
+  \end{notes}
 
   \TODO{Finish Results }
   \TODOMaybe{Flesh out more sub-sections}
 
 \section{Discussion and conclusion}
 
-  \TODO{Finish Discussion and contlusion}
+  \begin{notes}{Discussion}
+    Type: Specific $\rightarrow$ General
+    \begin{enumerate}
+      \item{Present relevant background information}
+      \item{Summarize key results}
+      \item{Discuss the results}
+      \item{Where there any limitations? How were they solved?}
+      \item{Suggest broader implications \& further research}
+    \end{enumerate}
+    \begin{itemize}
+      \item{Discuss \& interpret your findings}
+      \item{Restate results $\rightarrow$ broaden}
+    \end{itemize}
+  \end{notes}
 
-\section{References }
+  \TODO{Finish Discussion and conclusion}
+
+\section{References}
 
   \TODO{Finish References }
 
