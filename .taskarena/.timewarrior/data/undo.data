@@ -478,3 +478,39 @@ txn:
   type: interval
   before: 
   after: {"start":"20181128T163353Z","end":"20181128T171233Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T171908Z","tags":["- Notes.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: {"start":"20181128T171908Z","tags":["- Notes.","master_thesis","writing"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T171908Z","end":"20181128T181011Z","tags":["- Notes.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T181031Z","tags":["- Notes.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: {"start":"20181128T181031Z","tags":["- Notes.","master_thesis","writing"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T181031Z","end":"20181128T184446Z","tags":["- Notes.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T184453Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T184453Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T184453Z","end":"20181128T190029Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}

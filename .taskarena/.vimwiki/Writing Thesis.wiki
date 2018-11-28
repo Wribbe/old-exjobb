@@ -9,11 +9,12 @@
 [[improvements-done|done]]
 * [X] - Flesh out front page.  #0af97fe3
 * [X] - Adjust format.  #b1307642
-* [-] - Poking LaTeX related things.  #6d8ad2f2
+* [ ] - Poking LaTeX related things.  #6d8ad2f2
 
 == Writing || +writing ==
 * [ ] - Introduction.  #0342e5b6
 * [ ] - Methodology.  #6c3215f8
+  * [-] - Notes.  #51be6f3e
   * [ ] - Theories.  #8ad99c84
   * [ ] - Tools.  #2817cb8a
   * [ ] - Threats to validity.  #236cbee2

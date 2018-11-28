@@ -562,3 +562,42 @@ time 1543425155
 old [description:"- Poking LaTeX related things." end:"1543425153" entry:"1543417959" modified:"1543425153" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
 new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543425155" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
 ---
+time 1543425545
+new [description:"- Notes." entry:"1543425545" modified:"1543425545" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543425545
+old [depends:"2817cb8a-ab6f-46c5-9b92-e097ad524783,8ad99c84-ebff-45db-acaa-4ceaf0623468,236cbee2-846c-4bc5-aa28-794495f03c78" description:"- Methodology." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"6c3215f8-8e5d-4d2b-b616-25d62f8902d8"]
+new [depends:"2817cb8a-ab6f-46c5-9b92-e097ad524783,8ad99c84-ebff-45db-acaa-4ceaf0623468,236cbee2-846c-4bc5-aa28-794495f03c78,51be6f3e-bca2-4045-851b-17b1c2d1d0fe" description:"- Methodology." entry:"1543411505" modified:"1543425545" project:"master_thesis" status:"pending" tags:"writing" uuid:"6c3215f8-8e5d-4d2b-b616-25d62f8902d8"]
+---
+time 1543425548
+old [description:"- Notes." entry:"1543425545" modified:"1543425545" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." entry:"1543425545" modified:"1543425548" project:"master_thesis" start:"1543425548" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543428629
+old [description:"- Notes." entry:"1543425545" modified:"1543425548" project:"master_thesis" start:"1543425548" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." entry:"1543425545" modified:"1543428629" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543428631
+old [description:"- Notes." entry:"1543425545" modified:"1543428629" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." entry:"1543425545" modified:"1543428631" project:"master_thesis" start:"1543428631" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543430686
+old [description:"- Notes." entry:"1543425545" modified:"1543428631" project:"master_thesis" start:"1543428631" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." end:"1543430686" entry:"1543425545" modified:"1543430686" project:"master_thesis" status:"completed" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543430687
+old [description:"- Notes." end:"1543430686" entry:"1543425545" modified:"1543430686" project:"master_thesis" status:"completed" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." entry:"1543425545" modified:"1543430687" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543430693
+old [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543425155" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543430693" project:"master_thesis" start:"1543430692" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543431629
+old [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543430693" project:"master_thesis" start:"1543430692" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." end:"1543431629" entry:"1543417959" modified:"1543431629" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543431631
+old [description:"- Poking LaTeX related things." end:"1543431629" entry:"1543417959" modified:"1543431629" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543431631" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---

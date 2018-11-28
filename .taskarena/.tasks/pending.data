@@ -9,5 +9,6 @@
 [description:"- Theories." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"8ad99c84-ebff-45db-acaa-4ceaf0623468"]
 [description:"- Tools." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"2817cb8a-ab6f-46c5-9b92-e097ad524783"]
 [description:"- Threats to validity." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"236cbee2-846c-4bc5-aa28-794495f03c78"]
-[depends:"2817cb8a-ab6f-46c5-9b92-e097ad524783,8ad99c84-ebff-45db-acaa-4ceaf0623468,236cbee2-846c-4bc5-aa28-794495f03c78" description:"- Methodology." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"6c3215f8-8e5d-4d2b-b616-25d62f8902d8"]
-[description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543425155" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+[depends:"2817cb8a-ab6f-46c5-9b92-e097ad524783,8ad99c84-ebff-45db-acaa-4ceaf0623468,236cbee2-846c-4bc5-aa28-794495f03c78,51be6f3e-bca2-4045-851b-17b1c2d1d0fe" description:"- Methodology." entry:"1543411505" modified:"1543425545" project:"master_thesis" status:"pending" tags:"writing" uuid:"6c3215f8-8e5d-4d2b-b616-25d62f8902d8"]
+[description:"- Notes." entry:"1543425545" modified:"1543430687" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+[description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543431631" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
