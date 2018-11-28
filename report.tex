@@ -86,9 +86,42 @@
 \usepackage{txfonts}
 
 % Define t o d o commands.
-\newcommand\TODO[1]{\textcolor{purple}{\texttt{<}\textbf{TODO}\texttt{: #1>}}}
-\newcommand\TODOMaybe[1]{\textcolor{orange}{\texttt{<}\textbf{TODOMaybe}\texttt{: #1?>}}}
-\newcommand\TODOCite{\textcolor{blue}{\texttt{\textit{[Finalize citations]}}}}
+
+
+\newcommand\TODO[1]{\ifshowTodo{\textcolor{purple}{\texttt{<}\textbf{TODO}\texttt{: #1>}}\\}\fi}
+\newcommand\TODOMaybe[1]{\ifshowTodo{\textcolor{orange}{\texttt{<}\textbf{TODOMaybe}\texttt{: #1?>}}}\fi}
+\newcommand\TODOCite{\ifshowTodo{\textcolor{blue}{\texttt{\textit{[Finalize citations]}}}}\fi}
+% Get adjustwidth command.
+\usepackage{changepage}
+
+% Get \NewEnviron command.
+\usepackage{environ}
+
+
+% Define notes environment.
+\NewEnviron{notes}[1]
+{
+  \ifshowComments
+    \color{teal}
+    Notes (\textit{#1}):
+    \begin{adjustwidth}{0.5cm}{0pt}
+      \BODY
+    \end{adjustwidth}
+    \ \\
+  \fi
+}
+
+% Toggle clutter on or off.
+\newif\ifshowTodo
+\newif\ifshowComments
+
+% Show.
+\showTodotrue
+\showCommentstrue
+
+% Hide.
+%\showCommentsfalse
+%\showTodofalse
 
 \begin{document}
 
@@ -233,7 +266,7 @@
 
 \section*{Abstract}
 
-\TODO{Write non-mock abstract} \\
+\TODO{Write non-mock abstract}
 \def\abs{
   Working as a team in the gaming industry can be challenging as is, and it
   does not get better with the degradation of effectiveness and communication
@@ -275,7 +308,7 @@
 
 \section*{Sammanfattning}
 
-\TODO{Translate to Swedish} \\
+\TODO{Translate to Swedish}
 {\abs}
 
 \newpage
@@ -307,50 +340,77 @@ Lund, \monthname \ \the\year
 
 \section{Introduction}
 
-  \TODO{Finish Introduction} \\
+  \begin{notes}{Introduction structure | CARS}
+    \begin{itemize}
+      \item{Establish your territory}
+      \begin{itemize}
+        \item{Make a claim}
+        \item{Review previous work}
+        \item{Position yourself}
+      \end{itemize}
+      \item{Establish your own niche}
+        \begin{itemize}
+          \item{Raise a problem}
+          \item{Indicate a gap}
+          \item{Continue}
+        \end{itemize}
+      \item{Occupy your space}
+        \begin{itemize}
+          \item{Present a statement of purpose}
+          \item{Outline / Blueprint / Mapping}
+          \item{Broader significance}
+        \end{itemize}
+    \end{itemize}
+  \end{notes}
+
+  \TODO{Finish Introduction}
+
+  Communication and effectiveness have always been valued in industry,
+  especially now in the modern age {\TODOCite}. \\
+
 
   \subsection{Issues and aim}
 
-    \TODO{Finish Issues and aim} \\
+    \TODO{Finish Issues and aim}
 
   \subsection{Scope and limitations}
 
-    \TODO{Finish Scope and limitation} \\
+    \TODO{Finish Scope and limitation}
 
   \subsection{Report structure}
 
-    \TODO{Finish Report structure} \\
+    \TODO{Finish Report structure}
 
 \section{Methodology}
 
-  \TODO{Finish Methodology} \\
+  \TODO{Finish Methodology}
 
   \subsection{Theories}
-    \TODO{Finish Theories} \\
+    \TODO{Finish Theories}
   \subsection{Tools}
-    \TODO{Finish Tools} \\
+    \TODO{Finish Tools}
   \subsection{Threats to validity}
-    \TODO{Finish Threats to validity} \\
+    \TODO{Finish Threats to validity}
 
 \section{Results}
 
-  \TODO{Finish Results } \\
-  \TODOMaybe{Flesh out more sub-sections} \\
+  \TODO{Finish Results }
+  \TODOMaybe{Flesh out more sub-sections}
 
 \section{Discussion and conclusion}
 
-  \TODO{Finish Discussion and contlusion} \\
+  \TODO{Finish Discussion and contlusion}
 
 \section{References }
 
-  \TODO{Finish References } \\
+  \TODO{Finish References }
 
 \section{Appendices}
 
 
 \section{Popular science summary}
 
-  \TODO{Finish Popular science summary} \\
+  \TODO{Finish Popular science summary}
 
   \begin{figure}[H]
     \begin{center}
