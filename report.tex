@@ -111,17 +111,18 @@
   \fi
 }
 
+
 % Toggle clutter on or off.
 \newif\ifshowTodo
 \newif\ifshowComments
 
-% Show.
-\showTodotrue
-\showCommentstrue
-
-% Hide.
-%\showCommentsfalse
-%\showTodofalse
+\ifdefined\visibleComments
+  \showTodotrue
+  \showCommentstrue
+\else
+  \showCommentsfalse
+  \showTodofalse
+\fi
 
 \begin{document}
 

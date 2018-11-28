@@ -4,6 +4,16 @@
 \usepackage[english,swedish]{babel}
 \usepackage[T1]{fontenc}
 
+% Reference settings.
+\usepackage[autostyle]{csquotes}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  url=true,
+  sorting=none
+]{biblatex}
+\bibliography{report}
+
 \setlength{\parindent}{0cm}
 
 \begin{document}
@@ -132,7 +142,6 @@
   \texttt{<annika.wallin@lucs.lu.se>} som ställt upp för frågor och förslag
   kring relevant litteratur inom kognitionsvetenskap om behovet uppstår.
 
-\bibliography{mdoc}
-\bibliographystyle{plain}
+	\printbibliography
 
 \end{document}
