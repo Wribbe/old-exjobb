@@ -12,3 +12,11 @@ let g:vimwiki_list = [{'path':$DIR_LOCAL_VIMWIKI}]
 " Taskwiki redirection.
 let g:taskwiki_taskrc_location = $DIR_LOCAL_TASKWIKIRC
 let g:taskwiki_data_location = $DIR_LOCAL_TASKWIKI
+
+
+" Calendar.vim configuration.
+" ===========================
+" Set Calendar first day of week.
+let g:calendar_first_day = 'monday'
+" Change cache directory.
+let g:calendar_cache_directory = $DIR_LOCAL_CALENDAR_CACHE

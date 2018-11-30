@@ -14,3 +14,6 @@ out
 .taskarena/.tasks/hooks/on-modify.timewarrior
 figures/plots
 **/__pycache__
+*taskrc
+*temp
+*/tasks/hooks
