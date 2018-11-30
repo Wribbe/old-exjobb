@@ -1,1 +1,3 @@
 Start using diary entries, populate the Calendar retroactively.
+
+Manged to fix SSH-key to github throguh proxy.
