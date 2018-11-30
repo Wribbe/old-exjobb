@@ -1,0 +1,3 @@
+{ 'items': [ {'id': '201811301305550006', 'summary': 'First personal meeting IKDC', 'end': {'date': '2018-9-7'}, 'start': {'date': '2018-9-6'}},
+             {'id': '201811301306480007', 'summary': 'Presentation project-plan.', 'end': {'date': '2018-9-27'}, 'start': {'date': '2018-9-26'}},
+             {'id': '201811301313290012', 'summary': 'MASSIVE-keycard', 'end': {'date': '2018-9-25'}, 'start': {'date': '2018-9-24'}} ] }

@@ -20,3 +20,5 @@ let g:taskwiki_data_location = $DIR_LOCAL_TASKWIKI
 let g:calendar_first_day = 'monday'
 " Change cache directory.
 let g:calendar_cache_directory = $DIR_LOCAL_CALENDAR_CACHE
+" Enable week-numbers.
+let g:calendar_week_number=1
