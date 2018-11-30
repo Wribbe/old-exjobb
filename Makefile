@@ -15,7 +15,7 @@ BBLS := $(patsubst %_raw.bib,$(DIR_OUT)/%.bbl,$(wildcard *.bib))
 BIBS := $(patsubst %.bbl,%.bib,$(BBLS))
 IMGS := $(wildcard images/*)
 
-PP := pdflatex -output-directory $(DIR_OUT)
+PP = pdflatex -output-directory $(DIR_OUT) $(1) | tee $(2) 2>&1
 
 INPUTS := tex/tidsschema.tex
 
@@ -36,13 +36,13 @@ non-commented: deps_both $(PDFS_NON_COMMENTED)
 #	cd $(DIR_OUT) && biber $(notdir $(patsubst %-commented.pdf,%,$@))
 #	$(PP) -draftmode "\def\visibleComments{1} $(foreach f,$(filter %.tex,$^),\input{$(f)})"
 
-$(DIR_OUT)/%-commented.pdf : %.tex $(INPUTS) $(IMGS) $(PLOTS)
-	$(PP) "\def\visibleComments{1} $(foreach f,$(filter %.tex,$^),\input{$(f)})"
-	@mv $(patsubst %-commented.pdf,%.pdf,$@) $@
+$(DIR_OUT)/%-commented.pdf : %.tex $(DIR_OUT)/%.bbl $(INPUTS) $(IMGS) $(PLOTS)
+	$(call PP,"\def\visibleComments{1} $(foreach f,$(filter %.tex,$^),\input{$(f)})",$(@:-commented.pdf=.log))
+	@mv $(@:-commented.pdf=.pdf) $@
 
-$(DIR_OUT)/%-non-commented.pdf : %.tex $(INPUTS) $(IMGS) $(PLOTS)
+$(DIR_OUT)/%-non-commented.pdf : %.tex $(DIR_OUT)/%.bbl $(INPUTS) $(IMGS) $(PLOTS)
 	$(PP) $(filter %.tex,$^)
-	@mv $(patsubst %-non-commented.pdf,%.pdf,$@) $@
+	@mv $(@:non-commented.pdf=.pdf) $@
 
 
 #$(DIR_OUT)/mdoc.pdf : mdoc.tex $(INPUTS) | $(DIR_OUT)
@@ -53,15 +53,12 @@ $(DIR_OUT)/%-non-commented.pdf : %.tex $(INPUTS) $(IMGS) $(PLOTS)
 #	bibtex $(patsubst %.bbl,%,$@)
 #	$(PP) $(notdir $(patsubst %.bbl,%.tex,$@))
 
-DEP_BIB_BBL :=  %_raw.bib | $(DIR_OUT)
-
-
-$(DIR_OUT)/%.bbl : $(DEP_BIB_BBL)
-	$(PP) -draft-mode $(notdir $(@:.bbl=.tex))
+$(DIR_OUT)/%.bbl : $(DIR_OUT)/%.undefref | $(DIR_OUT)
+	[ -f $@ ] || $(PP) -draft-mode $(notdir $(@:.bbl=.tex))
 	cd $(DIR_OUT) && biber $(notdir $(@:.bbl=))
 	$(PP) -draft-mode $(notdir $(@:.bbl=.tex))
 
-$(DIR_OUT)/%.bib : $(DEP_BIB_BBL)
+$(DIR_OUT)/%.bib : %_raw.bib | $(DIR_OUT)
 	./clean_bib_urls.py $^ > $@
 
 $(DIR_PLOTS)/%.pdf : $(DIR_PLOTS_SRC)/%.py plots.py | $(DIR_PLOTS)
