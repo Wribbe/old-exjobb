@@ -60,6 +60,6 @@ tex/tidsschema.tex : py/tids.py | $(DIR_TEX)
 	python $^ > $@
 
 $(DIRS):
-	@mkdir $@
+	@mkdir -p $@
 
 .PHONY: all commented non-commented
