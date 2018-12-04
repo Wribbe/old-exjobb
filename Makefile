@@ -62,3 +62,8 @@ tex/tidsschema.tex : py/tids.py | $(DIR_TEX)
 
 $(DIRS):
 	@mkdir -p $@
+
+clean:
+	rm -rf out
+
+.PHONY : clean all full both commented no_comments
