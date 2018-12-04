@@ -26,7 +26,8 @@ no_comments: $(PDFS_NO_COMMENTS)
 
 PP = \
 	pdf_out=$$($1 $2 | tee /dev/tty); \
-	if [ -n $$(grep "LaTeX Warning: There were undefined references." "$$pdf_out") ]; then \
+	rerun=$$(echo "$$pdf_out" | grep -E "undefined references|entry could not be found"); \
+	if [ -n "$$rerun" ]; then \
 		(cd "$(DIR_OUT)" && biber $(4:.tex=)); \
 		$1 $2;\
 	fi; \
@@ -50,7 +51,7 @@ $(DIR_OUT)/%-no-comments.pdf : %.tex $(PLOTS) %_raw.bib | $(DIR_OUT)
 
 
 $(DIR_OUT)/%.bib : %_raw.bib | $(DIR_OUT)
-	ln -sr $^ $@
+	python raw2bib.py $^ > $@
 
 
 tex/tidsschema.tex : py/tids.py | $(DIR_TEX)
