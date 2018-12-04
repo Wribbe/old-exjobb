@@ -23,6 +23,8 @@ commented: $(PDFS_COMMENTS)
 
 no_comments: $(PDFS_NO_COMMENTS)
 
+re:
+	$(MAKE) -B $(filter-out $@,$(MAKECMDGOALS))
 
 PP = \
 	pdf_out=$$($1 $2 | tee /dev/tty); \
