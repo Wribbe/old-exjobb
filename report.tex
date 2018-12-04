@@ -58,6 +58,7 @@
 \titlespacing{\section}{0cm}{0cm}{\sectionSpacing}
 \titlespacing{name=\section, numberless}{0cm}{0cm}{\sectionSpacing}
 \titlespacing{\subsection}{0cm}{0cm}{\sectionSpacing-0.7cm}
+\titlespacing{\subsubsection}{0pt}{10pt}{12pt}
 
 % Reference settings.
 \usepackage[autostyle]{csquotes}
@@ -67,6 +68,7 @@
   url=true,
   sorting=none
 ]{biblatex}
+\renewcommand\multicitedelim{\addsemicolon\space}
 \bibliography{report}
 
 % Get copyright-symbol.
