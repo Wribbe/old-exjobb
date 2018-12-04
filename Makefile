@@ -33,7 +33,7 @@ PP = \
 	mv $(DIR_OUT)/$(4:.tex=.pdf) $3;
 
 
-$(DIR_OUT)/%-comments.pdf : %.tex $(PLOTS) | $(DIR_OUT)
+$(DIR_OUT)/%-comments.pdf : %.tex $(PLOTS) %_raw.bib | $(DIR_OUT)
 	$(call PP,pdflatex -output-directory $(DIR_OUT), \
 		"\def\visibleComments{1} $(foreach f,$(filter %.tex,$^),\input{$(f)})",\
 	  $@,\
@@ -41,7 +41,7 @@ $(DIR_OUT)/%-comments.pdf : %.tex $(PLOTS) | $(DIR_OUT)
 	)
 
 
-$(DIR_OUT)/%-no-comments.pdf : %.tex $(PLOTS) | $(DIR_OUT)
+$(DIR_OUT)/%-no-comments.pdf : %.tex $(PLOTS) %_raw.bib | $(DIR_OUT)
 	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter %.tex,$^),$@,$(filter %.tex,$^))
 
 
