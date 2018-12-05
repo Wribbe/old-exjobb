@@ -93,11 +93,50 @@
 % Get heart.
 \usepackage{txfonts}
 
+% Get \isempty.
+\usepackage{xifthen}
+
+% Get strike through.
+\usepackage[normalem]{ulem}
+
 % Define t o d o commands.
 
+\newcommand\tableofcontentsTODO{%
+  \addcontentsline{toc}{section}{Todo-list}%
+  \section*{\textbf{\textcolor{purple}{Todo-list:}}
+      \@mkboth{\MakeUppercase\contentsname}{\MakeUppercaes\contentsname}%
+    }%
+    \vspace{-1.7cm}%
+    \@starttoc{tocTODO}%
+}%
 
-\newcommand\TODO[1]{\ifshowTodo{\textcolor{purple}{\texttt{<}\textbf{TODO}\texttt{: #1>}}\\}\fi}
-\newcommand\TODOMaybe[1]{\ifshowTodo{\textcolor{orange}{\texttt{<}\textbf{TODOMaybe}\texttt{: #1?>}}\\}\fi}
+\newcounter{counterTODO}\setcounter{counterTODO}{1}
+\newcounter{counterTODOMaybe}\setcounter{counterTODOMaybe}{1}
+
+\newcommand\TODO[2][]{%
+  \ifshowTodo{%
+    \def\varTODOtext{\textcolor{purple}{\texttt{<}\textbf{TODO}\#\arabic{counterTODO}\texttt{: #2>}}}
+    \def\varTODOContentLine{\textcolor{purple}{#2}}
+    \ifthenelse{\isempty{#1}}%
+      {% Is not checked.
+        \addcontentsline{tocTODO}{section}{\vspace{-0.3cm}\varTODOContentLine}%
+        \varTODOtext\\%
+      }%
+      {% Is checked.
+        \addcontentsline{tocTODO}{section}{\vspace{-0.3cm}\sout{\varTODOContentLine}}%
+      }%
+      \stepcounter{counterTODO}%
+  }\fi%
+}
+
+\newcommand\TODOMaybe[1]{%
+  \ifshowTodo{%
+    \textcolor{orange}{%
+      \texttt{<}\textbf{TODOMaybe}\#\arabic{counterTODOMaybe}\texttt{: #1?>}%
+    }\\%
+    \stepcounter{counterTODOMaybe}
+  }\fi%
+}
 \newcommand\TODOCite{\ifshowTodo{\textcolor{blue}{\texttt{\textit{[Finalize
           citations]}}}}\else[?]\fi}
 % Get adjustwidth command.
@@ -264,7 +303,7 @@
   Subject: (MAMM10), Interaction Design \\
   Division: \division \\
   Supervisor: \supervisor \\
-  % TODO: Which one?
+  \TODO[]{Co-supervisor or Company contact?}
   Co-supervisor / Company contact: \contact \\
   Examiner: \examiner \\
 
@@ -277,7 +316,7 @@
 
 \section*{Abstract}
 
-\TODO{Write non-mock abstract}
+\TODO[]{Write non-mock abstract}
 \def\abs{
   Working as a team in the gaming industry can be challenging as is, and it
   does not get better with the degradation of effectiveness and communication
@@ -319,14 +358,14 @@
 
 \section*{Sammanfattning}
 
-\TODO{Complete English version \& translate to Swedish}
+\TODO[]{Complete English version \& translate to Swedish}
 {\abs}
 
 \newpage
 
 \section*{Preface}
 
-\TODO{Finish preface}
+\TODO[]{Finish preface}
 
 {\large
 
@@ -379,7 +418,7 @@ Lund,
     \end{itemize}
   \end{notes}
 
-  \TODO{Finish Introduction}
+  \TODO[]{Finish Introduction}
 
   Communication and effectiveness have always been valued in industry,
   especially now in the modern age {\TODOCite}. \\
@@ -387,15 +426,15 @@ Lund,
 
   \subsection{Issues and aim}
 
-    \TODO{Finish Issues and aim}
+    \TODO[]{Finish Issues and aim}
 
   \subsection{Scope and limitations}
 
-    \TODO{Finish Scope and limitation}
+    \TODO[]{Finish Scope and limitation}
 
   \subsection{Report structure}
 
-    \TODO{Finish Report structure}
+    \TODO[]{Finish Report structure}
 
 \section{Methodology}
 
@@ -421,7 +460,7 @@ Lund,
     \end{itemize}
   \end{notes}
 
-  \TODO{Finish Methodology}
+  \TODO[]{Finish Methodology}
 
   \subsection{Design thinking}
 
@@ -496,18 +535,23 @@ Lund,
 
         \TODO{Ideate-cycle-graphic.pdf} \\
 
-      Hello
+      \TODO[]{Include break intrinsic bias / framing á design}
 
     \subsubsection{Prototype}
 
     \subsubsection{Test}
 
+    \TODO[]{Figure the correct word for '<this current document>'}
+  \subsection{Design thinking and this \{...\} (project?)}
+
+    \TODO[]{How is design thinking used in this <project?{>}}
+
   \subsection{Theories}
-    \TODO{Finish Theories}
+    \TODO[]{Finish Theories}
   \subsection{Tools}
-    \TODO{Finish Tools}
+    \TODO[]{Finish Tools}
   \subsection{Threats to validity}
-    \TODO{Finish Threats to validity}
+    \TODO[]{Finish Threats to validity}
 
 \section{Results}
   \begin{notes}{Results}
@@ -521,7 +565,7 @@ Lund,
     \end{itemize}
   \end{notes}
 
-  \TODO{Finish Results }
+  \TODO[]{Finish Results }
   \TODOMaybe{Flesh out more sub-sections}
 
 \section{Discussion and conclusion}
@@ -541,11 +585,12 @@ Lund,
     \end{itemize}
   \end{notes}
 
-  \TODO{Finish Discussion and conclusion}
+  \TODO[]{Finish Discussion and conclusion}
 
 \section{References}
 
-  \TODO{Finish References }
+  \TODO[]{Finish References}
+  \TODO[]{Add retrived-on dates to relevant references}
 
   \printbibliography[heading=none]
 
@@ -554,7 +599,7 @@ Lund,
 
 \section{Popular science summary}
 
-  \TODO{Finish Popular science summary}
+  \TODO[]{Finish Popular science summary}
 
   \begin{figure}[H]
     \begin{center}
@@ -578,5 +623,10 @@ Lund,
       \caption{Hello bar figure!}
     \end{center}
   \end{figure}
+
+\ifdefined\visibleComments
+  \newpage
+  \tableofcontentsTODO
+\fi
 
 \end{document}
