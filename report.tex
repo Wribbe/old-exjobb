@@ -332,41 +332,7 @@
 \section*{Abstract}
 
 \TODO[]{Write non-mock abstract}
-\def\abs{
-  Working as a team in the gaming industry can be challenging as is, and it
-  does not get better with the degradation of effectiveness and communication
-  that potential stress of looming deadlines brings with it. \\
-
-  This thesis examines if it is possible to counter the reduction
-  in communication and effectiveness by making it easier to work with the
-  available tooling. More specifically, it tries to answer the question; is is
-  possible to reduce the negative effects of stress through tailor-made
-  web-interfaces interfacing with available tooling that utilise findings from
-  Cognitive Science and Interface Design?  \\
-
-  The main method used in the study is design thinking, which is composed the
-  following steps: empathize, define, ideate, prototype and test. During the
-  empathize step interviews and surveys are conducted in order to get a measure
-  of the how the users currently view working with {\shotgun}.
-  Using the initial data, personas representing the requirements and needs of
-  identified user-groups and stakeholders are created.
-  After the define and ideate stages, manipulable prototypes are cerated using
-  {\python} and {\flask}. The prototypes are then tested and monitored using
-  {\recordingSystem} together with {\reviewProtocol} with the results
-  feeding back into the prototype iteration cycle for a total of {\numIterations}
-  iterations. \\
-
-  By analyzing the observation data gathered using {\recordingSystem} the
-  conclusion that {\texttt{<insert conclusion here>}} is (not) possible through
-  usage of them method described above. \\
-
-  \textbf{Keywords:}
-    Interaction Design,
-    Tooling,
-    Stress,
-    Development,
-    Design-Thinking.
-}
+\def\abs{\input{tex/report/abstract.tex}}
 {\abs}
 
 
@@ -436,21 +402,7 @@ Lund,
 
   \TODO[]{Finish Introduction}
 
-  Communication and effectiveness have always been valued in industry,
-  especially now in the modern age {\TODOCite}. \\
-
-
-  \subsection{Issues and aim}
-
-    \TODO[]{Finish Issues and aim}
-
-  \subsection{Scope and limitations}
-
-    \TODO[]{Finish Scope and limitation}
-
-  \subsection{Report structure}
-
-    \TODO[]{Finish Report structure}
+  \input{tex/report/introduction.tex}
 
 \section{Methodology}
 
@@ -478,134 +430,10 @@ Lund,
 
   \TODO[]{Finish Methodology}
 
-  \subsection{Design thinking}
-
-    After coming in
-    contact with the method in a paper on using personas to evaluate user
-    requirements\cite{c_personas_article_controlled_experiment} design thinking
-    became an interesting method candidate due to the following characteristics.
-    As a process, design thinking%
-      \cite{c_design_thinking_article_origins,
-      c_design_thinking_online_nonpeer_dschool_stanford},
-    has a strong focus on user requirements and
-    promotes an iteration heavy approach to prototyping and evaluation. Since
-    both of these characteristics were brought up in the initial discussions of
-    what kind of process that should underpin this project, it was chosen as the
-    projects main method. The process is generally defined by five steps or
-    \textit{modes}; empathize, define, ideate, prototype and test, each
-    described in more detail below.
-
-    %After coming in contact with the design thinking process through a paper on
-    %using personas for evaluation of
-    %users requirements\cite{c_personas_article_controlled_experiment}, and
-    %further reading about it\cite{c_design_thinking_article_origins}%
-    %\cite{c_design_thinking_online_nonpeer_dschool_stanford}
-    %it was considered a good fit for this project due to its user centered
-    %approach and focus on a iterative process. The main structure of the
-    %design thinking consists of five steps; empathize, define, ideate prototype
-    %and test, each defined below.
-
-    \subsubsection{Empathize}
-
-      This step expands collecting end-user requirement and paint points
-      to also include the requirements and frustrations of related stakeholders
-      (henceforth collectively referred to as users).
-      Using this extended pool of users, the goal is to observe, engage and
-      immerse one self in the relationship between the users and the current
-      situation. Observing consists of noting how users interact with their
-      environment; capture quotes, watch common usages and be on the lookout for
-      clues that give hints about their feelings and thoughts. Try to reveal
-      deeper insights by interacting with users more directly through
-      interviews and similar means. Be immersed by constructing or participating
-      in the specific environments that could influence the design or
-      perceptions about the situation. \\
-
-      As the name suggests, the empathize stage is about probing the emotions
-      that drive the users needs and behaviours, in order to make it possible to
-      design innovate solutions to their problems.
-
-      %gathering the insights
-      %necessary to design innovative solutions by probing the emotions that
-      %drive the users needs and behaviours.
-
-      %Design thinking expands on the usual user-requirement gathering with the
-      %inclusion of formulating and gathering requirements for relevant
-      %stakeholders.
-
-    \subsubsection{Define}
-
-      Your point of view; by taking the insights gathered in the previous step,
-      construct an actionable problem statement that reflects the understanding
-      of the users and their environment, this is your point of view.
-      Mainly, this should be more than a simple re-statement of the problem
-      space, it should be a unique design solution strongly influenced and
-      framed by the discovered needs of the end-users. It is important that any
-      initial or revised problem statement is continuously re-framed to mach new
-      insights generated from current and future empathy work.
-
-    \subsubsection{Ideate}
-
-      In this mode the goal is to do a wide examination of the solution space by
-      continuing to generate ideas well beyond any initial solutions that spring
-      to mind. After such probing is done, the focus is narrowed and the
-      solutions are evaluated one by one in order to determine if they are
-      viable or not. \\
-
-        \TODO[]{Create ideate-focus-cycle-graphic.pdf}
-
-      It is important to insist that the different focus phases should be fully
-      separated from each other. There should be no evaluation in the broad
-      phase, only collection, similarly, introducing new ideas during the
-      evaluation phase should be avoided.
-
-      \TODO[]{Include break intrinsic bias / framing á design}
-
-    \subsubsection{Prototype}
-
-      Prototyping should manifests the current ideas into the physical world in
-      such a way that they can be interacted with and the results discussed. An
-      initial prototype should be cheap and rough; a role-playing activity,
-      post-its on a wall or a simple physical object. By keeping the investment
-      in, and resolution of the prototype low it will be easier to quickly explore
-      different scenarios and incorporate the results back into the iteration
-      process. \\
-
-      Prototyping will most readily generate data that evaluate the pure
-      functionality of the idea that the prototype is based on, but it also has
-      several other benefits. Interacting with the prototype can add to the
-      empathy work by deepening the understanding of the users and the
-      surrounding design space.  It is also possible to run tests on the
-      prototype artefact in order to validate or refine current theories and
-      solutions.  Further, the use of a prototype can facilitate easier
-      communicating of the underlying design vision for both showcase and
-      inspiration. Finally, by using multiple different prototypes at the same
-      time, parallell execution and exploration of multiple ideas can be
-      preformed at once, increasing overall throughput.
-
-    \subsubsection{Test}
-
-    As described in the Standford d.school's {\stanfordBootleg}%
-    \cite[V]{c_design_thinking_online_nonpeer_dschool_stanford};
-      \enquote{Prototype as if your know you're right, but test as if you know
-        you're wrong}. This phase allows you to gather feedback, refine
-      solutions and further deepen the empathy work. The core of the process is
-      an iterative sequence where data, gathered by observing users  interacting
-      with a prototype in the appropriate context, is used to further refine the
-      design- and problem-space.
-
-  \subsection{Design thinking and this \{...\} (project?)}
-
-    \TODO[]{Figure the correct word for '<this current document>'}
-    \TODO[]{How is design thinking used in this <project?{>}}
-
-  \subsection{Theories}
-    \TODO[]{Finish Theories}
-  \subsection{Tools}
-    \TODO[]{Finish Tools}
-  \subsection{Threats to validity}
-    \TODO[]{Finish Threats to validity}
+  \input{tex/report/methodology.tex}
 
 \section{Results}
+
   \begin{notes}{Results}
     Type: Specific
     \begin{itemize}
@@ -617,8 +445,7 @@ Lund,
     \end{itemize}
   \end{notes}
 
-  \TODO[]{Finish Results }
-  \TODOMaybe{Flesh out more sub-sections}
+  \input{tex/report/results.tex}
 
 \section{Discussion and conclusion}
 
@@ -637,7 +464,7 @@ Lund,
     \end{itemize}
   \end{notes}
 
-  \TODO[]{Finish Discussion and conclusion}
+  \input{tex/report/discussion.tex}
 
 \newpage
 \section{References}
@@ -652,30 +479,8 @@ Lund,
 
 \section{Popular science summary}
 
-  \TODO[]{Finish Popular science summary}
+  \input{tex/report/science_summary.tex}
 
-  \begin{figure}[H]
-    \begin{center}
-      \includegraphics{figures/plots/fig_test.pdf}
-      \caption{Hello line figure!}
-    \end{center}
-  \end{figure}
-
-  \begin{figure}[H]
-    \begin{center}
-      \vspace{-0.3cm}
-      \includegraphics{figures/plots/fig_pie_test.pdf}
-      \vspace{-0.5cm}
-      \caption{Hello pie figure!}
-    \end{center}
-  \end{figure}
-
-  \begin{figure}[H]
-    \begin{center}
-      \includegraphics{figures/plots/fig_bar_test.pdf}
-      \caption{Hello bar figure!}
-    \end{center}
-  \end{figure}
 
 \ifdefined\visibleComments
   \newpage

@@ -12,16 +12,16 @@ SUF_NOCO := _no_comments
 SUF_CO := _comments
 
 BASE_NAMES := $(patsubst %.tex,%,$(wildcard *.tex))
-BASE_NAMES := $(filter report,$(BASE_NAMES))
+#BASE_NAMES := $(filter report,$(BASE_NAMES))
 PDFS := $(foreach n,$(BASE_NAMES),$n$(SUF_NOCO).pdf $n$(SUF_CO).pdf)
 PDFS := $(foreach p,$(PDFS),$(DIR_OUT)/$p)
 
 PLOTS := $(patsubst %.py,$(DIR_PLOTS)/%.pdf,$(notdir $(wildcard $(DIR_PLOTS_SRC)/*.py)))
 BIBS := $(PDFS:.pdf=.bib)
 TEXS := $(PDFS:.pdf=.tex)
+SRC_LINKS := $(PDFS:.pdf=)
 
-all: $(TEXS) $(BIBS) commented
-	echo $(BIBS)
+all: $(SRC_LINKS) $(TEXS) $(BIBS) commented
 
 full both: all no_comments
 
@@ -42,7 +42,7 @@ PP = \
 	fi
 
 
-%.pdf : %.tex %.bib $(PLOTS) | $(DIR_OUT)
+%.pdf : %.tex % %.bib $(PLOTS) | $(DIR_OUT)
 	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter %.tex,$^))
 
 
@@ -72,6 +72,14 @@ tex/tidsschema.tex : py/tids.py | $(DIR_TEX)
 
 $(DIRS):
 	@mkdir -p $@
+
+$(DIR_OUT)/%$(SUF_NOCO): | $(DIR_OUT)
+	[ -d "tex/$*" ] || mkdir -p tex/$*
+	ln -sr tex/$* $@
+
+$(DIR_OUT)/%$(SUF_CO): | $(DIR_OUT)
+	[ -d "tex/$*" ] || mkdir -p tex/$*
+	ln -sr tex/$* $@
 
 clean:
 	rm -rf out

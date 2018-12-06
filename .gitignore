@@ -4,7 +4,6 @@ brev
 *.bbl
 *.blg
 crypt
-tex
 pplan.out
 *.toc
 *.xml
@@ -17,3 +16,4 @@ figures/plots
 *taskrc
 *temp
 */tasks/hooks
+tex/tidsschema.tex
