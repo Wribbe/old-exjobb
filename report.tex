@@ -229,11 +229,11 @@
       (current page.north west) + (\colorBorder, -\colorBorder)%
     $);
 
-    \coordinate (bottomRight) at ($%
+    \coordinate (bottom-Right) at ($%
       (current page.south east) + (-\colorBorder, \colorBorder)%
     $);
 
-    \fill[fill=bgcolor] (topLeft) rectangle (bottomRight);
+    \fill[fill=bgcolor] (topLeft) rectangle (bottom-Right);
   \end{tikzpicture}
 
   \begin{tikzpicture}[remember picture, overlay]
@@ -339,9 +339,10 @@
 
   This thesis examines if it is possible to counter the reduction
   in communication and effectiveness by making it easier to work with the
-  available tooling. More specifically; is is possible
-  to reduce the negative effects of stress through tailor-made web-interfaces
-  employing findings from Cognitive Science and Interface Design? \\
+  available tooling. More specifically, it tries to answer the question; is is
+  possible to reduce the negative effects of stress through tailor-made
+  web-interfaces interfacing with available tooling that utilise findings from
+  Cognitive Science and Interface Design?  \\
 
   The main method used in the study is design thinking, which is composed the
   following steps: empathize, define, ideate, prototype and test. During the
@@ -351,7 +352,7 @@
   identified user-groups and stakeholders are created.
   After the define and ideate stages, manipulable prototypes are cerated using
   {\python} and {\flask}. The prototypes are then tested and monitored using
-  {\recordingSystem} toghether with {\reviewProtocol} with the results
+  {\recordingSystem} together with {\reviewProtocol} with the results
   feeding back into the prototype iteration cycle for a total of {\numIterations}
   iterations. \\
 
