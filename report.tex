@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{lipsum}
 
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{calc}
 
@@ -160,6 +160,18 @@
     \end{adjustwidth}
     \vspace{0.3cm}
   \fi
+}
+
+% Define draftText command.
+\newcommand\draftText[2]
+{
+  \ifshowComments
+    {\footnotesize
+      \color{OliveGreen}
+        #1
+    }
+  \fi
+  #2
 }
 
 
