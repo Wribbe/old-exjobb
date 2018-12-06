@@ -35,10 +35,13 @@ re:
 
 PP = \
 	pdf_out=$$($1 $2 | tee /dev/tty); \
-	rerun=$$(echo "$$pdf_out" | grep -E "undefined references|entry could not be found"); \
-	if [ -n "$$rerun" ]; then \
+	rerun_biber=$$(echo "$$pdf_out" | grep -E "undefined references|entry could not be found"); \
+	rerun_links=$$(echo "$$pdf_out" | grep -E "Rerun to get cross-references right"); \
+	if [ -n "$$rerun_biber" ]; then \
 	  biber $(2:.tex=); \
 		$1 $2;\
+	elif [ -n "$$rerun_links" ]; then \
+		$1 $2; \
 	fi
 
 
