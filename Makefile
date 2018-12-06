@@ -8,51 +8,61 @@ DIR_PLOTS_SRC := src/plots
 PERCENT := %
 $(eval DIRS := $(foreach var,$(filter-out %_$(PERCENT)%,$(filter DIR_%,$(shell cat Makefile))),$$($(var))))
 
-TEXS := $(filter report.tex,$(wildcard *.tex))
-PDFS_COMMENTS := $(patsubst %.tex,$(DIR_OUT)/%-comments.pdf,$(TEXS))
-PDFS_NO_COMMENTS := $(patsubst %.tex,$(DIR_OUT)/%-no-comments.pdf,$(TEXS))
+SUF_NOCO := _no_comments
+SUF_CO := _comments
+
+BASE_NAMES := $(patsubst %.tex,%,$(wildcard *.tex))
+BASE_NAMES := $(filter report,$(BASE_NAMES))
+PDFS := $(foreach n,$(BASE_NAMES),$n$(SUF_NOCO).pdf $n$(SUF_CO).pdf)
+PDFS := $(foreach p,$(PDFS),$(DIR_OUT)/$p)
 
 PLOTS := $(patsubst %.py,$(DIR_PLOTS)/%.pdf,$(notdir $(wildcard $(DIR_PLOTS_SRC)/*.py)))
-BIBS := $(patsubst %_raw.bib,$(DIR_OUT)/%.bib,$(wildcard *_raw.bib))
+BIBS := $(PDFS:.pdf=.bib)
+TEXS := $(PDFS:.pdf=.tex)
 
-all: $(BIBS) commented
+all: $(TEXS) $(BIBS) commented
+	echo $(BIBS)
 
-full both: $(BIBS) commented no_comments
+full both: all no_comments
 
-commented: $(PDFS_COMMENTS)
+commented: $(filter-out %$(SUF_NOCO).pdf,$(PDFS))
 
-no_comments: $(PDFS_NO_COMMENTS)
+no_comments: $(filter %$(SUF_NOCO).pdf,$(PDFS))
 
 re:
 	$(MAKE) -B $(filter-out $@,$(MAKECMDGOALS))
+
 
 PP = \
 	pdf_out=$$($1 $2 | tee /dev/tty); \
 	rerun=$$(echo "$$pdf_out" | grep -E "undefined references|entry could not be found"); \
 	if [ -n "$$rerun" ]; then \
-		(cd "$(DIR_OUT)" && biber $(4:.tex=)); \
+	  biber $(2:.tex=); \
 		$1 $2;\
-	fi; \
-	mv $(DIR_OUT)/$(4:.tex=.pdf) $3;
+	fi
 
 
-$(DIR_OUT)/%-comments.pdf : %.tex $(PLOTS) %_raw.bib | $(DIR_OUT)
-	$(call PP,pdflatex -output-directory $(DIR_OUT), \
-		"\def\visibleComments{1} $(foreach f,$(filter %.tex,$^),\input{$(f)})",\
-	  $@,\
-		$(filter %.tex,$^)\
-	)
-
-
-$(DIR_OUT)/%-no-comments.pdf : %.tex $(PLOTS) %_raw.bib | $(DIR_OUT)
-	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter %.tex,$^),$@,$(filter %.tex,$^))
+%.pdf : %.tex %.bib $(PLOTS) | $(DIR_OUT)
+	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter %.tex,$^))
 
 
 %.pdf : $(DIR_PLOTS_SRC)/%.py plots.py | $(DIR_PLOTS)
 	./plots.py $(filter-out plots.py,$^) $@
 
 
-$(DIR_OUT)/%.bib : %_raw.bib | $(DIR_OUT)
+$(DIR_OUT)/%$(SUF_NOCO).tex : %.tex | $(DIR_OUT)
+	./tex_format.py $^ bibfile=$(notdir $(@:.tex=)) > $@
+
+
+$(DIR_OUT)/%$(SUF_CO).tex : %.tex | $(DIR_OUT)
+	./tex_format.py $^ COMMENTS bibfile=$(notdir $(@:.tex=)) > $@
+
+
+$(DIR_OUT)/%$(SUF_NOCO).bib : %_raw.bib | $(DIR_OUT)
+	python raw2bib.py $^ > $@
+
+
+$(DIR_OUT)/%$(SUF_CO).bib : %_raw.bib | $(DIR_OUT)
 	python raw2bib.py $^ > $@
 
 

@@ -68,8 +68,10 @@
   url=true,
   sorting=none
 ]{biblatex}
+
+
 \renewcommand\multicitedelim{\addsemicolon\space}
-\bibliography{report}
+\bibliography{$bibfile}
 
 % Get copyright-symbol.
 \usepackage{textcomp}
@@ -171,6 +173,18 @@
 \else
   \showCommentsfalse
   \showTodofalse
+\fi
+
+\ifx\visibleComments\undefined
+  \DeclareSourcemap{
+    \maps[datatype=bibtex]{
+      \map{
+        \step[fieldsource=url, match=\regexp{http://ludwig.lub.lu.se/login}, final]
+        \step[fieldset=url, null]
+        \step[fieldset=urldate, null]
+      }
+    }
+  }
 \fi
 
 \begin{document}
