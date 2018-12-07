@@ -23,7 +23,7 @@ SRC_LINKS := $(PDFS:.pdf=)
 
 IMGS := $(wildcard images/*)
 
-all: $(SRC_LINKS) $(TEXS) $(BIBS) commented
+all: $(SRC_LINKS) $(TEXS) $(BIBS) $(PLOTS) commented
 
 full both: all no_comments
 
@@ -51,7 +51,7 @@ PP = \
 	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter %.tex,$^))
 
 
-%.pdf : $(DIR_PLOTS_SRC)/%.py plots.py | $(DIR_PLOTS)
+$(DIR_PLOTS)/%.pdf : $(DIR_PLOTS_SRC)/%.py plots.py | $(DIR_PLOTS)
 	./plots.py $(filter-out plots.py,$^) $@
 
 
