@@ -2,12 +2,13 @@
 
 import os
 import sys
+import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
 import importlib.util
 
 NUM_FIG = 0
-DEFAULT_SIZE = (5, 3)
+DEFAULT_SIZE = (3.0, 1.5)
 
 hfont = {'fontname': 'Helvetica'}
 
@@ -48,11 +49,9 @@ def create_plot(figure):
 
     if figure.plot_type == "pie":
         f, ax = plt.subplots(figsize=figure.size)
-        ax.pie(figure.sizes, explode=figure.explode, labels=figure.labels,
+        ax.pie(figure.values , explode=figure.explode, labels=figure.labels,
                 autopct='%1.1f%%', shadow=True, startangle=90)
         ax.set_axis_off()
-        plt.gca().xaxis.set_major_locator(plt.NullLocator())
-        plt.gca().yaxis.set_major_locator(plt.NullLocator())
     elif figure.plot_type == "bar":
         f, ax = plt.subplots(figsize=figure.size)
         plt.bar(figure.x, figure.x_data)
