@@ -12,7 +12,7 @@ SUF_NOCO := _no_comments
 SUF_CO := _comments
 
 BASE_NAMES := $(patsubst %.tex,%,$(wildcard *.tex))
-#BASE_NAMES := $(filter report,$(BASE_NAMES))
+BASE_NAMES := $(filter report,$(BASE_NAMES))
 PDFS := $(foreach n,$(BASE_NAMES),$n$(SUF_NOCO).pdf $n$(SUF_CO).pdf)
 PDFS := $(foreach p,$(PDFS),$(DIR_OUT)/$p)
 
