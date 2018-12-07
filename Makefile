@@ -80,11 +80,11 @@ $(DIRS):
 
 $(DIR_OUT)/%$(SUF_NOCO): | $(DIR_OUT)
 	[ -d "tex/$*" ] || mkdir -p tex/$*
-	ln -sr tex/$* $@
+	[ -h "$@" ] || ln -sr tex/$* $@
 
 $(DIR_OUT)/%$(SUF_CO): | $(DIR_OUT)
 	[ -d "tex/$*" ] || mkdir -p tex/$*
-	ln -sr tex/$* $@
+	[ -h "$@" ] || ln -sr tex/$* $@
 
 clean:
 	rm -rf out
