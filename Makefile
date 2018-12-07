@@ -21,6 +21,8 @@ BIBS := $(PDFS:.pdf=.bib)
 TEXS := $(PDFS:.pdf=.tex)
 SRC_LINKS := $(PDFS:.pdf=)
 
+IMGS := $(wildcard images/*)
+
 all: $(SRC_LINKS) $(TEXS) $(BIBS) commented
 
 full both: all no_comments
@@ -45,7 +47,7 @@ PP = \
 	fi
 
 
-%.pdf : %.tex % %.bib $(PLOTS) | $(DIR_OUT)
+%.pdf : %.tex % %.bib $(PLOTS) $(IMGS) | $(DIR_OUT)
 	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter %.tex,$^))
 
 
