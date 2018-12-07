@@ -150,6 +150,9 @@
 % Get subfigure.
 \usepackage{subcaption}
 
+% Get wrapfig.
+\usepackage{wrapfig}
+
 
 % Define notes environment.
 \NewEnviron{notes}[1]
@@ -166,7 +169,7 @@
 }
 
 % Define draftText command.
-\newcommand\draftText[2]
+\newcommand\draftText[1]
 {
   \ifshowComments
     {\footnotesize
@@ -174,7 +177,6 @@
         #1
     }
   \fi
-  #2
 }
 
 
