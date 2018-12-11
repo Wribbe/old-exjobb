@@ -76,9 +76,19 @@
   \pageref{fig:ref_fig_survey_initial} for a screenshot of
   the survey as viewed in a web-browser.\\
 
-  Q1: [M] \textbf{Role:} \\
-  Presented as a text-input field with the suggestion: \textit{programmer,
-    animator, etc.} beneath it. \\
+  Q1: [M] \textbf{Role:} \\ Presented as a text-input field with the suggestion: \textit{programmer,
+    animator, etc.} beneath it. Results, sorted alphabetically:  \\
+  \textit{
+    animator, animator, artist, cinematics, compositor and 3d artist, concept
+    artist, environment artist, lead anim tech, lead animator cinematic dept., lead
+    cine art, producer, project management, senior 3d art generalist, senior
+    animator, shotgun administrator / pipeline coordinator, technical
+  } \\
+
+  Performing a word-analysis after making the following substitutions; art
+  $\rightarrow$ artist and anim $\rightarrow$ animator and taking the five most
+  occurring words yields the following: six artist, five animator, three lead and two
+  occurrences of 3d and senior respectively. \\
 
   Q2: [O] \textbf{%
     Write a short description, in your own words, of up to three
@@ -86,11 +96,72 @@
   } \\
   Question is presented as three text-input fields numbered 1 to 3.\\
 
+  Summery of answers follows, for the full data (with specific company and
+  individual information redacted) see \ref{subsec:ref_subsec_results_initial}
+  on page \pageref{subsec:ref_subsec_results_initial}. Of the 48
+  description lines submitted, 6 were left blank. First, the answers are split
+  into words and substitutions, as described below, are done in order to get the
+  most prevalent groupings. \vspace{-0.4cm}
+  \begin{figure}[H]
+    \begin{minipage}[c]{0.3\textwidth}
+    \begin{equation*} \left. \begin{tabular}{c}
+      \text{shot-task} \\
+      \text{tasks} \\
+    \end{tabular}\right \} \text{task} \end{equation*}
+    \end{minipage}
+    \begin{minipage}[c]{0.3\textwidth}
+    \begin{equation*} \left. \begin{tabular}{c}
+      \text{searches} \\
+      \text{lookup} \\
+      \text{search} \\
+      \text{check} \\
+      \text{finding} \\
+    \end{tabular}\right \} \text{find} \end{equation*}
+    \end{minipage}
+    \begin{minipage}[c]{0.3\textwidth}
+    \begin{equation*} \left. \begin{tabular}{c}
+      \text{communicate} \\
+      \text{update} \\
+      \text{feedback} \\
+      \text{status} \\
+    \end{tabular}\right \} \text{info} \end{equation*}
+    \end{minipage}
+    \caption{Word substitution on Q2 before analysis.}
+  \end{figure}
+
+  Which results in the following words appearing three or more times.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figures/plots/fig_dots_survey_001_Q2_word_freq.pdf}
+    \caption{Q2 most frequent words after substitution.}
+  \end{figure}
+
   Q3: [O] \textbf{%
     Mark all words that reflect your thoughts on working with \\Shotgun.
   } \\
-  Question is presented as a grid of 12 checkboxes representing a word each, the
-  layout is scrambled based on the participants name. \\
+  Question is presented as a grid of 3x4 check-boxes representing a word each, the
+  layout is scrambled based on the participants name in order to avoid any
+  systematic biases based on the order of appearance. \\
+
+  The goal of the selected words is to get an estimate on the following
+  characteristics: \\
+  \begin{adjustwidth}{0.5cm}{}
+    \underline{From less or worse $\longrightarrow$ more or better:} \\
+    \textit{Perceived complexity:} Complex, Understandable, Straightforward \\
+    \textit{Emotional state:} Painful, Okay, Delightful \\
+    \textit{Perceived functional maturity:} Lacking, Functional, Perfect \\
+    \textit{Perceived information coherence:} Fragmented, Clear, Whole-Picture \\
+  \end{adjustwidth}
+
+  Result presented below.
+
+  \begin{figure}[H]
+    \centering
+    \hspace{-2.35cm}
+    \includegraphics{figures/plots/fig_dots_survey_001_Q3_word_freq.pdf}
+    \caption{Q3 chosen words.}
+  \end{figure}
 
   Q4: [O] \textbf{%
     Describe up to four work-flow related functionalities that would benefit

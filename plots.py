@@ -31,6 +31,16 @@ defaults = {
         "formatter": None,
         "size": DEFAULT_SIZE,
     },
+    'dots': {
+      "label_x": "",
+      "label_y": "",
+      "title": "",
+      "size": DEFAULT_SIZE,
+      "rotation_label": None,
+      "dot_scale":3.0,
+      "labels_y": [],
+      "rotate_figure": False,
+    },
 }
 
 def check_default_attributes(module):
@@ -59,6 +69,16 @@ def create_plot(figure):
         if figure.formatter:
             formatter = FuncFormatter(figure.formatter)
             ax.yaxis.set_major_formatter(formatter)
+    elif figure.plot_type == "dots":
+      f, ax = plt.subplots(figsize=figure.size)
+      if figure.rotate_figure:
+        ax.scatter(figure.y, figure.x, s=figure.dot_scale)
+        plt.yticks(figure.label_pos, figure.labels, rotation=figure.rotation_label)
+        plt.xticks(figure.labels_pos_y, figure.labels_y)
+      else:
+        ax.scatter(figure.x, figure.y, s=figure.dot_scale)
+        plt.xticks(figure.label_pos, figure.labels, rotation=figure.rotation_label)
+        plt.yticks(figure.labels_pos_y, figure.labels_y)
 
     else: # type == "line".
         f = plt.figure(figsize=figure.size)
