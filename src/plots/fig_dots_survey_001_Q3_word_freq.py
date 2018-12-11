@@ -11,7 +11,7 @@ from collections import Counter
 sys.path.insert(0, ".")
 import config as cfg
 
-conn = sqlite3.connect(cfg.DATABASE_PATH)
+conn = sqlite3.connect(cfg.PATH_DATABASE)
 
 c = conn.execute("""
   SELECT

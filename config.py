@@ -1,3 +1,7 @@
 # Configuration file.
 # -------------------
-DATABASE_PATH="/home/seng/backup/backup/shotgun_web/2018-12-09/databases/shotgun_web_surveys.sqlite"
+import os
+
+PATH_DIR_ROOT=os.path.dirname(os.path.abspath(__file__))
+PATH_DIR_TEX=os.path.join(PATH_DIR_ROOT, "tex")
+PATH_DATABASE="/home/seng/backup/backup/shotgun_web/2018-12-09/databases/shotgun_web_surveys.sqlite"
