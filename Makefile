@@ -28,7 +28,7 @@ def: $(SRC_LINKS) $(TEXS) $(BIBS) $(PLOTS) commented
 
 all: def $(PDFS)
 
-commented: $(filter-out %$(SUF_NOCO).pdf %$(SUF_NOAPP),$(PDFS))
+commented: $(filter-out %$(SUF_NOCO).pdf %$(SUF_NOAPP).pdf,$(PDFS))
 
 no_comments: $(filter %$(SUF_NOCO).pdf,$(PDFS))
 
