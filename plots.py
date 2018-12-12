@@ -16,6 +16,8 @@ defaults = {
     'line': {
         "label_x": "",
         "label_y": "",
+        "ticks_x": "",
+        "ticks_y": "",
         "title": "",
         "size": DEFAULT_SIZE,
     },
@@ -58,10 +60,13 @@ def create_plot(figure):
         plt.title(figure.title, **hfont)
 
     if figure.plot_type == "pie":
-        f, ax = plt.subplots(figsize=figure.size)
-        ax.pie(figure.values , explode=figure.explode, labels=figure.labels,
-                autopct='%1.1f%%', shadow=True, startangle=90)
-        ax.set_axis_off()
+        f = plt.figure(figsize=(figure.size))
+        patches, text = plt.pie(figure.values, explode=figure.explode,
+                               startangle=90)
+        plt.legend(patches, labels=figure.labels, loc="best",
+                  prop={'size': 5})
+        plt.tight_layout()
+#        ax.set_axis_off()
     elif figure.plot_type == "bar":
         f, ax = plt.subplots(figsize=figure.size)
         plt.bar(figure.x, figure.x_data)
@@ -87,6 +92,10 @@ def create_plot(figure):
             fig.xlabel(figure.label_x, **hfont)
         if figure.label_y:
             fig.ylabel(figure.label_y, **hfont)
+        if figure.ticks_x:
+          plt.xticks(*figure.ticks_x[:2], **figure.ticks_x[2])
+        if figure.ticks_y:
+          plt.yticks(*figure.ticks_y[:2], **figure.ticks_y[2])
 
     return f
 
@@ -111,7 +120,10 @@ def main(arguments):
     check_default_attributes(figure)
 
     f = create_plot(figure)
-    f.savefig(path_output, bbox_inches='tight', pad_inches=-0.0)
+    if figure.plot_type == "pie":
+      f.savefig(path_output)
+    else:
+      f.savefig(path_output, bbox_inches='tight', pad_inches=-0.0)
 
 if __name__ == "__main__":
    main(sys.argv[1:])
