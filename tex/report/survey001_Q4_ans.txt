@@ -1,0 +1,39 @@
+\\ Category legend: \textcolor{MidnightBlue}{$\text{Automation}^{1}$}, \textcolor{Fuchsia}{$\text{Presentation}^{2}$}, \textcolor{ForestGreen}{$\text{Enforcement}^{3}$}, \textcolor{BurntOrange}{$\text{Communication}^{4}$}, \textcolor{Aquamarine}{$\text{Usability}^{5}$}, \textcolor{BrickRed}{$\text{Functionality}^{6}$}. \\\\
+Bigger picture: Get a more direct, user friendly UI representation of \textcolor{Fuchsia}{$\textbf{\text{information}}^{2}$} displayed in general. It's just too \textcolor{Fuchsia}{$\textbf{\text{cluttered}}^{2}$} to navigate through effectively\\
+\textcolor{Aquamarine}{$\textbf{\text{Integration}}^{5}$} of media upload. an easier, more direct way of creating \textcolor{Aquamarine}{$\textbf{\text{versions}}^{5}$} with pics that \textcolor{MidnightBlue}{$\textbf{\text{autofills}}^{1}$} obvious \textcolor{Fuchsia}{$\textbf{\text{info}}^{2}$} (Name of artist etc) - A button in SG that prompts a screencap and \textcolor{MidnightBlue}{$\textbf{\text{auto-upload?}}^{1}$}\\
+The note system is a bit slow and painful to go through, could we have some sort of chatroom per sequence /task that stays there for \textcolor{Fuchsia}{$\textbf{\text{reference}}^{2}$} (add \textcolor{Fuchsia}{$\textbf{\text{"tags"}}^{2}$} to specific messages of important to use as \textcolor{Fuchsia}{$\textbf{\text{reference}}^{2}$} ,maybe?)\\
+all \textcolor{Fuchsia}{$\textbf{\text{info}}^{2}$} in one place\\
+A \textcolor{Fuchsia}{$\textbf{\text{clearer}}^{2}$} workflow for blocking and unblocking tasks so that they don't remain blocked in a vaccum. Like \textcolor{ForestGreen}{$\textbf{\text{forcing}}^{3}$} a reason for block and a \textcolor{ForestGreen}{$\textbf{\text{need}}^{3}$} to assign someone to it.\\
+A \textcolor{Fuchsia}{$\textbf{\text{clearer}}^{2}$} note system and overview, so that tasks with many \textcolor{Aquamarine}{$\textbf{\text{versions}}^{5}$} with annotations can be sorted through more easily\\
+Status changing on my task becoming more readily \textcolor{BurntOrange}{$\textbf{\text{available}}^{4}$} to my supervisor\\
+easier \textcolor{Aquamarine}{$\textbf{\text{navigation}}^{5}$} between shots -> task level in shotgun\\
+If the prop task is set to skip, all prop tasks are set to skip\\
+Assets of \textcolor{MidnightBlue}{$\textbf{\text{parent}}^{1}$} task get the prio of the \textcolor{MidnightBlue}{$\textbf{\text{parent}}^{1}$} (props connected to scenes)\\
+Not getting \textcolor{BurntOrange}{$\textbf{\text{spammed}}^{4}$} with emails/inbox when someone changes the start date of a scene\\
+The gantt chart would be very useful if it was updated \textcolor{Fuchsia}{$\textbf{\text{correctly}}^{2}$}\\
+It would have helped if data was \textcolor{Fuchsia}{$\textbf{\text{organized}}^{2}$} more \textcolor{Fuchsia}{$\textbf{\text{clearly}}^{2}$}\\
+It would have helped if there were actually \textcolor{Fuchsia}{$\textbf{\text{images}}^{2}$} for assets (especially character assets)\\
+People work \textcolor{ForestGreen}{$\textbf{\text{differently}}^{3}$} in Shotgun and many tasks were set Ready to Start when they were not ready\\
+image search.\\
+Footage \textcolor{Aquamarine}{$\textbf{\text{uploader,}}^{5}$} as RV has it but with better tracking of user tasks so it's easier to link\\
+Asset \textcolor{Aquamarine}{$\textbf{\text{management}}^{5}$}\\
+DCC \textcolor{Aquamarine}{$\textbf{\text{integrations}}^{5}$} (shotgun desktop)\\
+I seem to not see the notes sent to me on a task. Easiest way for me to see if I got notes is in my \textcolor{BurntOrange}{$\textbf{\text{email}}^{4}$}\\
+\textcolor{MidnightBlue}{$\textbf{\text{automatic}}^{1}$} cross programs mistakes/violations flagged\\
+live/case sensitive helping system\\
+Better \textcolor{Aquamarine}{$\textbf{\text{flows}}^{5}$} for artists and thier \textcolor{BurntOrange}{$\textbf{\text{leads}}^{4}$}\\
+Improvements on \textcolor{BurntOrange}{$\textbf{\text{review}}^{4}$} tools for 3d files\\
+Better \textcolor{Fuchsia}{$\textbf{\text{graphing}}^{2}$} of production\\
+Easier \textcolor{Aquamarine}{$\textbf{\text{flow}}^{5}$} of input\\
+A new way of adding notes to tasks when looking at \textcolor{Aquamarine}{$\textbf{\text{versions}}^{5}$} that requires \textcolor{Aquamarine}{$\textbf{\text{fewer}}^{5}$} inputs.\\
+\textcolor{BrickRed}{$\textbf{\text{Kanban}}^{6}$} board for users\\
+A sprint/phase \textcolor{BrickRed}{$\textbf{\text{planning}}^{6}$} interface where I can see workload/capacity for a select group of users. *\\
+A better way of \textcolor{BrickRed}{$\textbf{\text{storing}}^{6}$} text\\
+Easy to use asset \textcolor{Aquamarine}{$\textbf{\text{management}}^{5}$} and tracking.\\
+Better \textcolor{BurntOrange}{$\textbf{\text{feedback}}^{4}$} / \textcolor{BurntOrange}{$\textbf{\text{review}}^{4}$} process.\\
+Cant think of anything at the moment.\\
+Able to \textcolor{MidnightBlue}{$\textbf{\text{batch}}^{1}$} update Task Templates dependency's\\
+"Thoughts-to-task creation". Much less friction in the task creation, \textcolor{Aquamarine}{$\textbf{\text{navigation}}^{5}$} and updating of tasks.\\
+Task and assets \textcolor{Aquamarine}{$\textbf{\text{management}}^{5}$} workflow. The more bigger view...custom tools for easing the save and creations of \textcolor{Aquamarine}{$\textbf{\text{versions}}^{5}$}\\
+\textcolor{Aquamarine}{$\textbf{\text{Integrated}}^{5}$} artist software with SG. Artist open their software and inside they can access their task (SG desktop that are tailored for us)\\
+"Feedback-to-note creation". Much less friction in the \textcolor{BurntOrange}{$\textbf{\text{feedback}}^{4}$} creation, \textcolor{Aquamarine}{$\textbf{\text{navigation}}^{5}$} and updating.
