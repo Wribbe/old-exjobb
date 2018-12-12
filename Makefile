@@ -1,39 +1,107 @@
+#!/usr/bin/env make -f
 
 DIR_TEX := tex
 DIR_OUT := out
+DIR_PLOTS := figures/plots
+DIR_PLOTS_SRC := src/plots
 
-PDFS := $(patsubst %.tex,$(DIR_OUT)/%.pdf,$(wildcard *.tex))
-BBLS := $(patsubst %_raw.bib,$(DIR_OUT)/%.bib,$(wildcard *raw.bib))
-BIBS := $(patsubst %.bib,%.bbl,$(BBLS))
+PERCENT := %
+$(eval DIRS := $(foreach var,$(filter-out %_$(PERCENT)%,$(filter DIR_%,$(shell cat Makefile))),$$($(var))))
+
+SUF_NOCO := _no_comments
+SUF_NOAPP := _no_appendix
+SUF_CO := _comments
+
+BASE_NAMES := $(patsubst %.tex,%,$(wildcard *.tex))
+BASE_NAMES := $(filter report,$(BASE_NAMES))
+PDFS := $(foreach n,$(BASE_NAMES),$n$(SUF_NOCO).pdf $n$(SUF_CO).pdf $n$(SUF_NOAPP).pdf)
+PDFS := $(foreach p,$(PDFS),$(DIR_OUT)/$p)
+
+PLOTS := $(patsubst %.py,$(DIR_PLOTS)/%.pdf,$(notdir $(wildcard $(DIR_PLOTS_SRC)/*.py)))
+BIBS := $(PDFS:.pdf=.bib)
+TEXS := $(PDFS:.pdf=.tex)
+SRC_LINKS := $(PDFS:.pdf=)
+
 IMGS := $(wildcard images/*)
 
-PP := pdflatex -output-directory $(DIR_OUT)
+def: $(SRC_LINKS) $(TEXS) $(BIBS) $(PLOTS) commented
 
-INPUTS := tex/tidsschema.tex
+all: def $(PDFS)
 
-all: $(DIR_OUT) $(INPUTS) $(BBLS) $(BIBS) $(PDFS)
+commented: $(filter-out %$(SUF_NOCO).pdf %$(SUF_NOAPP).pdf,$(PDFS))
 
-$(DIR_OUT)/%.pdf : %.tex %.bbl %_raw.bib $(INPUTS) $(IMGS)
-	$(PP) $(filter %.tex,$^)
-	$(PP) $(filter %.tex,$^)
+no_comments: $(filter %$(SUF_NOCO).pdf,$(PDFS))
 
-$(DIR_OUT)/%.pdf : %.tex $(INPUTS) | $(DIR_OUT)
-	$(PP) $(filter %.tex,$^)
+no_appendix: $(filter %$(SUF_NOAPP).pdf,$(PDFS))
 
-$(DIR_OUT)/%.bbl : $(DIR_OUT)/%.bib
-	$(PP) $(notdir $(patsubst %.bbl,%.tex,$@))
-#	bibtex $(patsubst %.bbl,%,$@)
-	cd $(DIR_OUT) && biber $(notdir $(patsubst %.bbl,%,$@))
-	$(PP) $(notdir $(patsubst %.bbl,%.tex,$@))
+re:
+	$(MAKE) -B $(filter-out $@,$(MAKECMDGOALS))
 
-$(DIR_OUT)/%.bib : %_raw.bib
-	./clean_bib_urls.py $^ > $@
+
+PP = \
+	pdf_out=$$($1 $2 | tee /dev/tty); \
+	rerun_biber=$$(echo "$$pdf_out" | grep -E "undefined references|entry could not be found"); \
+	rerun_links=$$(echo "$$pdf_out" | grep -E "Rerun to get cross-references right"); \
+	if [ -n "$$rerun_biber" ]; then \
+	  biber $(2:.tex=); \
+		$1 $2;\
+	elif [ -n "$$rerun_links" ]; then \
+		$1 $2; \
+	fi
+
+
+%.pdf : %.tex % %.bib $(PLOTS) $(IMGS) | $(DIR_OUT)
+	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter %.tex,$^))
+
+
+$(DIR_PLOTS)/%.pdf : $(DIR_PLOTS_SRC)/%.py plots.py | $(DIR_PLOTS)
+	./plots.py $(filter-out plots.py,$^) $@
+
+
+$(DIR_OUT)/%$(SUF_NOCO).tex : %.tex | $(DIR_OUT)
+	./tex_format.py $^ bibfile=$(notdir $(@:.tex=)) > $@
+
+
+$(DIR_OUT)/%$(SUF_CO).tex : %.tex | $(DIR_OUT)
+	./tex_format.py $^ COMMENTS bibfile=$(notdir $(@:.tex=)) > $@
+
+
+$(DIR_OUT)/%$(SUF_NOAPP).tex : %.tex | $(DIR_OUT)
+	./tex_format.py $^ NO_APPENDIX bibfile=$(notdir $(@:.tex=)) > $@
+
+
+$(DIR_OUT)/%$(SUF_NOAPP).bib : %_raw.bib | $(DIR_OUT)
+	python raw2bib.py $^ > $@
+
+
+$(DIR_OUT)/%$(SUF_NOCO).bib : %_raw.bib | $(DIR_OUT)
+	python raw2bib.py $^ > $@
+
+
+$(DIR_OUT)/%$(SUF_CO).bib : %_raw.bib | $(DIR_OUT)
+	python raw2bib.py $^ > $@
+
 
 tex/tidsschema.tex : py/tids.py | $(DIR_TEX)
 	python $^ > $@
 
-$(DIR_TEX):
-	mkdir $@
 
-$(DIR_OUT):
-	mkdir $@
+$(DIRS):
+	@mkdir -p $@
+
+$(DIR_OUT)/%$(SUF_NOAPP): | $(DIR_OUT)
+	[ -d "tex/$*" ] || mkdir -p tex/$*
+	[ -h "$@" ] || ln -sr tex/$* $@
+
+$(DIR_OUT)/%$(SUF_NOCO): | $(DIR_OUT)
+	[ -d "tex/$*" ] || mkdir -p tex/$*
+	[ -h "$@" ] || ln -sr tex/$* $@
+
+$(DIR_OUT)/%$(SUF_CO): | $(DIR_OUT)
+	[ -d "tex/$*" ] || mkdir -p tex/$*
+	[ -h "$@" ] || ln -sr tex/$* $@
+
+clean:
+	rm -rf out
+
+.PHONY : clean all def commented no_comments no_appendix

@@ -1,0 +1,614 @@
+time 1542108547
+new [description:"This is a thing." entry:"1542108547" modified:"1542108547" status:"pending" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+---
+time 1542108569
+old [description:"This is a thing." entry:"1542108547" modified:"1542108547" status:"pending" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+new [description:"This is a thing." end:"1542108569" entry:"1542108547" modified:"1542108569" status:"deleted" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+---
+time 1542108572
+old [description:"This is a thing." end:"1542108569" entry:"1542108547" modified:"1542108569" status:"deleted" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+new [description:"This is a thing." entry:"1542108547" modified:"1542108572" status:"pending" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+---
+time 1542108594
+old [description:"This is a thing." entry:"1542108547" modified:"1542108572" status:"pending" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+new [description:"This is a thing." end:"1542108594" entry:"1542108547" modified:"1542108594" status:"deleted" tags:"thesis" uuid:"9156dbeb-5e42-4161-a302-43b90cafa0cd"]
+---
+time 1542108606
+new [description:"This is another thing." entry:"1542108606" modified:"1542108606" status:"pending" tags:"todo,thesis" uuid:"2ebc0ced-c058-48f6-a0f3-e3302c2c9ea1"]
+---
+time 1542108626
+new [description:"This is a third thing." entry:"1542108626" modified:"1542108626" project:"master_thesis" status:"pending" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+---
+time 1542108641
+new [description:"This is an indented thing." entry:"1542108641" modified:"1542108641" project:"master_thesis" status:"pending" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+---
+time 1542108648
+old [description:"This is a third thing." entry:"1542108626" modified:"1542108626" project:"master_thesis" status:"pending" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+new [depends:"c0b25b8a-40d0-402c-aee4-117b4d96fd74" description:"This is a third thing." entry:"1542108626" modified:"1542108648" project:"master_thesis" status:"pending" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+---
+time 1542108665
+new [description:"This is a furter indentend thing." entry:"1542108665" modified:"1542108665" project:"master_thesis" status:"pending" uuid:"f87b78b7-09ba-4488-ad82-7122d9cea866"]
+---
+time 1542108665
+old [description:"This is an indented thing." entry:"1542108641" modified:"1542108641" project:"master_thesis" status:"pending" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+new [depends:"f87b78b7-09ba-4488-ad82-7122d9cea866" description:"This is an indented thing." entry:"1542108641" modified:"1542108665" project:"master_thesis" status:"pending" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+---
+time 1542108680
+old [description:"This is another thing." entry:"1542108606" modified:"1542108606" status:"pending" tags:"todo,thesis" uuid:"2ebc0ced-c058-48f6-a0f3-e3302c2c9ea1"]
+new [description:"This is another thing." end:"1542108680" entry:"1542108606" modified:"1542108680" status:"deleted" tags:"todo,thesis" uuid:"2ebc0ced-c058-48f6-a0f3-e3302c2c9ea1"]
+---
+time 1542108680
+old [depends:"c0b25b8a-40d0-402c-aee4-117b4d96fd74" description:"This is a third thing." entry:"1542108626" modified:"1542108648" project:"master_thesis" status:"pending" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+new [depends:"c0b25b8a-40d0-402c-aee4-117b4d96fd74" description:"This is a third thing." end:"1542108680" entry:"1542108626" modified:"1542108680" project:"master_thesis" status:"deleted" tags:"todo" uuid:"7451ec27-e73c-4c69-ac9a-73b93b4d9666"]
+---
+time 1542108680
+old [description:"This is a furter indentend thing." entry:"1542108665" modified:"1542108665" project:"master_thesis" status:"pending" uuid:"f87b78b7-09ba-4488-ad82-7122d9cea866"]
+new [description:"This is a furter indentend thing." end:"1542108680" entry:"1542108665" modified:"1542108680" project:"master_thesis" status:"deleted" uuid:"f87b78b7-09ba-4488-ad82-7122d9cea866"]
+---
+time 1542108680
+old [depends:"f87b78b7-09ba-4488-ad82-7122d9cea866" description:"This is an indented thing." entry:"1542108641" modified:"1542108665" project:"master_thesis" status:"pending" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+new [depends:"f87b78b7-09ba-4488-ad82-7122d9cea866" description:"This is an indented thing." end:"1542108680" entry:"1542108641" modified:"1542108680" project:"master_thesis" status:"deleted" uuid:"c0b25b8a-40d0-402c-aee4-117b4d96fd74"]
+---
+time 1542108795
+new [description:"- Use taskarena with master thesis work." entry:"1542108795" modified:"1542108795" project:"master_thesis" status:"pending" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+---
+time 1542108797
+old [description:"- Use taskarena with master thesis work." entry:"1542108795" modified:"1542108795" project:"master_thesis" status:"pending" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+new [description:"- Use taskarena with master thesis work." entry:"1542108795" modified:"1542108797" project:"master_thesis" start:"1542108797" status:"pending" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+---
+time 1542108839
+new [description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108839" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+---
+time 1542108864
+new [description:"- Read the design document throughly." entry:"1542108864" modified:"1542108864" project:"master_thesis" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+---
+time 1542108864
+old [description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108839" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+new [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a" description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108864" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+---
+time 1542108890
+new [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+---
+time 1542108890
+new [description:"- (Re-)write the current text to fit the new format." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"93217e73-15d9-4a38-ac4b-13ca8938217a"]
+---
+time 1542108890
+old [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a" description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108864" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+new [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a,24409892-f84a-4dae-adb9-59e2ff8a01ea,93217e73-15d9-4a38-ac4b-13ca8938217a" description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+---
+time 1542108896
+old [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a,24409892-f84a-4dae-adb9-59e2ff8a01ea,93217e73-15d9-4a38-ac4b-13ca8938217a" description:"- Post draft of thesis design to supervisor." entry:"1542108839" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+new [depends:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a,24409892-f84a-4dae-adb9-59e2ff8a01ea,93217e73-15d9-4a38-ac4b-13ca8938217a" description:"- Email draft of thesis design to supervisor." entry:"1542108839" modified:"1542108896" project:"master_thesis" status:"pending" tags:"todo" uuid:"70293a9c-d8d1-43ae-864f-56e409ef4d34"]
+---
+time 1542108932
+old [description:"- Use taskarena with master thesis work." entry:"1542108795" modified:"1542108797" project:"master_thesis" start:"1542108797" status:"pending" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+new [description:"- Use taskarena with master thesis work." end:"1542108932" entry:"1542108795" modified:"1542108932" project:"master_thesis" status:"completed" tags:"todo" uuid:"5c285589-458b-4d96-8c0b-19a33ba2c2a7"]
+---
+time 1542108977
+old [description:"- Read the design document throughly." entry:"1542108864" modified:"1542108864" project:"master_thesis" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+new [description:"- Read the design document throughly." entry:"1542108864" modified:"1542108977" project:"master_thesis" start:"1542108977" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+---
+time 1542109619
+old [description:"- Read the design document throughly." entry:"1542108864" modified:"1542108977" project:"master_thesis" start:"1542108977" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+new [description:"- Read the design document throughly." entry:"1542108864" modified:"1542109619" project:"master_thesis" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+---
+time 1542717346
+old [description:"- Read the design document throughly." entry:"1542108864" modified:"1542109619" project:"master_thesis" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+new [description:"- Read the design document throughly." entry:"1542108864" modified:"1542717346" project:"master_thesis" start:"1542717346" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+---
+time 1542721375
+old [description:"- Read the design document throughly." entry:"1542108864" modified:"1542717346" project:"master_thesis" start:"1542717346" status:"pending" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+new [description:"- Read the design document throughly." end:"1542721375" entry:"1542108864" modified:"1542721375" project:"master_thesis" status:"completed" tags:"todo" uuid:"edf0ef09-63a7-4cc4-88ba-05b0a48ddf0a"]
+---
+time 1542721377
+old [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+new [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542721377" project:"master_thesis" start:"1542721377" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+---
+time 1542724836
+old [description:"- Adjust the LaTeX template to match." entry:"1542108890" modified:"1542721377" project:"master_thesis" start:"1542721377" status:"pending" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+new [description:"- Adjust the LaTeX template to match." end:"1542724836" entry:"1542108890" modified:"1542724836" project:"master_thesis" status:"completed" tags:"todo" uuid:"24409892-f84a-4dae-adb9-59e2ff8a01ea"]
+---
+time 1542821897
+new [description:"- Read papers." end:"1542821897" entry:"1542821897" modified:"1542821897" project:"master_thesis" status:"completed" tags:"todo" uuid:"93817dc0-74eb-4f16-8082-b1fe130352ac"]
+---
+time 1542821898
+old [description:"- Read papers." end:"1542821897" entry:"1542821897" modified:"1542821897" project:"master_thesis" status:"completed" tags:"todo" uuid:"93817dc0-74eb-4f16-8082-b1fe130352ac"]
+new [description:"- Read papers." entry:"1542821897" modified:"1542821898" project:"master_thesis" start:"1542821898" status:"pending" tags:"todo" uuid:"93817dc0-74eb-4f16-8082-b1fe130352ac"]
+---
+time 1542882964
+old [description:"- Read papers." entry:"1542821897" modified:"1542821898" project:"master_thesis" start:"1542821898" status:"pending" tags:"todo" uuid:"93817dc0-74eb-4f16-8082-b1fe130352ac"]
+new [description:"- Read papers." entry:"1542821897" modified:"1542882964" project:"master_thesis" status:"pending" tags:"todo" uuid:"93817dc0-74eb-4f16-8082-b1fe130352ac"]
+---
+time 1542883070
+new [description:"- Flesh out front page." entry:"1542883070" modified:"1542883070" project:"master_thesis" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+---
+time 1542883072
+old [description:"- Flesh out front page." entry:"1542883070" modified:"1542883070" project:"master_thesis" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+new [description:"- Flesh out front page." entry:"1542883070" modified:"1542883072" project:"master_thesis" start:"1542883072" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+---
+time 1542883173
+old [description:"- Flesh out front page." entry:"1542883070" modified:"1542883072" project:"master_thesis" start:"1542883072" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+new [description:"- Flesh out front page." entry:"1542883070" modified:"1542883173" project:"master_thesis" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+---
+time 1542883185
+old [description:"- Flesh out front page." entry:"1542883070" modified:"1542883173" project:"master_thesis" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+new [description:"- Flesh out front page." entry:"1542883070" modified:"1542883185" project:"master_thesis" start:"1542883185" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+---
+time 1542894654
+old [description:"- Flesh out front page." entry:"1542883070" modified:"1542883185" project:"master_thesis" start:"1542883185" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+new [description:"- Flesh out front page." entry:"1542883070" modified:"1542894654" project:"master_thesis" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+---
+time 1542894702
+old [description:"- Flesh out front page." entry:"1542883070" modified:"1542894654" project:"master_thesis" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+new [description:"- Flesh out front page." entry:"1542883070" modified:"1542894702" project:"master_thesis" start:"1542894702" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+---
+time 1542895434
+old [description:"- Flesh out front page." entry:"1542883070" modified:"1542894702" project:"master_thesis" start:"1542894702" status:"pending" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+new [description:"- Flesh out front page." end:"1542895434" entry:"1542883070" modified:"1542895434" project:"master_thesis" status:"completed" tags:"improvements" uuid:"0af97fe3-3251-462b-9fd9-b6394c619c38"]
+---
+time 1542896070
+old [description:"- (Re-)write the current text to fit the new format." entry:"1542108890" modified:"1542108890" project:"master_thesis" status:"pending" tags:"todo" uuid:"93217e73-15d9-4a38-ac4b-13ca8938217a"]
+new [description:"- (Re-)write the current text to fit the new format." entry:"1542108890" modified:"1542896070" project:"master_thesis" start:"1542896070" status:"pending" tags:"todo" uuid:"93217e73-15d9-4a38-ac4b-13ca8938217a"]
+---
+time 1542898198
+old [description:"- (Re-)write the current text to fit the new format." entry:"1542108890" modified:"1542896070" project:"master_thesis" start:"1542896070" status:"pending" tags:"todo" uuid:"93217e73-15d9-4a38-ac4b-13ca8938217a"]
+new [description:"- (Re-)write the current text to fit the new format." entry:"1542108890" modified:"1542898198" project:"master_thesis" status:"pending" tags:"todo" uuid:"93217e73-15d9-4a38-ac4b-13ca8938217a"]
+---
+time 1542898227
+new [description:"- Find citable material about usability testing." entry:"1542898227" modified:"1542898227" project:"master_thesis" status:"pending" tags:"todo" uuid:"9bd45022-c0d2-4f1a-a52a-091925ce5a82"]
+---
+time 1542898230
+old [description:"- Find citable material about usability testing." entry:"1542898227" modified:"1542898227" project:"master_thesis" status:"pending" tags:"todo" uuid:"9bd45022-c0d2-4f1a-a52a-091925ce5a82"]
+new [description:"- Find citable material about usability testing." entry:"1542898227" modified:"1542898230" project:"master_thesis" start:"1542898230" status:"pending" tags:"todo" uuid:"9bd45022-c0d2-4f1a-a52a-091925ce5a82"]
+---
+time 1542899422
+old [description:"- Find citable material about usability testing." entry:"1542898227" modified:"1542898230" project:"master_thesis" start:"1542898230" status:"pending" tags:"todo" uuid:"9bd45022-c0d2-4f1a-a52a-091925ce5a82"]
+new [description:"- Find citable material about usability testing." entry:"1542898227" modified:"1542899422" project:"master_thesis" status:"pending" tags:"todo" uuid:"9bd45022-c0d2-4f1a-a52a-091925ce5a82"]
+---
+time 1543226139
+new [description:"- Adjust fonts." entry:"1543226139" modified:"1543226139" project:"master_thesis" start:"1543226139" status:"pending" tags:"improvements" uuid:"a6eeb68b-e273-48ca-87e3-c629b87191e1"]
+---
+time 1543226221
+old [description:"- Adjust fonts." entry:"1543226139" modified:"1543226139" project:"master_thesis" start:"1543226139" status:"pending" tags:"improvements" uuid:"a6eeb68b-e273-48ca-87e3-c629b87191e1"]
+new [description:"- Adjust fonts." entry:"1543226139" modified:"1543226221" project:"master_thesis" status:"pending" tags:"improvements" uuid:"a6eeb68b-e273-48ca-87e3-c629b87191e1"]
+---
+time 1543226390
+old [description:"- Adjust fonts." entry:"1543226139" modified:"1543226221" project:"master_thesis" status:"pending" tags:"improvements" uuid:"a6eeb68b-e273-48ca-87e3-c629b87191e1"]
+new [description:"- Adjust fonts." entry:"1543226139" modified:"1543226390" project:"master_thesis" start:"1543226389" status:"pending" tags:"improvements" uuid:"a6eeb68b-e273-48ca-87e3-c629b87191e1"]
+---
+time 1543232128
+old [description:"- Adjust fonts." entry:"1543226139" modified:"1543226390" project:"master_thesis" start:"1543226389" status:"pending" tags:"improvements" uuid:"a6eeb68b-e273-48ca-87e3-c629b87191e1"]
+new [description:"- Adjust format." entry:"1543226139" modified:"1543232128" project:"master_thesis" start:"1543226389" status:"pending" tags:"improvements" uuid:"a6eeb68b-e273-48ca-87e3-c629b87191e1"]
+---
+time 1543232244
+old [description:"- Adjust format." entry:"1543226139" modified:"1543232128" project:"master_thesis" start:"1543226389" status:"pending" tags:"improvements" uuid:"a6eeb68b-e273-48ca-87e3-c629b87191e1"]
+new [description:"- Adjust format." entry:"1543226139" modified:"1543232244" project:"master_thesis" status:"pending" tags:"improvements" uuid:"a6eeb68b-e273-48ca-87e3-c629b87191e1"]
+---
+time 1543232247
+new [description:"- Adjust format." entry:"1543232247" modified:"1543232247" project:"master_thesis" start:"1543232247" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+---
+time 1543241740
+old [description:"- Adjust format." entry:"1543232247" modified:"1543232247" project:"master_thesis" start:"1543232247" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+new [description:"- Adjust format." entry:"1543232247" modified:"1543241740" project:"master_thesis" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+---
+time 1543241795
+old [description:"- Adjust format." entry:"1543232247" modified:"1543241740" project:"master_thesis" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+new [description:"- Adjust format." end:"1543241795" entry:"1543232247" modified:"1543241795" project:"master_thesis" status:"completed" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+---
+time 1543241814
+old [description:"- Adjust format." end:"1543241795" entry:"1543232247" modified:"1543241795" project:"master_thesis" status:"completed" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+new [description:"- Adjust format." entry:"1543232247" modified:"1543241814" project:"master_thesis" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+---
+time 1543241818
+old [description:"- Adjust format." entry:"1543232247" modified:"1543241814" project:"master_thesis" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+new [description:"- Adjust format." entry:"1543232247" modified:"1543241818" project:"master_thesis" start:"1543241818" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+---
+time 1543241825
+old [description:"- Adjust format." entry:"1543232247" modified:"1543241818" project:"master_thesis" start:"1543241818" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+new [description:"- Adjust format." entry:"1543232247" modified:"1543241825" project:"master_thesis" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+---
+time 1543242000
+old [description:"- Adjust format." entry:"1543232247" modified:"1543241825" project:"master_thesis" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+new [description:"- Adjust format." entry:"1543232247" modified:"1543242000" project:"master_thesis" start:"1543242000" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+---
+time 1543242263
+old [description:"- Adjust format." entry:"1543232247" modified:"1543242000" project:"master_thesis" start:"1543242000" status:"pending" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+new [description:"- Adjust format." end:"1543242262" entry:"1543232247" modified:"1543242263" project:"master_thesis" status:"completed" tags:"improvements" uuid:"b1307642-2988-48ce-9bf1-0adc9fc68dab"]
+---
+time 1543242284
+new [description:"- Integrate matplot-lib figure." entry:"1543242284" modified:"1543242284" project:"master_thesis" status:"pending" tags:"todo" uuid:"39222fb6-91ca-4e1a-8593-40909aa4bc8f"]
+---
+time 1543242295
+old [description:"- Integrate matplot-lib figure." entry:"1543242284" modified:"1543242284" project:"master_thesis" status:"pending" tags:"todo" uuid:"39222fb6-91ca-4e1a-8593-40909aa4bc8f"]
+new [description:"- Integrate matplot-lib figure." entry:"1543242284" modified:"1543242295" project:"master_thesis" start:"1543242295" status:"pending" tags:"todo" uuid:"39222fb6-91ca-4e1a-8593-40909aa4bc8f"]
+---
+time 1543251352
+old [description:"- Integrate matplot-lib figure." entry:"1543242284" modified:"1543242295" project:"master_thesis" start:"1543242295" status:"pending" tags:"todo" uuid:"39222fb6-91ca-4e1a-8593-40909aa4bc8f"]
+new [description:"- Integrate matplot-lib figure." end:"1543251352" entry:"1543242284" modified:"1543251352" project:"master_thesis" status:"completed" tags:"todo" uuid:"39222fb6-91ca-4e1a-8593-40909aa4bc8f"]
+---
+time 1543251367
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543251367" project:"master_thesis" start:"1543251367" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543260274
+old [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543251367" project:"master_thesis" start:"1543251367" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543260274" project:"master_thesis" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543260412
+old [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543260274" project:"master_thesis" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543260412" project:"master_thesis" start:"1543260412" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543260420
+old [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543260412" project:"master_thesis" start:"1543260412" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" end:"1543260420" entry:"1543251367" modified:"1543260420" project:"master_thesis" status:"completed" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543260425
+old [description:"- Possible to generate custom svg graphics with python?" end:"1543260420" entry:"1543251367" modified:"1543260420" project:"master_thesis" status:"completed" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543260425" project:"master_thesis" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543317120
+new [description:"- Write mock-abstract." entry:"1543317120" modified:"1543317120" project:"master_thesis" status:"pending" tags:"todo" uuid:"d26b3d31-f752-4013-a2bb-04b47930a139"]
+---
+time 1543317123
+old [description:"- Write mock-abstract." entry:"1543317120" modified:"1543317120" project:"master_thesis" status:"pending" tags:"todo" uuid:"d26b3d31-f752-4013-a2bb-04b47930a139"]
+new [description:"- Write mock-abstract." entry:"1543317120" modified:"1543317123" project:"master_thesis" start:"1543317122" status:"pending" tags:"todo" uuid:"d26b3d31-f752-4013-a2bb-04b47930a139"]
+---
+time 1543320487
+new [description:"- Figure out why draft watermark not on all pages." entry:"1543320487" modified:"1543320487" project:"master_thesis" start:"1543320487" status:"pending" tags:"bug" uuid:"e1cb5bfd-baac-4f90-8b08-144ece393bf6"]
+---
+time 1543320487
+old [description:"- Write mock-abstract." entry:"1543317120" modified:"1543317123" project:"master_thesis" start:"1543317122" status:"pending" tags:"todo" uuid:"d26b3d31-f752-4013-a2bb-04b47930a139"]
+new [description:"- Write mock-abstract." entry:"1543317120" modified:"1543320487" project:"master_thesis" status:"pending" tags:"todo" uuid:"d26b3d31-f752-4013-a2bb-04b47930a139"]
+---
+time 1543320498
+old [description:"- Figure out why draft watermark not on all pages." entry:"1543320487" modified:"1543320487" project:"master_thesis" start:"1543320487" status:"pending" tags:"bug" uuid:"e1cb5bfd-baac-4f90-8b08-144ece393bf6"]
+new [description:"- Figure out why draft watermark not on all pages." entry:"1543320487" modified:"1543320498" project:"master_thesis" status:"pending" tags:"bug" uuid:"e1cb5bfd-baac-4f90-8b08-144ece393bf6"]
+---
+time 1543320502
+old [description:"- Figure out why draft watermark not on all pages." entry:"1543320487" modified:"1543320498" project:"master_thesis" status:"pending" tags:"bug" uuid:"e1cb5bfd-baac-4f90-8b08-144ece393bf6"]
+new [description:"- Figure out why draft watermark not on all pages." entry:"1543320487" modified:"1543320502" project:"master_thesis" start:"1543320502" status:"pending" tags:"bug" uuid:"e1cb5bfd-baac-4f90-8b08-144ece393bf6"]
+---
+time 1543328398
+old [description:"- Figure out why draft watermark not on all pages." entry:"1543320487" modified:"1543320502" project:"master_thesis" start:"1543320502" status:"pending" tags:"bug" uuid:"e1cb5bfd-baac-4f90-8b08-144ece393bf6"]
+new [description:"- Figure out why draft watermark not on all pages." end:"1543328398" entry:"1543320487" modified:"1543328398" project:"master_thesis" status:"completed" tags:"bug" uuid:"e1cb5bfd-baac-4f90-8b08-144ece393bf6"]
+---
+time 1543335912
+old [description:"- Write mock-abstract." entry:"1543317120" modified:"1543320487" project:"master_thesis" status:"pending" tags:"todo" uuid:"d26b3d31-f752-4013-a2bb-04b47930a139"]
+new [description:"- Write mock-abstract." entry:"1543317120" modified:"1543335912" project:"master_thesis" start:"1543335911" status:"pending" tags:"todo" uuid:"d26b3d31-f752-4013-a2bb-04b47930a139"]
+---
+time 1543337040
+old [description:"- Write mock-abstract." entry:"1543317120" modified:"1543335912" project:"master_thesis" start:"1543335911" status:"pending" tags:"todo" uuid:"d26b3d31-f752-4013-a2bb-04b47930a139"]
+new [description:"- Write mock-abstract." end:"1543337040" entry:"1543317120" modified:"1543337040" project:"master_thesis" status:"completed" tags:"todo" uuid:"d26b3d31-f752-4013-a2bb-04b47930a139"]
+---
+time 1543337048
+new [description:"- Write mock-preface." end:"1543337048" entry:"1543337048" modified:"1543337048" project:"master_thesis" status:"completed" tags:"todo" uuid:"d9cd2f5e-e791-4cb2-bfea-5a5a017fc05e"]
+---
+time 1543337062
+new [description:"- Write introduction." entry:"1543337062" modified:"1543337062" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543337066
+old [description:"- Write introduction." entry:"1543337062" modified:"1543337062" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." entry:"1543337062" modified:"1543337066" project:"master_thesis" start:"1543337066" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543402603
+old [description:"- Write introduction." entry:"1543337062" modified:"1543337066" project:"master_thesis" start:"1543337066" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." entry:"1543337062" modified:"1543402603" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543402985
+new [description:"- Write colored \todo macros." entry:"1543402985" modified:"1543402985" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543402991
+old [description:"- Write colored \todo macros." entry:"1543402985" modified:"1543402985" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \todo macros." entry:"1543402985" modified:"1543402991" project:"master_thesis" start:"1543402991" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403005
+old [description:"- Write colored \todo macros." entry:"1543402985" modified:"1543402991" project:"master_thesis" start:"1543402991" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \todo macros." entry:"1543402985" modified:"1543403005" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403124
+old [description:"- Write colored \todo macros." entry:"1543402985" modified:"1543403005" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403124" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403138
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403124" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403138" project:"master_thesis" start:"1543403138" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403143
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403138" project:"master_thesis" start:"1543403138" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403143" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403173
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403143" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403173" project:"master_thesis" start:"1543403173" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403186
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403173" project:"master_thesis" start:"1543403173" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403186" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403212
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403186" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403212" project:"master_thesis" start:"1543403212" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403243
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403212" project:"master_thesis" start:"1543403212" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403243" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403338
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403243" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." end:"1543403338" entry:"1543402985" modified:"1543403338" project:"master_thesis" status:"completed" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403341
+old [description:"- Write colored \\todo macros." end:"1543403338" entry:"1543402985" modified:"1543403338" project:"master_thesis" status:"completed" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403341" project:"master_thesis" start:"1543403341" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403346
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403341" project:"master_thesis" start:"1543403341" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403346" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403476
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403346" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403476" project:"master_thesis" start:"1543403476" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403493
+old [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543260425" project:"master_thesis" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403493" project:"master_thesis" start:"1543403493" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543403498
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403476" project:"master_thesis" start:"1543403476" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403498" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403498
+old [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403493" project:"master_thesis" start:"1543403493" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403498" project:"master_thesis" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543403514
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403498" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403514" project:"master_thesis" start:"1543403514" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403541
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403514" project:"master_thesis" start:"1543403514" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403541" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403582
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403541" project:"master_thesis" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403582" project:"master_thesis" start:"1543403582" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543403596
+new [description:"- Write colored \todo macros." entry:"1543403596" modified:"1543403596" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543403596
+old [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403498" project:"master_thesis" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403596" project:"master_thesis" start:"1543403596" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543403600
+old [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403596" project:"master_thesis" start:"1543403596" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403600" project:"master_thesis" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543403781
+old [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403600" project:"master_thesis" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403781" project:"master_thesis" start:"1543403781" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543403786
+old [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403781" project:"master_thesis" start:"1543403781" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+new [description:"- Possible to generate custom svg graphics with python?" entry:"1543251367" modified:"1543403786" project:"master_thesis" status:"pending" tags:"todo" uuid:"65a1b4ac-6fef-40e4-b711-b92ee6b0b348"]
+---
+time 1543403844
+old [description:"- Write colored \todo macros." entry:"1543403596" modified:"1543403596" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+new [description:"- Write colored \\todo macros." entry:"1543403596" modified:"1543403844" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543403854
+old [description:"- Write colored \\todo macros." entry:"1543403596" modified:"1543403844" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+new [description:"- Write colored \todo macros." entry:"1543403596" modified:"1543403854" project:"master_thesis" start:"1543403853" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543403866
+old [description:"- Write colored \todo macros." entry:"1543403596" modified:"1543403854" project:"master_thesis" start:"1543403853" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+new [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403866" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543403868
+old [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403866" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+new [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403868" project:"master_thesis" start:"1543403868" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543403884
+old [description:"- Write introduction." entry:"1543337062" modified:"1543402603" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." entry:"1543337062" modified:"1543403884" project:"master_thesis" start:"1543403884" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543403888
+old [description:"- Write introduction." entry:"1543337062" modified:"1543403884" project:"master_thesis" start:"1543403884" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." entry:"1543337062" modified:"1543403888" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543403891
+old [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403868" project:"master_thesis" start:"1543403868" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+new [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403891" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543403894
+old [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403891" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+new [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403894" project:"master_thesis" start:"1543403894" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543403922
+old [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403894" project:"master_thesis" start:"1543403894" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+new [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403922" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543403923
+old [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403922" project:"master_thesis" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+new [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403923" project:"master_thesis" start:"1543403923" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543404903
+old [description:"- Write colored todo macros." entry:"1543403596" modified:"1543403923" project:"master_thesis" start:"1543403923" status:"pending" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+new [description:"- Write colored todo macros." end:"1543404903" entry:"1543403596" modified:"1543404903" project:"master_thesis" status:"completed" tags:"todo" uuid:"7dc81ace-691a-4577-aef4-afa985224a8c"]
+---
+time 1543404959
+old [description:"- Write introduction." entry:"1543337062" modified:"1543403888" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." entry:"1543337062" modified:"1543404959" project:"master_thesis" start:"1543404959" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543410466
+new [description:"- Add TODOCite command." entry:"1543410466" modified:"1543410466" project:"master_thesis" status:"pending" tags:"todo" uuid:"fa392118-e23c-4728-8398-cce30d5d99c5"]
+---
+time 1543410466
+old [description:"- Write introduction." entry:"1543337062" modified:"1543404959" project:"master_thesis" start:"1543404959" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." entry:"1543337062" modified:"1543410466" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543410471
+old [description:"- Add TODOCite command." entry:"1543410466" modified:"1543410466" project:"master_thesis" status:"pending" tags:"todo" uuid:"fa392118-e23c-4728-8398-cce30d5d99c5"]
+new [description:"- Add TODOCite command." entry:"1543410466" modified:"1543410471" project:"master_thesis" start:"1543410471" status:"pending" tags:"todo" uuid:"fa392118-e23c-4728-8398-cce30d5d99c5"]
+---
+time 1543410787
+old [description:"- Add TODOCite command." entry:"1543410466" modified:"1543410471" project:"master_thesis" start:"1543410471" status:"pending" tags:"todo" uuid:"fa392118-e23c-4728-8398-cce30d5d99c5"]
+new [description:"- Add TODOCite command." end:"1543410787" entry:"1543410466" modified:"1543410787" project:"master_thesis" status:"completed" tags:"todo" uuid:"fa392118-e23c-4728-8398-cce30d5d99c5"]
+---
+time 1543410813
+old [description:"- Write introduction." entry:"1543337062" modified:"1543410466" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." entry:"1543337062" modified:"1543410813" project:"master_thesis" start:"1543410813" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543411249
+old [description:"- Write introduction." entry:"1543337062" modified:"1543410813" project:"master_thesis" start:"1543410813" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." entry:"1543337062" modified:"1543411249" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543411251
+old [description:"- Write introduction." entry:"1543337062" modified:"1543411249" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." end:"1543411251" entry:"1543337062" modified:"1543411251" project:"master_thesis" status:"completed" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543411254
+old [description:"- Write introduction." end:"1543411251" entry:"1543337062" modified:"1543411251" project:"master_thesis" status:"completed" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." entry:"1543337062" modified:"1543411254" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543411276
+new [description:"- Write Methodoligy." entry:"1543411276" modified:"1543411276" project:"master_thesis" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+---
+time 1543411295
+old [description:"- Write Methodoligy." entry:"1543411276" modified:"1543411276" project:"master_thesis" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+new [description:"- Write Methodology." entry:"1543411276" modified:"1543411295" project:"master_thesis" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+---
+time 1543411322
+old [description:"- Write colored \\todo macros." entry:"1543402985" modified:"1543403582" project:"master_thesis" start:"1543403582" status:"pending" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+new [description:"- Write colored \todo macros." end:"1543411320" entry:"1543402985" modified:"1543411322" project:"master_thesis" start:"1543403582" status:"deleted" tags:"todo" uuid:"af1bf545-d259-44dd-b34c-eea9f898ec7a"]
+---
+time 1543411338
+old [description:"- Write Methodology." entry:"1543411276" modified:"1543411295" project:"master_thesis" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+new [description:"- Write Methodology." entry:"1543411276" modified:"1543411338" project:"master_thesis" start:"1543411337" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+---
+time 1543411370
+old [description:"- Write Methodology." entry:"1543411276" modified:"1543411338" project:"master_thesis" start:"1543411337" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+new [description:"- Write Methodology." end:"1543411370" entry:"1543411276" modified:"1543411370" project:"master_thesis" status:"completed" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+---
+time 1543411375
+old [description:"- Write Methodology." end:"1543411370" entry:"1543411276" modified:"1543411370" project:"master_thesis" status:"completed" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+new [description:"- Write Methodology." entry:"1543411276" modified:"1543411375" project:"master_thesis" start:"1543411375" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+---
+time 1543411410
+old [description:"- Write Methodology." entry:"1543411276" modified:"1543411375" project:"master_thesis" start:"1543411375" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+new [description:"- Write Methodology." entry:"1543411276" modified:"1543411410" project:"master_thesis" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+---
+time 1543411415
+old [description:"- Write introduction." entry:"1543337062" modified:"1543411254" project:"master_thesis" status:"pending" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+new [description:"- Write introduction." end:"1543411415" entry:"1543337062" modified:"1543411415" project:"master_thesis" status:"deleted" tags:"todo" uuid:"c0e479a0-3d74-4dd7-9041-9524fe7ed7ca"]
+---
+time 1543411415
+old [description:"- Write Methodology." entry:"1543411276" modified:"1543411410" project:"master_thesis" status:"pending" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+new [description:"- Write Methodology." end:"1543411415" entry:"1543411276" modified:"1543411415" project:"master_thesis" status:"deleted" tags:"todo" uuid:"9b05efbb-fcbc-47ce-8e59-2fda88a47e6d"]
+---
+time 1543411442
+new [description:"- Write introduction." entry:"1543411442" modified:"1543411442" project:"master_thesis" status:"pending" tags:"writing" uuid:"0342e5b6-71ad-4630-b86b-e110ecfbcf86"]
+---
+time 1543411442
+new [description:"- Write Methodology." entry:"1543411442" modified:"1543411442" project:"master_thesis" status:"pending" tags:"writing" uuid:"84209333-c456-4ea7-8dc6-fdf66d739137"]
+---
+time 1543411452
+old [description:"- Write Methodology." entry:"1543411442" modified:"1543411442" project:"master_thesis" status:"pending" tags:"writing" uuid:"84209333-c456-4ea7-8dc6-fdf66d739137"]
+new [description:"- Write Methodology." entry:"1543411442" modified:"1543411452" project:"master_thesis" start:"1543411452" status:"pending" tags:"writing" uuid:"84209333-c456-4ea7-8dc6-fdf66d739137"]
+---
+time 1543411459
+old [description:"- Write Methodology." entry:"1543411442" modified:"1543411452" project:"master_thesis" start:"1543411452" status:"pending" tags:"writing" uuid:"84209333-c456-4ea7-8dc6-fdf66d739137"]
+new [description:"- Write Methodology." end:"1543411459" entry:"1543411442" modified:"1543411459" project:"master_thesis" status:"completed" tags:"writing" uuid:"84209333-c456-4ea7-8dc6-fdf66d739137"]
+---
+time 1543411460
+old [description:"- Write Methodology." end:"1543411459" entry:"1543411442" modified:"1543411459" project:"master_thesis" status:"completed" tags:"writing" uuid:"84209333-c456-4ea7-8dc6-fdf66d739137"]
+new [description:"- Write Methodology." entry:"1543411442" modified:"1543411460" project:"master_thesis" status:"pending" tags:"writing" uuid:"84209333-c456-4ea7-8dc6-fdf66d739137"]
+---
+time 1543411505
+old [description:"- Write introduction." entry:"1543411442" modified:"1543411442" project:"master_thesis" status:"pending" tags:"writing" uuid:"0342e5b6-71ad-4630-b86b-e110ecfbcf86"]
+new [description:"- Introduction." entry:"1543411442" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"0342e5b6-71ad-4630-b86b-e110ecfbcf86"]
+---
+time 1543411505
+new [description:"- Theories." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"8ad99c84-ebff-45db-acaa-4ceaf0623468"]
+---
+time 1543411505
+new [description:"- Tools." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"2817cb8a-ab6f-46c5-9b92-e097ad524783"]
+---
+time 1543411505
+new [description:"- Threats to validity." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"236cbee2-846c-4bc5-aa28-794495f03c78"]
+---
+time 1543411505
+new [depends:"2817cb8a-ab6f-46c5-9b92-e097ad524783,8ad99c84-ebff-45db-acaa-4ceaf0623468,236cbee2-846c-4bc5-aa28-794495f03c78" description:"- Methodology." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"6c3215f8-8e5d-4d2b-b616-25d62f8902d8"]
+---
+time 1543417959
+new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543417959" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543418036
+old [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543417959" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543418036" project:"master_thesis" start:"1543418036" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543422829
+old [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543418036" project:"master_thesis" start:"1543418036" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." end:"1543422829" entry:"1543417959" modified:"1543422829" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543422833
+old [description:"- Poking LaTeX related things." end:"1543422829" entry:"1543417959" modified:"1543422829" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543422833" project:"master_thesis" start:"1543422833" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543425153
+old [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543422833" project:"master_thesis" start:"1543422833" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." end:"1543425153" entry:"1543417959" modified:"1543425153" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543425155
+old [description:"- Poking LaTeX related things." end:"1543425153" entry:"1543417959" modified:"1543425153" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543425155" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543425545
+new [description:"- Notes." entry:"1543425545" modified:"1543425545" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543425545
+old [depends:"2817cb8a-ab6f-46c5-9b92-e097ad524783,8ad99c84-ebff-45db-acaa-4ceaf0623468,236cbee2-846c-4bc5-aa28-794495f03c78" description:"- Methodology." entry:"1543411505" modified:"1543411505" project:"master_thesis" status:"pending" tags:"writing" uuid:"6c3215f8-8e5d-4d2b-b616-25d62f8902d8"]
+new [depends:"2817cb8a-ab6f-46c5-9b92-e097ad524783,8ad99c84-ebff-45db-acaa-4ceaf0623468,236cbee2-846c-4bc5-aa28-794495f03c78,51be6f3e-bca2-4045-851b-17b1c2d1d0fe" description:"- Methodology." entry:"1543411505" modified:"1543425545" project:"master_thesis" status:"pending" tags:"writing" uuid:"6c3215f8-8e5d-4d2b-b616-25d62f8902d8"]
+---
+time 1543425548
+old [description:"- Notes." entry:"1543425545" modified:"1543425545" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." entry:"1543425545" modified:"1543425548" project:"master_thesis" start:"1543425548" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543428629
+old [description:"- Notes." entry:"1543425545" modified:"1543425548" project:"master_thesis" start:"1543425548" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." entry:"1543425545" modified:"1543428629" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543428631
+old [description:"- Notes." entry:"1543425545" modified:"1543428629" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." entry:"1543425545" modified:"1543428631" project:"master_thesis" start:"1543428631" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543430686
+old [description:"- Notes." entry:"1543425545" modified:"1543428631" project:"master_thesis" start:"1543428631" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." end:"1543430686" entry:"1543425545" modified:"1543430686" project:"master_thesis" status:"completed" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543430687
+old [description:"- Notes." end:"1543430686" entry:"1543425545" modified:"1543430686" project:"master_thesis" status:"completed" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+new [description:"- Notes." entry:"1543425545" modified:"1543430687" project:"master_thesis" status:"pending" tags:"writing" uuid:"51be6f3e-bca2-4045-851b-17b1c2d1d0fe"]
+---
+time 1543430693
+old [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543425155" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543430693" project:"master_thesis" start:"1543430692" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543431629
+old [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543430693" project:"master_thesis" start:"1543430692" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." end:"1543431629" entry:"1543417959" modified:"1543431629" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543431631
+old [description:"- Poking LaTeX related things." end:"1543431629" entry:"1543417959" modified:"1543431629" project:"master_thesis" status:"completed" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+new [description:"- Poking LaTeX related things." entry:"1543417959" modified:"1543431631" project:"master_thesis" status:"pending" tags:"todo" uuid:"6d8ad2f2-1fd3-4266-b729-0aabcd7c31a1"]
+---
+time 1543431840
+new [description:"- Introduction subsections are pushed to the next page." entry:"1543431840" modified:"1543431840" project:"master_thesis" status:"pending" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+---
+time 1543431841
+old [description:"- Introduction subsections are pushed to the next page." entry:"1543431840" modified:"1543431840" project:"master_thesis" status:"pending" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+new [description:"- Introduction subsections are pushed to the next page." entry:"1543431840" modified:"1543431841" project:"master_thesis" start:"1543431841" status:"pending" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+---
+time 1543432319
+old [description:"- Introduction subsections are pushed to the next page." entry:"1543431840" modified:"1543431841" project:"master_thesis" start:"1543431841" status:"pending" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+new [description:"- Introduction subsections are pushed to the next page." end:"1543432319" entry:"1543431840" modified:"1543432319" project:"master_thesis" status:"completed" tags:"bug" uuid:"19201b70-f79c-475e-9272-1a90aaf2b8dd"]
+---

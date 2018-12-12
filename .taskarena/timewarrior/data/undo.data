@@ -1,0 +1,528 @@
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181113T113317Z","tags":["- Use taskarena with master thesis work.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181113T113317Z","tags":["- Use taskarena with master thesis work.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181113T113317Z","end":"20181113T113532Z","tags":["- Use taskarena with master thesis work.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181113T113617Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181113T113617Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181113T113617Z","end":"20181113T114659Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181120T123546Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181120T123546Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181120T123546Z","end":"20181120T134255Z","tags":["- Read the design document throughly.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181120T134257Z","tags":["- Adjust the LaTeX template to match.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181120T134257Z","tags":["- Adjust the LaTeX template to match.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181120T134257Z","end":"20181120T144036Z","tags":["- Adjust the LaTeX template to match.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181121T173818Z","tags":["- Read papers.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181121T173818Z","tags":["- Read papers.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181121T173818Z","end":"20181122T103705Z","tags":["- Read papers.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181121T173818Z","end":"20181122T103705Z","tags":["- Read papers.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181121T173818Z","end":"20181121T181330Z","tags":["- Read papers.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181121T173818Z","end":"20181121T181330Z","tags":["- Read papers.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181121T173818Z","end":"20181121T191330Z","tags":["- Read papers.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T103945Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181122T103945Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T102300Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181122T102300Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T102300Z","end":"20181122T135054Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181122T102300Z","end":"20181122T135054Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T102300Z","end":"20181122T110300Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T135142Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181122T135142Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T135142Z","end":"20181122T140354Z","tags":["- Flesh out front page.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T141430Z","tags":["- (Re-)write the current text to fit the new format.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181122T141430Z","tags":["- (Re-)write the current text to fit the new format.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T141430Z","end":"20181122T144958Z","tags":["- (Re-)write the current text to fit the new format.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T145030Z","tags":["- Find citable material about usability testing.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181122T145030Z","tags":["- Find citable material about usability testing.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181122T145030Z","end":"20181122T151022Z","tags":["- Find citable material about usability testing.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T095950Z","tags":["- Adjust fonts.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181126T095950Z","tags":["- Adjust fonts.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T095950Z","end":"20181126T113656Z","tags":["- Adjust fonts.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T113746Z","tags":["- Adjust fonts.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181126T113746Z","tags":["- Adjust fonts.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T113746Z","end":"20181126T141540Z","tags":["- Adjust fonts.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181126T113746Z","tags":["- Adjust fonts.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T113746Z","end":"20181126T141658Z","tags":["- Adjust fonts.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T141658Z","tags":["- Adjust format.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181126T141658Z","tags":["- Adjust format.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T141658Z","end":"20181126T141705Z","tags":["- Adjust format.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T142000Z","tags":["- Adjust format.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181126T142000Z","tags":["- Adjust format.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T142000Z","end":"20181126T142423Z","tags":["- Adjust format.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T142455Z","tags":["- Integrate matplot-lib figure.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181126T142455Z","tags":["- Integrate matplot-lib figure.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T142455Z","end":"20181126T165552Z","tags":["- Integrate matplot-lib figure.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181126T142455Z","end":"20181126T165552Z","tags":["- Integrate matplot-lib figure.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T142455Z","end":"20181126T142455Z","tags":["- Integrate matplot-lib figure.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181126T142000Z","end":"20181126T142423Z","tags":["- Adjust format.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T142000Z","end":"20181126T142000Z","tags":["- Adjust format.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181126T142000Z","end":"20181126T142000Z","tags":["- Adjust format.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T142000Z","end":"20181126T142000Z","tags":["- Adjust format.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181126T142000Z","end":"20181126T142000Z","tags":["- Adjust format.","improvements","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T142000Z","end":"20181126T152000Z","tags":["- Adjust format.","improvements","master_thesis"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T192652Z","tags":["- Possible to generate custom svg graphics with python?","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181126T192652Z","tags":["- Possible to generate custom svg graphics with python?","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181126T192652Z","end":"20181126T192700Z","tags":["- Possible to generate custom svg graphics with python?","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181127T111203Z","tags":["- Write mock-abstract.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181127T111203Z","tags":["- Write mock-abstract.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181127T111203Z","end":"20181127T120807Z","tags":["- Write mock-abstract.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181127T120822Z","tags":["- Figure out why draft watermark not on all pages.","bug","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181127T120822Z","tags":["- Figure out why draft watermark not on all pages.","bug","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181127T120822Z","end":"20181127T141958Z","tags":["- Figure out why draft watermark not on all pages.","bug","master_thesis"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181127T162512Z","tags":["- Write mock-abstract.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181127T162512Z","tags":["- Write mock-abstract.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181127T162512Z","end":"20181127T164400Z","tags":["- Write mock-abstract.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181127T164426Z","tags":["- Write introduction.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181127T164426Z","tags":["- Write introduction.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181127T164426Z","end":"20181128T105643Z","tags":["- Write introduction.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111121Z"}
+txn:
+  type: interval
+  before: {"start":"20181128T111121Z"}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111121Z","end":"20181128T111126Z"}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111621Z","tags":["- Possible to generate custom svg graphics with python?","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T111621Z","tags":["- Possible to generate custom svg graphics with python?","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111621Z","end":"20181128T111626Z","tags":["- Possible to generate custom svg graphics with python?","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111734Z","tags":["- Write colored 	odo macros.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T111734Z","tags":["- Write colored 	odo macros.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111734Z","end":"20181128T111746Z","tags":["- Write colored 	odo macros.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T111734Z","tags":["- Write colored 	odo macros.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111734Z","end":"20181128T111748Z","tags":["- Write colored 	odo macros.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111748Z","tags":["- Write colored todo macros.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T111748Z","tags":["- Write colored todo macros.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111748Z","end":"20181128T111804Z","tags":["- Write colored todo macros.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111804Z","tags":["- Write introduction.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T111804Z","tags":["- Write introduction.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111804Z","end":"20181128T111808Z","tags":["- Write introduction.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111814Z","tags":["- Write colored todo macros.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111843Z","tags":["- Write colored todo macros.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T111843Z","tags":["- Write colored todo macros.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T111843Z","end":"20181128T113503Z","tags":["- Write colored todo macros.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T113559Z","tags":["- Write introduction.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T113559Z","tags":["- Write introduction.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T113559Z","end":"20181128T124123Z","tags":["- Write introduction.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T130751Z","tags":["- Add TODOCite command.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T130751Z","tags":["- Add TODOCite command.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T130751Z","end":"20181128T131307Z","tags":["- Add TODOCite command.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T131333Z","tags":["- Write introduction.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T131333Z","tags":["- Write introduction.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T131333Z","end":"20181128T132049Z","tags":["- Write introduction.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T132218Z","tags":["- Write Methodology.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T132218Z","tags":["- Write Methodology.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T132218Z","end":"20181128T132250Z","tags":["- Write Methodology.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T132255Z","tags":["- Write Methodology.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T132255Z","tags":["- Write Methodology.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T132255Z","end":"20181128T132330Z","tags":["- Write Methodology.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T132412Z","tags":["- Write Methodology.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: {"start":"20181128T132412Z","tags":["- Write Methodology.","master_thesis","writing"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T132412Z","end":"20181128T132419Z","tags":["- Write Methodology.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T151356Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T151356Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T151356Z","end":"20181128T163126Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T163353Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T163353Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T163353Z","end":"20181128T171233Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T171908Z","tags":["- Notes.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: {"start":"20181128T171908Z","tags":["- Notes.","master_thesis","writing"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T171908Z","end":"20181128T181011Z","tags":["- Notes.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T181031Z","tags":["- Notes.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: {"start":"20181128T181031Z","tags":["- Notes.","master_thesis","writing"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T181031Z","end":"20181128T184446Z","tags":["- Notes.","master_thesis","writing"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T184453Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: {"start":"20181128T184453Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T184453Z","end":"20181128T190029Z","tags":["- Poking LaTeX related things.","master_thesis","todo"]}
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T190401Z","tags":["- Introduction subsections are pushed to the next page.","bug","master_thesis"]}
+txn:
+  type: interval
+  before: {"start":"20181128T190401Z","tags":["- Introduction subsections are pushed to the next page.","bug","master_thesis"]}
+  after: 
+txn:
+  type: interval
+  before: 
+  after: {"start":"20181128T190401Z","end":"20181128T191159Z","tags":["- Introduction subsections are pushed to the next page.","bug","master_thesis"]}

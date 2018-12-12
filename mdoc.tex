@@ -4,6 +4,16 @@
 \usepackage[english,swedish]{babel}
 \usepackage[T1]{fontenc}
 
+% Reference settings.
+\usepackage[autostyle]{csquotes}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  url=true,
+  sorting=none
+]{biblatex}
+\bibliography{$bibfile}
+
 \setlength{\parindent}{0cm}
 
 \begin{document}
@@ -84,11 +94,11 @@
 
 \section*{Vetenskaplig grund}
 
-  \textbf{The design of everyday things}\cite{c_design_norman} -
+  \textbf{The design of everyday things}%\cite{c_design_norman} -
   Hur kognitionsvetenskap kan användas i design och underlätta användning. \\
 
   \textbf{Interaction design : beyond human-computer
-    interaction}\cite{c_interaction_design} -
+    interaction}%\cite{c_interaction_design} -
   Hur fungerar interaktionsdesign, förstå sig på användaren, hur gränssnitt
   påverkar, behovsidentifiering m.m.
 
@@ -132,7 +142,6 @@
   \texttt{<annika.wallin@lucs.lu.se>} som ställt upp för frågor och förslag
   kring relevant litteratur inom kognitionsvetenskap om behovet uppstår.
 
-\bibliography{mdoc}
-\bibliographystyle{plain}
+	\printbibliography
 
 \end{document}
