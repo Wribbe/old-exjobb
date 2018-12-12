@@ -25,6 +25,7 @@ defaults = {
         "explode": lambda module: [0]*len(module.labels),
         "title": "",
         "size": DEFAULT_SIZE,
+        "colors": None,
     },
     'bar': {
         "label_x": "",
@@ -62,7 +63,7 @@ def create_plot(figure):
     if figure.plot_type == "pie":
         f = plt.figure(figsize=(figure.size))
         patches, text = plt.pie(figure.values, explode=figure.explode,
-                               startangle=90)
+                               startangle=90, colors=figure.colors)
         plt.legend(patches, labels=figure.labels, loc="best",
                   prop={'size': 5})
         plt.tight_layout()

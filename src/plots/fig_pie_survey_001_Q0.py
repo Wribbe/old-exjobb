@@ -34,6 +34,13 @@ submitted = conn.execute("""
 num_total = len(total)
 num_submitted = len(submitted)
 
+part_submitted = (num_submitted/num_total)*100
+
 plot_type="pie"
-labels = ["Submitted", "Non-submitted"]
-values = [num_submitted, num_total-num_submitted]
+labels = [
+  "Non-submitted ({}/{}, {:.1f}%)".format(num_total-num_submitted,
+                                          num_total,100-part_submitted),
+  "Submitted ({}/{}, {:.1f}%)".format(num_submitted, num_total, part_submitted),
+]
+colors = ["orange", "blue"]
+values = [num_total-num_submitted, num_submitted]
