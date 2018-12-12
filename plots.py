@@ -26,6 +26,7 @@ defaults = {
         "title": "",
         "size": DEFAULT_SIZE,
         "colors": None,
+        "patterns": None,
     },
     'bar': {
         "label_x": "",
@@ -62,11 +63,16 @@ def create_plot(figure):
 
     if figure.plot_type == "pie":
         f = plt.figure(figsize=(figure.size))
-        patches, text = plt.pie(figure.values, explode=figure.explode,
-                               startangle=90, colors=figure.colors)
-        plt.legend(patches, labels=figure.labels, loc="best",
+        plot = plt.pie(figure.values, explode=figure.explode,
+                          startangle=90, colors=figure.colors)
+
+        if figure.patterns:
+          for pattern, patch in zip(figure.patterns, plot[0]):
+            patch.set_hatch(5*pattern)
+
+        plt.legend(plot[0], labels=figure.labels, loc="best",
                   prop={'size': 5})
-        plt.tight_layout()
+#        plt.tight_layout()
 #        ax.set_axis_off()
     elif figure.plot_type == "bar":
         f, ax = plt.subplots(figsize=figure.size)
@@ -122,7 +128,12 @@ def main(arguments):
 
     f = create_plot(figure)
     if figure.plot_type == "pie":
-      f.savefig(path_output)
+      svg_path = path_output.replace(".pdf",".svg")
+      f.savefig(svg_path)
+      import subprocess
+      incmd = ["inkscape", svg_path, "--export-pdf={}".format(path_output),
+               "--export-pdf-version=1.5"]
+      subprocess.check_output(incmd)
     else:
       f.savefig(path_output, bbox_inches='tight', pad_inches=-0.0)
 

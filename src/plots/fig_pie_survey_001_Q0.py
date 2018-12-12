@@ -43,4 +43,5 @@ labels = [
   "Submitted ({}/{}, {:.1f}%)".format(num_submitted, num_total, part_submitted),
 ]
 colors = ["orange", "blue"]
+patterns = ['/','\\']
 values = [num_total-num_submitted, num_submitted]
