@@ -9,11 +9,12 @@ PERCENT := %
 $(eval DIRS := $(foreach var,$(filter-out %_$(PERCENT)%,$(filter DIR_%,$(shell cat Makefile))),$$($(var))))
 
 SUF_NOCO := _no_comments
+SUF_NOAPP := _no_appendix
 SUF_CO := _comments
 
 BASE_NAMES := $(patsubst %.tex,%,$(wildcard *.tex))
 BASE_NAMES := $(filter report,$(BASE_NAMES))
-PDFS := $(foreach n,$(BASE_NAMES),$n$(SUF_NOCO).pdf $n$(SUF_CO).pdf)
+PDFS := $(foreach n,$(BASE_NAMES),$n$(SUF_NOCO).pdf $n$(SUF_CO).pdf $n$(SUF_NOAPP).pdf)
 PDFS := $(foreach p,$(PDFS),$(DIR_OUT)/$p)
 
 PLOTS := $(patsubst %.py,$(DIR_PLOTS)/%.pdf,$(notdir $(wildcard $(DIR_PLOTS_SRC)/*.py)))
@@ -23,13 +24,15 @@ SRC_LINKS := $(PDFS:.pdf=)
 
 IMGS := $(wildcard images/*)
 
-all: $(SRC_LINKS) $(TEXS) $(BIBS) $(PLOTS) commented
+def: $(SRC_LINKS) $(TEXS) $(BIBS) $(PLOTS) commented
 
-full both: all no_comments
+all: def $(PDFS)
 
-commented: $(filter-out %$(SUF_NOCO).pdf,$(PDFS))
+commented: $(filter-out %$(SUF_NOCO).pdf %$(SUF_NOAPP),$(PDFS))
 
 no_comments: $(filter %$(SUF_NOCO).pdf,$(PDFS))
+
+no_appendix: $(filter %$(SUF_NOAPP).pdf,$(PDFS))
 
 re:
 	$(MAKE) -B $(filter-out $@,$(MAKECMDGOALS))
@@ -63,6 +66,14 @@ $(DIR_OUT)/%$(SUF_CO).tex : %.tex | $(DIR_OUT)
 	./tex_format.py $^ COMMENTS bibfile=$(notdir $(@:.tex=)) > $@
 
 
+$(DIR_OUT)/%$(SUF_NOAPP).tex : %.tex | $(DIR_OUT)
+	./tex_format.py $^ NO_APPENDIX bibfile=$(notdir $(@:.tex=)) > $@
+
+
+$(DIR_OUT)/%$(SUF_NOAPP).bib : %_raw.bib | $(DIR_OUT)
+	python raw2bib.py $^ > $@
+
+
 $(DIR_OUT)/%$(SUF_NOCO).bib : %_raw.bib | $(DIR_OUT)
 	python raw2bib.py $^ > $@
 
@@ -78,6 +89,10 @@ tex/tidsschema.tex : py/tids.py | $(DIR_TEX)
 $(DIRS):
 	@mkdir -p $@
 
+$(DIR_OUT)/%$(SUF_NOAPP): | $(DIR_OUT)
+	[ -d "tex/$*" ] || mkdir -p tex/$*
+	[ -h "$@" ] || ln -sr tex/$* $@
+
 $(DIR_OUT)/%$(SUF_NOCO): | $(DIR_OUT)
 	[ -d "tex/$*" ] || mkdir -p tex/$*
 	[ -h "$@" ] || ln -sr tex/$* $@
@@ -89,4 +104,4 @@ $(DIR_OUT)/%$(SUF_CO): | $(DIR_OUT)
 clean:
 	rm -rf out
 
-.PHONY : clean all full both commented no_comments
+.PHONY : clean all def commented no_comments no_appendix
