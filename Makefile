@@ -24,7 +24,9 @@ SRC_LINKS := $(PDFS:.pdf=)
 
 IMGS := $(wildcard images/*)
 
-def: $(SRC_LINKS) $(TEXS) $(BIBS) $(PLOTS) commented
+GEN_TEXS := $(patsubst src/%.py,$(DIR_OUT)/%.tex,$(shell find src/tex -name "*.py"))
+
+def: $(SRC_LINKS) $(GEN_TEXS) $(TEXS) $(BIBS) $(PLOTS) commented
 
 all: def $(PDFS)
 
@@ -53,6 +55,7 @@ PP = \
 %.pdf : %.tex % %.bib $(PLOTS) $(IMGS) | $(DIR_OUT)
 	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter %.tex,$^))
 
+$(PDFS) : $(GEN_TEXS)
 
 $(DIR_PLOTS)/%.pdf : $(DIR_PLOTS_SRC)/%.py plots.py | $(DIR_PLOTS)
 	./plots.py $(filter-out plots.py,$^) $@
@@ -85,6 +88,9 @@ $(DIR_OUT)/%$(SUF_CO).bib : %_raw.bib | $(DIR_OUT)
 tex/tidsschema.tex : py/tids.py | $(DIR_TEX)
 	python $^ > $@
 
+$(DIR_OUT)/%.tex : src/%.py
+	[ -d "$(dir $@)" ] || mkdir -p $(dir $@)
+	python $^ > $@
 
 $(DIRS):
 	@mkdir -p $@
