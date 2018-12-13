@@ -20,6 +20,9 @@ def append(text):
 def add(text):
   out[-1] += text
 
+def new_page():
+  append("\\newpage")
+
 #data = np.random.randint(0,12,size=72)
 #bins = np.arange(13)-0.5
 
@@ -37,7 +40,7 @@ def figure_progress(length, name, labels_x=[]):
   if length == 1:
     figsize = (0.2, fig_height)
   else:
-    figsize = (0.5*length,fig_height)
+    figsize = (min(0.5*length, 5.5),fig_height)
   f = plt.figure(figsize=figsize)
 
   plt.scatter(range(length),[0]*length, marker=mark_not_checked)
@@ -53,10 +56,10 @@ def figure_progress(length, name, labels_x=[]):
   f.savefig(path_fig)
   return path_fig
 
-date_start = dt.strptime("2018-12-13", "%Y-%m-%d")
+day_start = dt.strptime("2018-12-13", "%Y-%m-%d")
 fmt_month = "%d/%m"
-mondays = [date_start + td(days=x) for x in
-           range(10*7+1) if (date_start+td(days=x)).weekday() == 0]
+mondays = [day_start + td(days=x) for x in
+           range(10*7+1) if (day_start+td(days=x)).weekday() == 0]
 labels_mondays = [dt.strftime(d, fmt_month) for d in mondays]
 
 path_fig_mondays = figure_progress(10, "draft_mondays", labels_mondays)
@@ -83,7 +86,7 @@ def objective(text):
   global count_KR; global count_O;
   count_KR = 0
   count_O += 1
-  fmt_object ="\\textbf{{O{}: {}}}"
+  fmt_object ="\\textbf{{\\mybox{{O{}:}} {}}}"
   if count_O > 0:
     append("\\end{adjustwidth}")
   append(fmt_object.format(count_O, text))
@@ -95,49 +98,96 @@ def keyresult(text, image):
   fmt_kr = "\\textbf{{KR{}.{}:}} \\\\ {}"
   count_KR += 1
   append(fmt_kr.format(count_O, count_KR, text))
-  append("\\vspace{-0.3cm}")
+#  append("\\vspace{0.3cm}")
   append("\\begin{center}")
   append("\\includegraphics")
   add("{{{}}}".format(image))
   append("\\end{center}")
 
-fmt_in_person = "Make three in-person presentations of current work and direction at {} \
-  before {} {}.".format("{}", label_weekday(day_last_draft),
-                        label_month(day_last_draft))
+def days_from_start(n):
+  return day_start+td(days=n)
+
+fmt_in_person = "Do three ten minutes in-person presentations of current work and direction at {} \
+  before {}.".format("{}", label_weekdate(day_last_draft))
 
 days_allotted = 7*12+1
-day_finished = date_start + td(days=days_allotted)
+day_finished = day_start + td(days=days_allotted)
+
+day_last_draft_report = day_finished-td(days=7)
+day_last_oposition = day_finished-td(days=7*2)
+day_last_draft_presentation = day_finished-td(days=7+4)
 
 append("\\newgeometry{top=1cm, bottom=1cm}")
-append("\\section{OKR's (\\today)}")
+append("\\section{Project \\textbf{O}bject and \\textbf{K}ey \\textbf{R}esult\\textbf{s} (\\today)}")
 append("\\vspace{-1.2cm}")
 
 objective(
-  "Complete all diploma-work on my side no later than {} {}.".format(
+  "Complete all diploma-work sans feedback no later than {} {}.".format(
   label_weekday(day_finished), label_iso(day_finished)))
 keyresult("Send in final report draft no later than {}.".format(
-  label_weekdate(day_finished-td(days=7))),
+  label_weekdate(day_last_draft_report)),
   figure_progress(1,"final_draft"))
 keyresult("Opposition on other master thesis done no later than {}.".format(
-  label_weekdate(day_finished-td(days=7*2))),
+  label_weekdate(day_last_oposition)),
   figure_progress(1,"opposition_done"))
+keyresult("Final version of presentation done no later than {}.".format(
+  label_weekdate(day_last_draft_presentation)),
+  figure_progress(1,"presentation_done"))
 
-objective("Improve communication on how the project is going.")
+objective("Improve communication on how the project is progressing.")
 keyresult("Email expanded draft each Monday for 10 weeks.", path_fig_mondays)
 keyresult(fmt_in_person.format("LTH"), path_fig_3_meet_LTH)
 keyresult(fmt_in_person.format("MASSIVE"), path_fig_3_meet_MASSIVE)
-#append("\\includegraphics{{{}}}".format(path_fig_3_meet_LTH))
-#append("\\textbf{KR0.3:} 3 meetings/presentations with MASSIVE contacts before March.")
-#append("\\includegraphics{{{}}}".format(path_fig_3_meet_MASSIVE))
-#
+keyresult("Finalize this OKR document no later than {}.".format(
+  label_weekdate(days_from_start(1))),
+  figure_progress(1,"finalize_OKRs"))
+
+objective("Do opposition on interesting master thesis.")
+keyresult("Find 8 promising thesis projects no later than {}.".format(
+  label_weekdate(days_from_start(7))),
+  figure_progress(8,"found_opposition_thesis"))
+keyresult("Contact at least three students of the eight no later than {}.".format(
+  label_weekdate(days_from_start(7+12+7))),
+  figure_progress(3,"selected_opposition_thesis"))
+keyresult("Finalize opposing thesis no later than {}.".format(
+  label_weekdate(days_from_start(7+12+7*3))),
+  figure_progress(1,"final_opposition_thesis"))
+
+
+objective("Ensure a robust grounding in scientific literature.")
+keyresult("Find and save at least 15 promising articles to reference, no later than {}.".format(
+  label_weekdate(days_from_start(7+12+3))),
+  figure_progress(15,"references_articles"))
+keyresult("Find at least 3 promising books to references, no later than {}.".format(
+  label_weekdate(days_from_start(7+12+3))),
+  figure_progress(3,"references_books"))
+keyresult("Argue for and get all references vetted by supervisor no later than {}.".format(
+  label_weekdate(days_from_start(7+12+3+5))),
+  figure_progress(1,"vet_references"))
+
+new_page()
+
+day_last_gathered_data = dt.strptime("2019-02-04", "%Y-%m-%d")
+
+objective("All data gathered no later than {}.".format(
+  label_weekdate(day_last_gathered_data)))
+keyresult("Send out 5 additional online surveys to the team no later than {}.".format(
+  label_weekdate(day_last_gathered_data-td(days=7))),
+  figure_progress(5,"additional_online_surveys"))
+keyresult("Complete 8 in-person interviews no later than {}.".format(
+  label_weekdate(day_last_gathered_data-td(days=3))),
+  figure_progress(8,"interviews"))
+keyresult("Perform 3 interface measurement tests with 3 participants each no later than {}.".format(
+  label_weekdate(day_last_gathered_data-td(days=3))),
+  figure_progress(9,"interface_tests"))
+
+append("\\end{adjustwidth}")
+append("\\restoregeometry")
 
 do_end = [
   "includegraphics"
 ]
 
-
-append("\\end{adjustwidth}")
-append("\\restoregeometry")
 print(os.linesep.join(
-  [l if (l == out[-1] or (l.endswith('}') and not (any([v in l for v in do_end]))))
+  [l if (l == out[-1] or ((l.endswith('}') or l.startswith("\\")) and not (any([v in l for v in do_end]))))
    else l+'\\\\' for l in out]))

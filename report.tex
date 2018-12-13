@@ -209,6 +209,9 @@
 % Define see command.
 \newcommand\seeref[1]{see \ref{#1} at page \pageref{#1}}
 
+% Define \mybox command.
+\newcommand\mybox[2][]{\tikz[overlay]\node[fill=blue!20,inner sep=2pt, anchor=text, rectangle, rounded corners=1mm,#1] {#2};\phantom{#2}}
+
 \begin{document}
 
 \pagenumbering{roman}
