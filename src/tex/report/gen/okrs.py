@@ -113,12 +113,12 @@ append("\\section{OKR's (\\today)}")
 append("\\vspace{-1.2cm}")
 
 objective(
-  "Complete all diploma-work on my side no later then {} {}.".format(
+  "Complete all diploma-work on my side no later than {} {}.".format(
   label_weekday(day_finished), label_iso(day_finished)))
-keyresult("Send in final report draft no later then {}.".format(
+keyresult("Send in final report draft no later than {}.".format(
   label_weekdate(day_finished-td(days=7))),
   figure_progress(1,"final_draft"))
-keyresult("Opposition on other master thesis done no later then {}.".format(
+keyresult("Opposition on other master thesis done no later than {}.".format(
   label_weekdate(day_finished-td(days=7*2))),
   figure_progress(1,"opposition_done"))
 
