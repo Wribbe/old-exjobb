@@ -124,4 +124,7 @@ $(DIR_OUT)/%$(SUF_CO): | $(DIR_OUT)
 clean:
 	rm -rf out
 
-.PHONY : clean all def commented no_comments no_appendix
+fresh: clean all
+
+.PHONY : clean all def commented no_comments no_appendix fresh
+

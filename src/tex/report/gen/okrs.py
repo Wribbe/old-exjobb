@@ -23,6 +23,9 @@ def add(text):
 def new_page():
   append("\\newpage")
 
+def strip_last_newline():
+  out[-1] = out[-1].replace("\\\\", '')
+
 objectives = {}
 key_results = {}
 
@@ -48,15 +51,21 @@ def gantt():
     add("{{{}}}{{{}}}".format(label_iso(start),label_iso(end)))
     append("\\gantttitlecalendar{year, month=name, day, weekday=letter}")
     append("\\ganttnewline")
-    dates_objs = [d for d in objectives if start <= d <= end]
+    dates_objs = [d for d in sorted(objectives) if start-td(days=1) <= d <= end]
     for date in dates_objs:
       for obj in objectives[date]:
         append("\\ganttmilestone{{ {} }}{{ {} }} \\\\".format(obj, label_iso(date)))
+    strip_last_newline()
     append("\\ganttnewline")
-    dates_krs = [d for d in key_results if start <= d <= end]
+    dates_krs = [d for d in sorted(key_results) if start-td(days=1) <= d <= end]
     for date in dates_krs:
-      for kr in key_results[date]:
-        append("\\ganttbar{{ {0} }}{{ {1} }}{{ {1} }} \\\\".format(kr, label_iso(date)))
+      for kr, color in key_results[date]:
+        label = label_iso(date)
+        append("\\ganttbar[\
+               bar label font=\\color{{{0}}},\
+               bar/.append style={{fill={0}, rounded corners=3pt}}]\
+               {{ {1} }}{{ {2} }}{{ {2} }} \\\\".format(color, kr, label))
+    strip_last_newline()
     append("\\end{ganttchart}")
     append("\\newpage")
     if end == day_finished:
@@ -77,7 +86,7 @@ def gantt():
 mark_checked = "$\u2713$"
 mark_not_checked = "$\u2610$"
 
-def figure_progress(length, name, labels_x=[]):
+def figure_progress(length, name, checked=[], labels_x=[]):
 
   fig_height = 0.67 if labels_x else 0.2
   if length == 1:
@@ -86,7 +95,9 @@ def figure_progress(length, name, labels_x=[]):
     figsize = (min(0.5*length, 5.5),fig_height)
   f = plt.figure(figsize=figsize)
 
-  plt.scatter(range(length),[0]*length, marker=mark_not_checked)
+  plt.scatter(range(length),[0]*length, c="black", marker=mark_not_checked)
+  for x in checked:
+    plt.scatter(x,0, marker=mark_checked, c="green")
   plt.yticks([],[])
   plt.xticks([],[])
 
@@ -99,7 +110,7 @@ def figure_progress(length, name, labels_x=[]):
   plt.tight_layout(pad=0)
   f.savefig(path_fig)
   plt.close()
-  return path_fig
+  return (path_fig, length, len(checked))
 
 day_start = dt.strptime("2018-12-13", "%Y-%m-%d")
 fmt_month = "%d/%m"
@@ -107,7 +118,6 @@ mondays = [day_start + td(days=x) for x in
            range(10*7+1) if (day_start+td(days=x)).weekday() == 0]
 labels_mondays = [dt.strftime(d, fmt_month) for d in mondays]
 
-path_fig_mondays = figure_progress(10, "draft_mondays", labels_mondays)
 
 def label_month(d):
   return dt.strftime(d, fmt_month)
@@ -143,13 +153,23 @@ def objective(text, date=None):
       os = objectives[date] = []
     os.append("O{}".format(count_O))
 
-def keyresult(text, image, date=None):
+def keyresult(text, data_img, date=None):
   global count_KR
-  fmt_kr = "\\textbf{{KR{}.{}:}} \\\\ {}"
+  image, tot_checkable , num_checked = data_img
+  prog = num_checked / tot_checkable
+
+  if 0.0 >= prog <= 0.3:
+    color = "red"
+  elif 0.3 >= prog <= 0.7:
+    color = "yellow"
+  else:
+    color = "green"
+
+  fmt_kr = "\\mybox[fill={}!20]{{\\textbf{{KR{}.{}:}}}} \\\\ {}"
   count_KR += 1
   if date:
     text = text.format(label_weekdate(date))
-  append(fmt_kr.format(count_O, count_KR, text))
+  append(fmt_kr.format(color, count_O, count_KR, text))
 #  append("\\vspace{0.3cm}")
   append("\\begin{center}")
   append("\\includegraphics")
@@ -159,7 +179,7 @@ def keyresult(text, image, date=None):
     krs = key_results.get(date)
     if not krs:
       krs = key_results[date] = []
-    krs.append("KR{}.{}".format(count_O, count_KR))
+    krs.append(("KR{}.{}".format(count_O, count_KR), color))
 
 def days_from_start(n):
   return day_start+td(days=n)
@@ -196,29 +216,33 @@ keyresult(
   day_last_draft_presentation)
 
 objective("Improve communication on how the project is progressing.")
-keyresult("Email expanded draft each Monday for 10 weeks.", path_fig_mondays)
+keyresult("Email expanded draft each Monday for 10 weeks.",
+          figure_progress(10, "draft_mondays",
+                          labels_x=labels_mondays,
+                          checked=[]))
+
 keyresult(
   fmt_in_person.format("LTH", "{}"),
-  figure_progress(3,"presentation_LTH"),
+  figure_progress(3,"presentation_LTH",checked=[]),
   day_last_draft_presentation)
 keyresult(
   fmt_in_person.format("MASSIVE", "{}"),
   figure_progress(3,"presentation_MASSIVE"),
   day_last_draft_presentation)
-keyresult("Finalize and email this OKR document no later than {}.".format(
-  label_weekdate(days_from_start(1))),
-  figure_progress(1,"finalize_OKRs"))
+keyresult("Finalize and email / handout this OKR document no later than {}.",
+  figure_progress(1,"finalize_OKRs",checked=[0]),
+  days_from_start(1))
 
 objective("Do opposition on interesting master thesis.")
-keyresult("Find 8 promising thesis projects no later than {}.".format(
-  label_weekdate(days_from_start(7))),
-  figure_progress(8,"found_opposition_thesis"))
-keyresult("Contact at least three students of the eight no later than {}.".format(
-  label_weekdate(days_from_start(7+12+7))),
-  figure_progress(3,"selected_opposition_thesis"))
-keyresult("Final opposing thesis confirmed no later than {}.".format(
-  label_weekdate(days_from_start(7+12+7*3))),
-  figure_progress(1,"final_opposition_thesis"))
+keyresult("Find 8 promising thesis projects no later than {}.",
+  figure_progress(8,"found_opposition_thesis"),
+  days_from_start(7))
+keyresult("Contact at least three students of the eight no later than {}.",
+  figure_progress(3,"selected_opposition_thesis"),
+  days_from_start(7+12+7))
+keyresult("Final opposing thesis confirmed no later than {}.",
+  figure_progress(1,"final_opposition_thesis"),
+  days_from_start(7+12+7*3))
 
 
 objective(
