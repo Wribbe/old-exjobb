@@ -64,8 +64,6 @@ mondays = [day_start + td(days=x) for x in
 labels_mondays = [dt.strftime(d, fmt_month) for d in mondays]
 
 path_fig_mondays = figure_progress(10, "draft_mondays", labels_mondays)
-path_fig_3_meet_LTH = figure_progress(3, "meet_lth")
-path_fig_3_meet_MASSIVE = figure_progress(3, "meet_massive")
 
 def label_month(d):
   return dt.strftime(d, fmt_month)
@@ -81,23 +79,27 @@ def label_iso(d):
 
 day_last_draft = mondays[-1]+td(days=4)
 
-count_O = -1
+count_O = 0
 conut_KR = -1
-def objective(text):
+def objective(text, date=None):
   global count_KR; global count_O;
   count_KR = 0
   count_O += 1
   fmt_object ="\\textbf{{\\mybox{{O{}:}} {}}}"
-  if count_O > 0:
+  if count_O > 1:
     append("\\end{adjustwidth}")
+  if date:
+    text = text.format(label_weekdate(date))
   append(fmt_object.format(count_O, text))
-#  append("\\vspace{-0.4cm}")
+  append("\\vspace{0.2cm}")
   append("\\begin{adjustwidth}{0.3cm}{}")
 
-def keyresult(text, image):
+def keyresult(text, image, date=None):
   global count_KR
   fmt_kr = "\\textbf{{KR{}.{}:}} \\\\ {}"
   count_KR += 1
+  if date:
+    text = text.format(label_weekdate(date))
   append(fmt_kr.format(count_O, count_KR, text))
 #  append("\\vspace{0.3cm}")
   append("\\begin{center}")
@@ -118,28 +120,38 @@ day_last_draft_report = day_finished-td(days=7)
 day_last_oposition = day_finished-td(days=7*2)
 day_last_draft_presentation = day_finished-td(days=7+4)
 
-append("\\newgeometry{top=1cm, bottom=1cm}")
-append("\\section{Project \\textbf{O}bject and \\textbf{K}ey \\textbf{R}esult\\textbf{s} (\\today)}")
+append("\\newgeometry{top=1cm, bottom=1cm, footskip=0.0cm}")
+append("\\section{Project OKRs (\\today) \\\\ \
+       {\\normalsize (\\textbf{O}bjectives and \\textbf{K}ey \\textbf{R}esults)}}")
 append("\\vspace{-1.2cm}")
 
 objective(
-  "Complete all diploma-work sans feedback no later than {} {}.".format(
-  label_weekday(day_finished), label_iso(day_finished)))
-keyresult("Send in final report draft no later than {}.".format(
-  label_weekdate(day_last_draft_report)),
-  figure_progress(1,"final_draft"))
-keyresult("Opposition on other master thesis done no later than {}.".format(
-  label_weekdate(day_last_oposition)),
-  figure_progress(1,"opposition_done"))
-keyresult("Final version of presentation done no later than {}.".format(
-  label_weekdate(day_last_draft_presentation)),
-  figure_progress(1,"presentation_done"))
+  "Complete all diploma-work sans feedback no later than {}.",
+  day_finished)
+keyresult(
+  "Send in final report draft no later than {}.",
+  figure_progress(1,"final_draft"),
+  day_last_draft_report)
+keyresult(
+  "Opposition on other master thesis done no later than {}.",
+  figure_progress(1,"opposition_done"),
+  day_last_oposition)
+keyresult(
+  "Final version of presentation done no later than {}.",
+  figure_progress(1,"presentation_done"),
+  day_last_draft_presentation)
 
 objective("Improve communication on how the project is progressing.")
 keyresult("Email expanded draft each Monday for 10 weeks.", path_fig_mondays)
-keyresult(fmt_in_person.format("LTH"), path_fig_3_meet_LTH)
-keyresult(fmt_in_person.format("MASSIVE"), path_fig_3_meet_MASSIVE)
-keyresult("Finalize this OKR document no later than {}.".format(
+keyresult(
+  fmt_in_person.format("LTH", "{}"),
+  figure_progress(3,"presentation_LTH"),
+  day_last_draft_presentation)
+keyresult(
+  fmt_in_person.format("MASSIVE", "{}"),
+  figure_progress(3,"presentation_MASSIVE"),
+  day_last_draft_presentation)
+keyresult("Finalize and email this OKR document no later than {}.".format(
   label_weekdate(days_from_start(1))),
   figure_progress(1,"finalize_OKRs"))
 
@@ -150,37 +162,69 @@ keyresult("Find 8 promising thesis projects no later than {}.".format(
 keyresult("Contact at least three students of the eight no later than {}.".format(
   label_weekdate(days_from_start(7+12+7))),
   figure_progress(3,"selected_opposition_thesis"))
-keyresult("Finalize opposing thesis no later than {}.".format(
+keyresult("Final opposing thesis confirmed no later than {}.".format(
   label_weekdate(days_from_start(7+12+7*3))),
   figure_progress(1,"final_opposition_thesis"))
 
 
-objective("Ensure a robust grounding in scientific literature.")
-keyresult("Find and save at least 15 promising articles to reference, no later than {}.".format(
-  label_weekdate(days_from_start(7+12+3))),
-  figure_progress(15,"references_articles"))
-keyresult("Find at least 3 promising books to references, no later than {}.".format(
-  label_weekdate(days_from_start(7+12+3))),
-  figure_progress(3,"references_books"))
-keyresult("Argue for and get all references vetted by supervisor no later than {}.".format(
-  label_weekdate(days_from_start(7+12+3+5))),
-  figure_progress(1,"vet_references"))
+objective(
+  "Ensure a robust grounding in scientific literature.")
+keyresult(
+  "Find and save at least 15 promising articles to reference, no later than {}.",
+  figure_progress(15,"references_articles"),
+  days_from_start(7+12+3))
+keyresult(
+  "Find at least 3 promising books to references, no later than {}.",
+  figure_progress(3,"references_books"),
+  days_from_start(7+12+3))
+keyresult(
+  "Argue for and get all references vetted by supervisor no later than {}.",
+  figure_progress(1,"vet_references"),
+  days_from_start(7+12+3+5))
 
 new_page()
 
-day_last_gathered_data = dt.strptime("2019-02-04", "%Y-%m-%d")
+day_last_gathered_data = dt.strptime("2019-02-11", "%Y-%m-%d")
 
-objective("All data gathered no later than {}.".format(
-  label_weekdate(day_last_gathered_data)))
-keyresult("Send out 5 additional online surveys to the team no later than {}.".format(
-  label_weekdate(day_last_gathered_data-td(days=7))),
-  figure_progress(5,"additional_online_surveys"))
-keyresult("Complete 8 in-person interviews no later than {}.".format(
-  label_weekdate(day_last_gathered_data-td(days=3))),
-  figure_progress(8,"interviews"))
-keyresult("Perform 3 interface measurement tests with 3 participants each no later than {}.".format(
-  label_weekdate(day_last_gathered_data-td(days=3))),
-  figure_progress(9,"interface_tests"))
+objective(
+  "All data gathered no later than {}.",
+  day_last_gathered_data)
+keyresult(
+  "Create personas no later than {}.",
+  figure_progress(1,"create_personas"),
+  day_start+td(days=5))
+keyresult(
+  "Send out 5 additional online surveys to the team no later than {}.",
+  figure_progress(5,"additional_online_surveys"),
+  day_last_gathered_data-td(days=7))
+keyresult(
+  "Complete 8 in-person interviews no later than {}.",
+  figure_progress(8,"interviews"),
+  day_last_gathered_data-td(days=3))
+keyresult(
+  "Perform 3 interface-theory tests with 3 participants each no later than {}.",
+  figure_progress(9,"interface_tests"),
+  day_last_gathered_data-td(days=5))
+
+objective(
+  "Usable integrated prototype with Shotgun no later than {}.",
+  day_last_draft_presentation-td(days=7))
+keyresult(
+  "Confirm 3 user-changes in prototype affecting Shotgun no later than {}.",
+  figure_progress(3,"shotgun_propagation"),
+  day_last_gathered_data-td(days=7*3.0))
+keyresult(
+  "Finalize 3 tasks that should be functional in in prototype no later than {}.",
+  figure_progress(3,"shotgun_tasks"),
+  day_last_gathered_data-td(days=7*2.0))
+keyresult(
+  "Apply results of each theory tests to Shotgun prototype no later than. {}.",
+  figure_progress(3,"interface_shotgun_tests"),
+  day_last_gathered_data+td(days=7))
+
+objective(
+  "Figure out how to test interface-theory no later than {}.",
+  day_start+td(days=7*2))
 
 append("\\end{adjustwidth}")
 append("\\restoregeometry")
