@@ -47,6 +47,7 @@ def figure_progress(length, name, labels_x=[]):
   plt.yticks([],[])
   plt.xticks([],[])
 
+  plt.box(False)
   path_fig = os.path.join(cfg.PATH_DIR_FIGURES, "{}.pdf".format(name))
   if labels_x:
     plt.xticks(range(len(labels_x)), labels_x, rotation=90)
