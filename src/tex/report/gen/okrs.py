@@ -23,6 +23,49 @@ def add(text):
 def new_page():
   append("\\newpage")
 
+objectives = {}
+key_results = {}
+
+def gantt():
+  append(
+    "\\def\\pgfcalendarweekdayletter#1{\
+      \\ifcase#1M\\or T\\or W\\or T\\or F\\or S\\or S\\fi\
+    }")
+  append("\\newgeometry{left=3cm, bottom=1cm, footskip=0.5cm}")
+  append("\\begin{landscape}")
+  start = dt.today()
+  delta = td(days=54)
+  end = start + delta
+  while True:
+    if end > day_finished:
+      end = day_finished
+    append("\\begin{ganttchart}\
+           [ \
+            y unit chart = 0.6cm,x unit = 0.45cm,hgrid,vgrid,\
+            milestone inline label node/.append style={left=2mm},\
+            time slot format=isodate \
+           ]")
+    add("{{{}}}{{{}}}".format(label_iso(start),label_iso(end)))
+    append("\\gantttitlecalendar{year, month=name, day, weekday=letter}")
+    append("\\ganttnewline")
+    dates_objs = [d for d in objectives if start <= d <= end]
+    for date in dates_objs:
+      for obj in objectives[date]:
+        append("\\ganttmilestone{{ {} }}{{ {} }} \\\\".format(obj, label_iso(date)))
+    append("\\ganttnewline")
+    dates_krs = [d for d in key_results if start <= d <= end]
+    for date in dates_krs:
+      for kr in key_results[date]:
+        append("\\ganttbar{{ {0} }}{{ {1} }}{{ {1} }} \\\\".format(kr, label_iso(date)))
+    append("\\end{ganttchart}")
+    append("\\newpage")
+    if end == day_finished:
+      break
+    start = end+td(days=1)
+    end += delta
+  append("\\end{landscape}")
+  append("\\restoregeometry")
+
 #data = np.random.randint(0,12,size=72)
 #bins = np.arange(13)-0.5
 
@@ -55,6 +98,7 @@ def figure_progress(length, name, labels_x=[]):
     os.makedirs(os.path.dirname(path_fig))
   plt.tight_layout(pad=0)
   f.savefig(path_fig)
+  plt.close()
   return path_fig
 
 day_start = dt.strptime("2018-12-13", "%Y-%m-%d")
@@ -93,6 +137,11 @@ def objective(text, date=None):
   append(fmt_object.format(count_O, text))
   append("\\vspace{0.2cm}")
   append("\\begin{adjustwidth}{0.3cm}{}")
+  if date:
+    os = objectives.get(date)
+    if not os:
+      os = objectives[date] = []
+    os.append("O{}".format(count_O))
 
 def keyresult(text, image, date=None):
   global count_KR
@@ -106,6 +155,11 @@ def keyresult(text, image, date=None):
   append("\\includegraphics")
   add("{{{}}}".format(image))
   append("\\end{center}")
+  if date:
+    krs = key_results.get(date)
+    if not krs:
+      krs = key_results[date] = []
+    krs.append("KR{}.{}".format(count_O, count_KR))
 
 def days_from_start(n):
   return day_start+td(days=n)
@@ -242,6 +296,8 @@ keyresult(
 
 append("\\end{adjustwidth}")
 append("\\restoregeometry")
+
+gantt()
 
 do_end = [
   "includegraphics"
