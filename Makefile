@@ -11,10 +11,11 @@ $(eval DIRS := $(foreach var,$(filter-out %_$(PERCENT)%,$(filter DIR_%,$(shell c
 SUF_NOCO := _no_comments
 SUF_NOAPP := _no_appendix
 SUF_CO := _comments
+SUF_OKRS := _OKRS
 
 BASE_NAMES := $(patsubst %.tex,%,$(wildcard *.tex))
 BASE_NAMES := $(filter report,$(BASE_NAMES))
-PDFS := $(foreach n,$(BASE_NAMES),$n$(SUF_NOCO).pdf $n$(SUF_CO).pdf $n$(SUF_NOAPP).pdf)
+PDFS := $(foreach n,$(BASE_NAMES),$n$(SUF_NOCO).pdf $n$(SUF_CO).pdf $n$(SUF_NOAPP).pdf $n$(SUF_OKRS).pdf)
 PDFS := $(foreach p,$(PDFS),$(DIR_OUT)/$p)
 
 PLOTS := $(patsubst %.py,$(DIR_PLOTS)/%.pdf,$(notdir $(wildcard $(DIR_PLOTS_SRC)/*.py)))
@@ -30,7 +31,7 @@ def: $(SRC_LINKS) $(GEN_TEXS) $(TEXS) $(BIBS) $(PLOTS) commented
 
 all: def $(PDFS)
 
-commented: $(filter-out %$(SUF_NOCO).pdf %$(SUF_NOAPP).pdf,$(PDFS))
+commented: $(filter-out %$(SUF_NOCO).pdf %$(SUF_NOAPP).pdf %$(SUF_OKRS).pdf,$(PDFS))
 
 no_comments: $(filter %$(SUF_NOCO).pdf,$(PDFS))
 
@@ -53,12 +54,16 @@ PP = \
 
 
 %.pdf : %.tex % %.bib $(PLOTS) $(IMGS) | $(DIR_OUT)
-	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter %.tex,$^))
+	$(call PP,pdflatex -output-directory $(DIR_OUT), $(filter $*%.tex,$^))
 
 $(PDFS) : $(GEN_TEXS)
 
 $(DIR_PLOTS)/%.pdf : $(DIR_PLOTS_SRC)/%.py plots.py | $(DIR_PLOTS)
 	./plots.py $(filter-out plots.py,$^) $@
+
+
+$(DIR_OUT)/%$(SUF_OKRS).tex : %.tex | $(DIR_OUT)
+	./tex_format.py $^ OKRS_ONLY bibfile=None > $@
 
 
 $(DIR_OUT)/%$(SUF_NOCO).tex : %.tex | $(DIR_OUT)
@@ -85,8 +90,13 @@ $(DIR_OUT)/%$(SUF_CO).bib : %_raw.bib | $(DIR_OUT)
 	python raw2bib.py $^ > $@
 
 
+$(DIR_OUT)/%$(SUF_OKRS).bib : %_raw.bib | $(DIR_OUT)
+	python raw2bib.py $^ > $@
+
+
 tex/tidsschema.tex : py/tids.py | $(DIR_TEX)
 	python $^ > $@
+
 
 $(DIR_OUT)/%.tex : src/%.py
 	[ -d "$(dir $@)" ] || mkdir -p $(dir $@)
@@ -94,6 +104,10 @@ $(DIR_OUT)/%.tex : src/%.py
 
 $(DIRS):
 	@mkdir -p $@
+
+$(DIR_OUT)/%$(SUF_OKRS): | $(DIR_OUT)
+	[ -d "tex/$*" ] || mkdir -p tex/$*
+	[ -h "$@" ] || ln -sr tex/$* $@
 
 $(DIR_OUT)/%$(SUF_NOAPP): | $(DIR_OUT)
 	[ -d "tex/$*" ] || mkdir -p tex/$*

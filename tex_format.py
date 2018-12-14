@@ -25,6 +25,29 @@ def main(args):
         continue
       out.append(line)
     text = os.linesep.join(out)
+  elif "OKRS_ONLY" in args:
+    out = []
+    in_document = False
+    in_OKRS = False
+    skip_if = False
+    for line in text.splitlines():
+      if "bibliography" in line:
+        continue
+      if skip_if:
+        skip_if = False
+        continue
+      if "\input{out/tex/report/gen/okrs.tex}" in line:
+        in_OKRS = True
+        skip_if = True
+      if "begin{document}" in line:
+        in_document = True
+        out.append(line)
+      if in_OKRS:
+        out.append(line)
+      elif not in_document:
+        out.append(line)
+    text = os.linesep.join(out)
+
 
   print(text)
 

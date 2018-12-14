@@ -222,9 +222,23 @@ keyresult(
   figure_progress(3,"interface_shotgun_tests"),
   day_last_gathered_data+td(days=7))
 
+day_test_interface_theory = day_start+td(days=7*2)
+
 objective(
   "Figure out how to test interface-theory no later than {}.",
-  day_start+td(days=7*2))
+  day_test_interface_theory)
+keyresult(
+  "Execute runnable example on current web-backend no later than {}.",
+  figure_progress(1,"interface_theory_backend"),
+  day_start+td(days=4))
+keyresult(
+  "Find alternative if current web-backend does not work no later than {}.",
+  figure_progress(1,"interface_theory_backend_alternative"),
+  day_start+td(days=6))
+keyresult(
+  "Showcase to supervisor and company contacts no later than {}.",
+  figure_progress(3,"interface_theory_backend_showcase"),
+  day_test_interface_theory-td(days=6))
 
 append("\\end{adjustwidth}")
 append("\\restoregeometry")
