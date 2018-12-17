@@ -15,7 +15,8 @@
 
 \usepackage{mathptmx}
 \usepackage{helvet}
-\usepackage[hidelinks=true]{hyperref}
+%\usepackage[hidelinks=true]{hyperref}
+\usepackage{hyperref}
 
 \usepackage{calc}
 
@@ -223,8 +224,10 @@
 
 \pagenumbering{roman}
 
-\newcommand\titleFirst{Using tailored web-interfaces to improve}
-\newcommand\titleSecond{in-team communication and effectiveness}
+\newcommand\titleFirst{Preventing communication breakdown}
+\newcommand\titleSecond{with minimal interface modifications.}
+%\newcommand\titleFirst{Using tailored web-interfaces to improve}
+%\newcommand\titleSecond{in-team communication and effectiveness}
 \newcommand\titleThird{at MASSIVE, Malmö}
 %\newcommand\titleFull{\titleFirst \ \titleSecond \ \titleThird}
 \newcommand\titleFull{\titleFirst \ \titleSecond}
@@ -525,6 +528,7 @@ Lund,
 
 \ifdefined\visibleComments
   \newpage
+  \label{OKRS}
   \input{out/tex/report/gen/okrs.tex}
 \fi
 

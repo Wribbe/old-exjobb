@@ -27,7 +27,7 @@ IMGS := $(wildcard images/*)
 
 GEN_TEXS := $(patsubst src/%.py,$(DIR_OUT)/%.tex,$(shell find src/tex -name "*.py"))
 
-def: $(SRC_LINKS) $(GEN_TEXS) $(TEXS) $(BIBS) $(PLOTS) commented
+def: $(SRC_LINKS) $(GEN_TEXS) $(TEXS) $(BIBS) $(PLOTS) no_comments
 
 all: def $(PDFS)
 

@@ -1,0 +1,18 @@
+Hi, new draft.
+
+Mainly fleshed out the Introduction section, and some other things behind the scenes, mostly regarding the interface-measuring-prototype-web-thingy, which is not that visible at the moment.
+
+A short guide to the Different-versions-of-this-report(Tm):
+-----------------------------------------------------------
+
+  report_comment.pdf:
+    Includes everything, notes, todos etc. Read if bored / extremely interested in the inner workings of my head.
+
+  report_no_comment.pdf:
+    Does not have the comments or todos, includes appendix. Read this part if you want to see the dumped data, extra figures, etc.
+
+  report_no_appendix.pdf:
+    As above, but also no appendix, read this if you actually want so see how much I've written.
+
+  report_OKRS.pdf:
+    Only includes the project OKRs, read this if you want to answer the question: "Where is he, and what is he planning to do?"

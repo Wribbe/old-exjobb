@@ -60,11 +60,14 @@ def gantt():
     dates_krs = [d for d in sorted(key_results) if start-td(days=1) <= d <= end]
     for date in dates_krs:
       for kr, color in key_results[date]:
+        ref_kr = "ref{}".format(kr)
         label = label_iso(date)
         append("\\ganttbar[\
                bar label font=\\color{{{0}}},\
                bar/.append style={{fill={0}, rounded corners=3pt}}]\
-               {{ {1} }}{{ {2} }}{{ {2} }} \\\\".format(color, kr, label))
+               {{ {1} }}{{ {2} }}{{ {2} }} \\\\".format(color,
+                                                        "\\hyperref[{}]{{{}}}".format(ref_kr,kr),
+                                                        label))
     strip_last_newline()
     append("\\end{ganttchart}")
     append("\\newpage")
@@ -158,18 +161,19 @@ def keyresult(text, data_img, date=None):
   image, tot_checkable , num_checked = data_img
   prog = num_checked / tot_checkable
 
-  if 0.0 >= prog <= 0.3:
+  if prog < 0.3:
     color = "red"
-  elif 0.3 >= prog <= 0.7:
+  elif prog < 0.7:
     color = "yellow"
   else:
     color = "green"
 
-  fmt_kr = "\\mybox[fill={}!20]{{\\textbf{{KR{}.{}:}}}} \\\\ {}"
+  fmt_kr = "\\hypertarget{{{0}}}{{\\mybox[fill={1}!20]{{\\textbf{{{0}:}}}} \\\\ {2}}}"
   count_KR += 1
   if date:
     text = text.format(label_weekdate(date))
-  append(fmt_kr.format(color, count_O, count_KR, text))
+  kr_tag = "KR{}.{}".format(count_O, count_KR)
+  append(fmt_kr.format(kr_tag, color, text))
 #  append("\\vspace{0.3cm}")
   append("\\begin{center}")
   append("\\includegraphics")
@@ -179,7 +183,7 @@ def keyresult(text, data_img, date=None):
     krs = key_results.get(date)
     if not krs:
       krs = key_results[date] = []
-    krs.append(("KR{}.{}".format(count_O, count_KR), color))
+    krs.append((kr_tag, color))
 
 def days_from_start(n):
   return day_start+td(days=n)
@@ -219,7 +223,7 @@ objective("Improve communication on how the project is progressing.")
 keyresult("Email expanded draft each Monday for 10 weeks.",
           figure_progress(10, "draft_mondays",
                           labels_x=labels_mondays,
-                          checked=[]))
+                          checked=[0,]))
 
 keyresult(
   fmt_in_person.format("LTH", "{}"),
@@ -253,7 +257,7 @@ keyresult(
   days_from_start(7+12+3))
 keyresult(
   "Find at least 3 promising books to references, no later than {}.",
-  figure_progress(3,"references_books"),
+  figure_progress(3,"references_books", checked=[0,1]),
   days_from_start(7+12+3))
 keyresult(
   "Argue for and get all references vetted by supervisor no later than {}.",
@@ -307,8 +311,9 @@ objective(
   day_test_interface_theory)
 keyresult(
   "Execute runnable example on current web-backend no later than {}.",
-  figure_progress(1,"interface_theory_backend"),
+  figure_progress(1,"interface_theory_backend", checked=[0]),
   day_start+td(days=4))
+
 keyresult(
   "Find alternative if current web-backend does not work no later than {}.",
   figure_progress(1,"interface_theory_backend_alternative"),
