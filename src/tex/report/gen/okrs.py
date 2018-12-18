@@ -66,7 +66,8 @@ def gantt():
                bar label font=\\color{{{0}}},\
                bar/.append style={{fill={0}, rounded corners=3pt}}]\
                {{ {1} }}{{ {2} }}{{ {2} }} \\\\".format(color,
-                                                        "\\hyperref[{}]{{{}}}".format(ref_kr,kr),
+                                                       # "\\hyperref[{}]{{{}}}".format(ref_kr,kr),
+                                                        kr,
                                                         label))
     strip_last_newline()
     append("\\end{ganttchart}")
