@@ -240,7 +240,7 @@ keyresult("Finalize and email / handout this OKR document no later than {}.",
 
 objective("Do opposition on interesting master thesis.")
 keyresult("Find 8 promising thesis projects no later than {}.",
-  figure_progress(8,"found_opposition_thesis"),
+  figure_progress(8,"found_opposition_thesis", checked=[0]),
   days_from_start(7))
 keyresult("Contact at least three students of the eight no later than {}.",
   figure_progress(3,"selected_opposition_thesis"),
@@ -274,7 +274,7 @@ objective(
   day_last_gathered_data)
 keyresult(
   "Create personas no later than {}.",
-  figure_progress(1,"create_personas"),
+  figure_progress(1,"create_personas", checked=[0]),
   day_start+td(days=5))
 keyresult(
   "Send out 5 additional online surveys to the team no later than {}.",
