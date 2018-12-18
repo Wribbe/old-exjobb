@@ -258,7 +258,7 @@ keyresult(
   days_from_start(7+12+3))
 keyresult(
   "Find at least 3 promising books to references, no later than {}.",
-  figure_progress(3,"references_books", checked=[0,1]),
+  figure_progress(3,"references_books", checked=[0,1,2]),
   days_from_start(7+12+3))
 keyresult(
   "Argue for and get all references vetted by supervisor no later than {}.",
