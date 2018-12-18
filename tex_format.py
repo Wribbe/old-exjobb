@@ -11,11 +11,13 @@ def main(args):
   text = open(tex_file).read()
   for key, value in args_dict.items():
     text = re.sub(r'\${}'.format(key), value, text)
+  text = os.linesep.join(["\\def\\visibleOKRS{1}",text])
   if "COMMENTS" in args:
     text = os.linesep.join(["\\def\\visibleComments{1}",text])
   elif "NO_APPENDIX" in args:
     out = []
     in_appendice = False
+    text = os.linesep.join(["\\undef\\visibleOKRS{1}",text])
     for line in text.splitlines():
       if "section{Appendices}" in line:
         in_appendice = True
