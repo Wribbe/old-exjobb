@@ -89,6 +89,7 @@ def gantt():
 
 mark_checked = "$\u2713$"
 mark_not_checked = "$\u2610$"
+mark_abandonend = "$-$"
 
 def figure_progress(length, name, checked=[], labels_x=[]):
 
@@ -100,8 +101,22 @@ def figure_progress(length, name, checked=[], labels_x=[]):
   f = plt.figure(figsize=figsize)
 
   plt.scatter(range(length),[0]*length, c="black", marker=mark_not_checked)
+  marker = mark_checked
+  color = "green"
+
+  if -1 in checked:
+    marker = mark_abandonend
+    color = "black"
+    checked = range(length)
+    length = -1
+
   for x in checked:
-    plt.scatter(x,0, marker=mark_checked, c="green")
+    if marker == mark_abandonend:
+      y = -0.05
+      for dx in range(-2,3):
+        plt.scatter(x+dx,y, marker=marker, c=color)
+    else:
+      plt.scatter(x,0, marker=marker, c=color)
   plt.yticks([],[])
   plt.xticks([],[])
 
@@ -160,9 +175,14 @@ def objective(text, date=None):
 def keyresult(text, data_img, date=None):
   global count_KR
   image, tot_checkable , num_checked = data_img
-  prog = num_checked / tot_checkable
+  if tot_checkable == -1: # Abandoned.
+    prog = -1
+  else:
+    prog = num_checked / tot_checkable
 
-  if prog < 0.3:
+  if prog == -1:
+    color = "gray"
+  elif prog < 0.3:
     color = "red"
   elif prog < 0.7:
     color = "yellow"
@@ -174,6 +194,9 @@ def keyresult(text, data_img, date=None):
   if date:
     text = text.format(label_weekdate(date))
   kr_tag = "KR{}.{}".format(count_O, count_KR)
+  if prog == -1:
+    kr_tag = "\\sout{{{}}}".format(kr_tag)
+    text = "\\sout{{{}}}".format(text)
   append(fmt_kr.format(kr_tag, color, text))
 #  append("\\vspace{0.3cm}")
   append("\\begin{center}")
@@ -317,7 +340,7 @@ keyresult(
 
 keyresult(
   "Find alternative if current web-backend does not work no later than {}.",
-  figure_progress(1,"interface_theory_backend_alternative"),
+  figure_progress(1,"interface_theory_backend_alternative", checked=[-1]),
   day_start+td(days=6))
 keyresult(
   "Showcase to supervisor and company contacts no later than {}.",
