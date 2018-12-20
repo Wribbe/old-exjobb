@@ -89,7 +89,7 @@ def gantt():
 
 mark_checked = "$\u2713$"
 mark_not_checked = "$\u2610$"
-mark_abandonend = "$-$"
+mark_abandonend = "$/$"
 
 def figure_progress(length, name, checked=[], labels_x=[]):
 
@@ -104,19 +104,18 @@ def figure_progress(length, name, checked=[], labels_x=[]):
   marker = mark_checked
   color = "green"
 
+  abandon = False
   if -1 in checked:
-    marker = mark_abandonend
-    color = "black"
-    checked = range(length)
-    length = -1
+    checked = [i if i in checked else -1-i for i in range(length)]
+    abandon = True
 
   for x in checked:
-    if marker == mark_abandonend:
-      y = -0.05
-      for dx in range(-2,3):
-        plt.scatter(x+dx,y, marker=marker, c=color)
+    if x < 0:
+      x = -(x+1)
+      plt.scatter(x,0, marker=mark_abandonend, c="black")
     else:
-      plt.scatter(x,0, marker=marker, c=color)
+      plt.scatter(x,0, marker=mark_checked, c="green")
+
   plt.yticks([],[])
   plt.xticks([],[])
 
@@ -129,6 +128,8 @@ def figure_progress(length, name, checked=[], labels_x=[]):
   plt.tight_layout(pad=0)
   f.savefig(path_fig)
   plt.close()
+  if abandon:
+    length = -1
   return (path_fig, length, len(checked))
 
 day_start = dt.strptime("2018-12-13", "%Y-%m-%d")
@@ -263,13 +264,13 @@ keyresult("Finalize and email / handout this OKR document no later than {}.",
 
 objective("Do opposition on interesting master thesis.")
 keyresult("Find 8 promising thesis projects no later than {}.",
-  figure_progress(8,"found_opposition_thesis", checked=[0]),
+  figure_progress(8,"found_opposition_thesis", checked=[0,-1]),
   days_from_start(7))
 keyresult("Contact at least three students of the eight no later than {}.",
-  figure_progress(3,"selected_opposition_thesis"),
+  figure_progress(3,"selected_opposition_thesis", checked=[0,-1]),
   days_from_start(7+12+7))
 keyresult("Final opposing thesis confirmed no later than {}.",
-  figure_progress(1,"final_opposition_thesis"),
+  figure_progress(1,"final_opposition_thesis", checked=[0]),
   days_from_start(7+12+7*3))
 
 
