@@ -59,16 +59,23 @@ def gantt():
     append("\\ganttnewline")
     dates_krs = [d for d in sorted(key_results) if start-td(days=1) <= d <= end]
     for date in dates_krs:
-      for kr, color in key_results[date]:
+      for kr, color, moved, name in key_results[date]:
         ref_kr = "ref{}".format(kr)
         label = label_iso(date)
         append("\\ganttbar[\
+               name={{ {3} }}, \
                bar label font=\\color{{{0}}},\
                bar/.append style={{fill={0}, rounded corners=3pt}}]\
                {{ {1} }}{{ {2} }}{{ {2} }} \\\\".format(color,
                                                        # "\\hyperref[{}]{{{}}}".format(ref_kr,kr),
                                                         kr,
-                                                        label))
+                                                        label,
+                                                        name,
+                                                        ))
+        if moved:
+          append("\\node[at={{({0})}}] ({0}) {{}};".format(name))
+          append("\\draw[/pgfgantt/link] ({0} -| 0, 99) -> ({0}.west);".format(name))
+
     strip_last_newline()
     append("\\end{ganttchart}")
     append("\\newpage")
@@ -173,7 +180,7 @@ def objective(text, date=None):
       os = objectives[date] = []
     os.append("O{}".format(count_O))
 
-def keyresult(text, data_img, date=None):
+def keyresult(text, data_img, date=None, moved=False):
   global count_KR
   image, tot_checkable , num_checked = data_img
   if tot_checkable == -1: # Abandoned.
@@ -191,6 +198,7 @@ def keyresult(text, data_img, date=None):
     color = "green"
 
   fmt_kr = "\\hypertarget{{{0}}}{{\\mybox[fill={1}!20]{{\\textbf{{{0}:}}}} \\\\ {2}}}"
+  name = "KR{}{}".format(count_O, count_KR)
   count_KR += 1
   if date:
     text = text.format(label_weekdate(date))
@@ -208,10 +216,13 @@ def keyresult(text, data_img, date=None):
     krs = key_results.get(date)
     if not krs:
       krs = key_results[date] = []
-    krs.append((kr_tag, color))
+    krs.append((kr_tag, color, moved, name))
 
 def days_from_start(n):
   return day_start+td(days=n)
+
+def move(day, num_days):
+  return (day+td(days=num_days), {"myved": True})
 
 fmt_in_person = "Do three ten minutes in-person presentations of current work and direction at {} \
   before {}.".format("{}", label_weekdate(day_last_draft))
@@ -248,7 +259,7 @@ objective("Improve communication on how the project is progressing.")
 keyresult("Email expanded draft each Monday for 10 weeks.",
           figure_progress(10, "draft_mondays",
                           labels_x=labels_mondays,
-                          checked=[0,]))
+                          checked=[0,1,2,3,4]))
 
 keyresult(
   fmt_in_person.format("LTH", "{}"),
@@ -274,12 +285,13 @@ keyresult("Final opposing thesis confirmed no later than {}.",
   days_from_start(7+12+7*3))
 
 
+days_moved = 27
 objective(
   "Ensure a robust grounding in scientific literature.")
 keyresult(
   "Find and save at least 15 promising articles to reference, no later than {}.",
   figure_progress(15,"references_articles"),
-  days_from_start(7+12+3))
+  *move(days_from_start(7+12+3), days_moved))
 keyresult(
   "Find at least 3 promising books to references, no later than {}.",
   figure_progress(3,"references_books", checked=[0,1,2]),
@@ -287,7 +299,7 @@ keyresult(
 keyresult(
   "Argue for and get all references vetted by supervisor no later than {}.",
   figure_progress(1,"vet_references"),
-  days_from_start(7+12+3+5))
+  *move(days_from_start(7+12+3+5), days_moved))
 
 new_page()
 
@@ -345,7 +357,7 @@ keyresult(
   day_start+td(days=6))
 keyresult(
   "Showcase to supervisor and company contacts no later than {}.",
-  figure_progress(3,"interface_theory_backend_showcase"),
+  figure_progress(3,"interface_theory_backend_showcase", checked=[0,-1]),
   day_test_interface_theory-td(days=6))
 
 append("\\end{adjustwidth}")
